@@ -1,0 +1,16 @@
+theme = "PaperMod"
+baseURL = 'https://example.org/'
+languageCode = 'en-us'
+title = 'Department of random technical stuffs'
+[params.homeInfoParams]
+  Title = "Hey, I'm Justin 👋"
+  Content = "Welcome to my blog — Its some random thoughts from a foolish developer!"
+[params.math]
+  enable = true  
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+[[menu.main]]
+  identifier = "search"
+  name = "Search"
+  url = "/search/"
+  weight = 10    

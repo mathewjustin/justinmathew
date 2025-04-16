@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>Posts | Department of random technical stuffs</title>
+<meta name="keywords" content="">
+<meta name="description" content="Posts - Department of random technical stuffs">
+<meta name="author" content="">
+<link rel="canonical" href="http://localhost:1313/posts/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.f49d66caae9ea0fd43f21f29e71a8d3e284517ed770f2aa86fa012953ad3c9ef.css" integrity="sha256-9J1myq6eoP1D8h8p5xqNPihFF&#43;13Dyqob6ASlTrTye8=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" type="application/rss+xml" href="http://localhost:1313/posts/index.xml">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript>
+</head>
+
+<body class="list" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="Department of random technical stuffs (Alt + H)">Department of random technical stuffs</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/search/" title="Search (Alt &#43; /)" accesskey=/>
+                    <span>Search</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main"> 
+<header class="page-header">
+  <h1>
+    Posts
+  </h1>
+</header>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">An early morning adventure
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>On the early morning of February 1st, I decided to tackle a problem from the Striver’s SDE sheet.
+I came across an intriguing challenge titled “Set Matrix Zeroes”.
+Here’s how I approached it:
+Initially, I attempted a brute force method. The usual strategy of iterating through a matrix and setting rows and columns to zero has a drawback: it can lead to the loss of the matrix’s original state, potentially zeroing out the entire matrix, which isn’t the desired outcome. To avoid this, my approach involved marking the rows and columns that intersect at a zero element with a temporary value of -1. This way, the matrix’s original elements remain unchanged until the final step, where a second pass converts all -1 values back to zeros.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2024-01-31 17:41:00 -0800 -0800'>January 31, 2024</span></footer>
+  <a class="entry-link" aria-label="post link to An early morning adventure" href="http://localhost:1313/2024/01/an-early-morning-adventure.html"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">An engineers view to religion
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>KEEP ONE HAND DISTANCE!
+</p>
+  </div>
+  <footer class="entry-footer"><span title='2022-04-03 07:39:00.001 -0700 -0700'>April 3, 2022</span></footer>
+  <a class="entry-link" aria-label="post link to An engineers view to religion" href="http://localhost:1313/2022/04/an-engineers-view-to-religion.html"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Moving from a wonderful organiztion !
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Cycle travelled all the way from Bangalore to Kannan devan hills, Idukki. ;) A wonderful journey of last 3 years has come to an end. Moved out of MBRDI / DTICI ( Daimler Trucks Innovation Center India)
+</p>
+  </div>
+  <footer class="entry-footer"><span title='2021-12-23 23:20:00.001 -0800 -0800'>December 23, 2021</span></footer>
+  <a class="entry-link" aria-label="post link to Moving from a wonderful organiztion !" href="http://localhost:1313/2021/12/moving-from-wonderful-organiztion.html"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Automate fetch upstream using github actions
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p> I like to fork interesting github repositories and experiment with it. Those who do this actively might have faced the problem of upstream sync, where we need to sync our repository with the upstream repository. Imagine you forked a repository contains some articles which are being updated everyday, you will like them to have it synced everyday. I do ;) Github introduced a feature called fetch upstream this year to solve this issue. But in this case you need to click on the fetch upstream button by yourself, this article is for the lazy ones who want it to be done automatically. ...</p>
+  </div>
+  <footer class="entry-footer"><span title='2021-08-26 10:22:00.002 -0700 -0700'>August 26, 2021</span></footer>
+  <a class="entry-link" aria-label="post link to Automate fetch upstream using github actions" href="http://localhost:1313/2021/08/automate-upstream-update-using-github.html"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Cheap Fast Good
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>
+You can make a great software but you have to choose 2 out of this above 3. There is no way to get around!
+</p>
+  </div>
+  <footer class="entry-footer"><span title='2021-05-30 22:16:00.003 -0700 -0700'>May 30, 2021</span></footer>
+  <a class="entry-link" aria-label="post link to Cheap Fast Good" href="http://localhost:1313/2021/05/cheap-fast-good.html"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Python linked List implementation
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p> class Node: def \_\_init\_\_(self, data): self.data=data self.nextNode=None class LinkedLIst: def \_\_init\_\_(self): self.head = None self.numberOFNodes=0 \# Here we get o(1) constant running time complexity for insertion. def insert\_start(self,data): self.numberOFNodes=self.numberOFNodes&#43;1 new\_node = Node(data) if not self.head: self.head=new\_node else: new\_node.nextNode=self.head self.head = new\_node #Linear running time o(n) def insert\_end(self,data): self.numberOFNodes=self.numberOFNodes&#43;1 new\_node=Node(data) actual\_node=self.head while actual\_node.nextNode is not None: actual\_node=actual\_node.nextNode actual\_node.nextNode=new\_node def size\_of\_list(self): actual\_node = self.head while actual\_node is not None: print(actual\_node) actual\_node=actual\_node.nextNode def traverse(self): actual\_node=self.head while actual\_node is not None: print(actual\_node.data) actual\_node=actual\_node.nextNode def deleteAtHead(self): self.head=self.head.nextNode self.numberOFNodes=self.numberOFNodes-1 def deleteAtTail(self): actual\_node = self.head while actual\_node.nextNode.nextNode is not None: actual\_node=actual\_node.nextNode actual\_node.nextNode=None self.numberOFNodes=self.numberOFNodes-1 linked\_list=LinkedLIst() linked\_list.insert\_start(4) linked\_list.insert\_start(3) linked\_list.insert\_start(&#39;A String type&#39;) linked\_list.insert\_start(1.232) linked\_list.insert\_end(12.232) linked\_list.traverse() print(&#39;Deleting at the front&#39;) linked\_list.deleteAtHead() linked\_list.traverse() print(&#39;Delete at the last position&#39;) linked\_list.deleteAtTail() linked\_list.traverse() </p>
+  </div>
+  <footer class="entry-footer"><span title='2021-01-04 08:21:00.003 -0800 -0800'>January 4, 2021</span></footer>
+  <a class="entry-link" aria-label="post link to Python linked List implementation" href="http://localhost:1313/2021/01/python-linked-list-implementation.html"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Custom annotations in Spring Boot
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p> I had worked on spring framework extensively throughout my career. The one thing which I am always try to implement in any Spring project I work on is Custom annotation. Its a fancy stuff but useful in many ways. Say you have numerous micro services (Duplicate code bases which will f*** you up) running on your cluster, the best and first thing you do is - Build a common library to push all your model classes, so called util package of your organization :p and the fancy stuffs . I am fortunate that I get to do all these experiments early on my career. So lets start with the problem.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2020-10-01 13:21:00 -0700 -0700'>October 1, 2020</span></footer>
+  <a class="entry-link" aria-label="post link to Custom annotations in Spring Boot" href="http://localhost:1313/2020/10/custom-annotations-in-spring-boot.html"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Python Unit Test: Basics 1
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p> When comes to any programming language what i check first is how to write a unit test on it. “Coding is not difficult- Bill Gates” So what is difficult? I would say testing is difficult. Here is a basic example on how to test a small piece of python code.
+The above snippet is a basic recursive program which will return the factorial of a number. Lets see how we can write a basic test case for this. I have my directory structure as follows.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2019-12-31 22:06:00.005 -0800 -0800'>December 31, 2019</span></footer>
+  <a class="entry-link" aria-label="post link to Python Unit Test: Basics 1" href="http://localhost:1313/2020/09/what-i-found-on-python-basics-1.html"></a>
+</article>
+<footer class="page-footer">
+  <nav class="pagination">
+    <a class="prev" href="http://localhost:1313/posts/">
+      «&nbsp;Prev&nbsp;
+    </a>
+  </nav>
+</footer>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="http://localhost:1313/">Department of random technical stuffs</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>
