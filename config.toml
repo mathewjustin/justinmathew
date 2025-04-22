@@ -1,5 +1,5 @@
 theme = "PaperMod"
-baseURL = "https://justinmathew.com/"
+baseURL = "http://justinmathew.com/"
 canonifyURLs = true
 languageCode = 'en-us'
 title = 'Department of random technical stuffs'
