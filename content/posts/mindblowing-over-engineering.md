@@ -1,6 +1,6 @@
 +++
 date = '2025-04-27T19:02:39+05:30'
-draft = true
+draft = false
 title = 'Enterprise Over Engineering'
 +++
 
