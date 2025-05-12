@@ -1,10 +1,7 @@
 ---
-title: ' IP V4 Subnetting tricks and basics'
 date: '2025-05-13T19:02:39+05:30'
 draft: false
-url: 
-tags: 
-- Ipv4, subnets, cids notations
+title: ' IP V4 Subnetting tricks and basics'
 ---
 
 ## IP V4 Subnetting tricks and basics
