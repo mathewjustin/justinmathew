@@ -1,5 +1,5 @@
 +++
-date = '2025-04-27T19:02:39+05:30'
+date = '2025-04-27T20:39:00.000-08:00'
 draft = false
 title = 'Enterprise Over Engineering'
 +++
