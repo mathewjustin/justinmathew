@@ -1,6 +1,6 @@
 ---
 title: 'Replication - Leaders and Followers'
-date: 2025-13-06T17:59:00.000-08:00
+date: 2025-06-15T17:59:00.000-08:00
 draft: false
 url: /2025/05/replication-leader-and-followers.html
 ---
@@ -114,7 +114,7 @@ pg_walreceiver --connect-to=leader --stream=wal
 
 Wait a minute...
 
-<img src="wait-a-minute.png" alt="alt text" width="100"/>
+![alt text](wait-a-minute.png)
 
 
 Can i see this process in action. Answer is yes.
