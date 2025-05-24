@@ -2,7 +2,6 @@
 title: 'Replication - Leaders and Followers'
 date: 2025-06-15T17:59:00.000-08:00
 draft: false
-url: /2025/05/replication-leader-and-followers.html
 ---
 
 ## Replication - Leaders and Followers
