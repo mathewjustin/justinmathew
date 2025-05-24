@@ -1,7 +1,7 @@
 ---
-title: 'Replication - Leaders and Followers'
-date: 2025-06-15T17:59:00.000-08:00
+date: '2025-05-20T19:02:39+05:30'
 draft: false
+title: ' Replication - Leaders and Followers'
 ---
 
 ## Replication - Leaders and Followers
