@@ -1,3 +1,10 @@
+---
+date: '2025-06-03T23:02:39+05:30'
+draft: false
+title: 'gRPC - The Witchcraft of Remote Procedure Calls'
+description: 'A deep dive into gRPC, its benefits, and how to implement it in a Spring Boot application.'
+---
+
 # WTF is gRPC? Why GRPC ?
 
    Some technologies are like witchcraft. You hear about them, you see them in action, but you don't really understand how they work. gRPC is one of those technologies for me. It's a remote procedure call (RPC) framework that allows you to define services and methods in a language-agnostic way, and then generate client and server code in multiple languages.
