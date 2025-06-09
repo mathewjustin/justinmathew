@@ -1,8 +1,8 @@
 ---
-date: '2025-06-10T23:02:39+05:30'
+date: '2025-06-09T23:04:00+05:30'
 draft: false
-title: 'removing duplicates from sorted array'
-description: 'This is a medium level problem.'
+title: 'Remove more than two duplicates in-place'
+description: 'This is a medium level problem. I think it should be easy. But anyway, lets get to the code.'
 ---
 
 # Problem
