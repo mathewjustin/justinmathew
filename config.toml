@@ -15,7 +15,7 @@ title = 'Department of random technical stuffs'
   name = "Search"
   url = "/search/"
   weight = 10    
+[params.comments]
+  enable=true
 [markup.goldmark.renderer]
-  unsafe = true  
-params:
-  comments: true
+  unsafe = true
