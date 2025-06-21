@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html lang="en" dir="auto">
 
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<head><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="noindex, nofollow">
+<meta name="robots" content="index, follow">
 <title>The nicest way to merge two sorted arrays | Department of random technical stuffs</title>
 <meta name="keywords" content="">
 <meta name="description" content="This is one of the easy but tricky problems. To be really honest I also struggled with tihs one. I am writing this down, and the pitfalls of this problem, so that I can refer to this later.">
 <meta name="author" content="">
-<link rel="canonical" href="http://localhost:1313/posts/mergingtwosortedarrays/">
-<link crossorigin="anonymous" href="http://localhost:1313/assets/css/stylesheet.f49d66caae9ea0fd43f21f29e71a8d3e284517ed770f2aa86fa012953ad3c9ef.css" integrity="sha256-9J1myq6eoP1D8h8p5xqNPihFF&#43;13Dyqob6ASlTrTye8=" rel="preload stylesheet" as="style">
-<link rel="icon" href="http://localhost:1313/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
-<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
-<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<link rel="canonical" href="https://justinmathew.com/posts/mergingtwosortedarrays/">
+<link crossorigin="anonymous" href="https://justinmathew.com/assets/css/stylesheet.f49d66caae9ea0fd43f21f29e71a8d3e284517ed770f2aa86fa012953ad3c9ef.css" integrity="sha256-9J1myq6eoP1D8h8p5xqNPihFF&#43;13Dyqob6ASlTrTye8=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://justinmathew.com/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://justinmathew.com/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://justinmathew.com/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://justinmathew.com/apple-touch-icon.png">
+<link rel="mask-icon" href="https://justinmathew.com/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/mergingtwosortedarrays/">
+<link rel="alternate" hreflang="en" href="https://justinmathew.com/posts/mergingtwosortedarrays/">
 <noscript>
     <style>
         #theme-toggle,
@@ -55,7 +55,69 @@
         }
 
     </style>
-</noscript>
+</noscript><meta property="og:url" content="https://justinmathew.com/posts/mergingtwosortedarrays/">
+  <meta property="og:site_name" content="Department of random technical stuffs">
+  <meta property="og:title" content="The nicest way to merge two sorted arrays">
+  <meta property="og:description" content="This is one of the easy but tricky problems. To be really honest I also struggled with tihs one. I am writing this down, and the pitfalls of this problem, so that I can refer to this later.">
+  <meta property="og:locale" content="en-us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-06-06T23:02:39+05:30">
+    <meta property="article:modified_time" content="2025-06-06T23:02:39+05:30">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="The nicest way to merge two sorted arrays">
+<meta name="twitter:description" content="This is one of the easy but tricky problems. To be really honest I also struggled with tihs one. I am writing this down, and the pitfalls of this problem, so that I can refer to this later.">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://justinmathew.com/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "The nicest way to merge two sorted arrays",
+      "item": "https://justinmathew.com/posts/mergingtwosortedarrays/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "The nicest way to merge two sorted arrays",
+  "name": "The nicest way to merge two sorted arrays",
+  "description": "This is one of the easy but tricky problems. To be really honest I also struggled with tihs one. I am writing this down, and the pitfalls of this problem, so that I can refer to this later.",
+  "keywords": [
+    
+  ],
+  "articleBody": "You are given two integer arrays nums1 and nums2, sorted in non-decreasing order, and two integers m and n, representing the number of elements in nums1 and nums2 respectively.\nMerge nums1 and nums2 into a single array sorted in non-decreasing order.\nThe final sorted array should not be returned by the function, but instead be stored inside the array nums1. To accommodate this, nums1 has a length of m + n, where the first m elements denote the elements that should be merged, and the last n elements are set to 0 and should be ignored. nums2 has a length of n.\nInput: nums1 = [1,2,3,0,0,0], m = 3, nums2 = [2,5,6], n = 3 Output: [1,2,2,3,5,6] Explanation: The arrays we are merging are [1,2,3] and [2,5,6]. The result of the merge is [1,2,2,3,5,6] with the underlined elements coming from nums1. Input: nums1 = [1], m = 1, nums2 = [], n = 0 Output: [1] Explanation: The arrays we are merging are [1] and []. The result of the merge is [1]. Input: nums1 = [0], m = 0, nums2 = [1], n = 1 Output: [1] Explanation: The arrays we are merging are [] and [1]. The result of the merge is [1]. Note that because m = 0, there are no elements in nums1. The 0 is only there to ensure the merge result can fit in nums1. The solution is actually simple. Look at the below.\nThe first intuition is we can use the empty positions in nums1 to fill the elements from nums2. Which is a harmless approach, because we are not overwriting any elements in nums1. The approach is based on this principle:\nStep 1:\nWe will have 3 pointers, p1 pointing to m-1 p pointing to m+n-1 p2 pointing to n-1\nWe continue this for next element.\nNow on the next step we will have p1 pointing to 3, p2 pointing to 3, and p pointing to nums[3]. Look at the below image.\nOn the final iteration,\nThe last part is a bit tricky. If you look at the original array what we do in our mind is shifting of elements. But what we are doing is dupicating the element and replacing it. This same approach we have seen in a problem where i wanted to remove a particular element from an array with o(1) time complexity.\nFrom this Problem , Leetcode: https://leetcode.com/problems/insert-delete-getrandom-o1/\nBoth of this probelms are similar in nature.\nDon’t shift data. Overwrite it smartly.\nNow the pitfalls. This is the crazy part of this problem.\npublic static void merge(int[] nums1, int m, int[] nums2, int n) { int p1 = m - 1; int p2 = n - 1; int p = m + n - 1; while(p\u003e=0) { if (nums1[p1] \u003e nums2[p2]) { nums1[p] = nums1[p1--]; } else { nums1[p] = nums2[p2--]; } p--; } } So elegant right? But there is a pitfall.\nPitfall No 1:\nInput: nums1 = [0], m = 0, nums2 = [1], n = 1\nWhat happens here is p1 will be -1, and nums1[p1] will throw an exception. So we need to handle this case.\nIn this case when p1 is -1 i need to go to else part. so we need to check if p1 is greater than or equal to 0.\npublic static void merge(int[] nums1, int m, int[] nums2, int n) { int p1 = m - 1; int p2 = n - 1; int p = m + n - 1; while(p\u003e=0) { if (p1\u003e=0\u0026\u0026nums1[p1] \u003e nums2[p2]) { nums1[p] = nums1[p1--]; } else { nums1[p] = nums2[p2--]; } p--; } } Pitfall No 2:\nThe while loop condition is p\u003e=0. But what if nums2 is empty? In that case p2 will be -1, and we will try to access nums2[-1] which will throw an exception. So we need to handle this case as well.\nSo instead of checking p\u003e=0, we need to check if p2 is greater than or equal to 0.\npublic static void merge(int[] nums1, int m, int[] nums2, int n) { int p1 = m - 1; int p2 = n - 1; int p = m + n - 1; while(p2\u003e=0) { if (p1 \u003e= 0 \u0026\u0026 nums1[p1] \u003e nums2[p2]) { nums1[p] = nums1[p1--]; } else { nums1[p] = nums2[p2--]; } p--; } } For the pitfall 2 as per leetcode solution it is to break if p2 is less than 0. But i think it is better to check the condition in the while loop itself. It just guarantees that you need to copy all the elements from nums2 to nums1. until p2 is less than 0.\n",
+  "wordCount" : "773",
+  "inLanguage": "en",
+  "datePublished": "2025-06-06T23:02:39+05:30",
+  "dateModified": "2025-06-06T23:02:39+05:30",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://justinmathew.com/posts/mergingtwosortedarrays/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Department of random technical stuffs",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://justinmathew.com/favicon.ico"
+    }
+  }
+}
+</script>
 </head>
 
 <body class="" id="top">
@@ -73,7 +135,7 @@
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="http://localhost:1313/" accesskey="h" title="Department of random technical stuffs (Alt + H)">Department of random technical stuffs</a>
+            <a href="https://justinmathew.com/" accesskey="h" title="Department of random technical stuffs (Alt + H)">Department of random technical stuffs</a>
             <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
@@ -99,7 +161,7 @@
         </div>
         <ul id="menu">
             <li>
-                <a href="http://localhost:1313/search/" title="Search (Alt &#43; /)" accesskey=/>
+                <a href="https://justinmathew.com/search/" title="Search (Alt &#43; /)" accesskey=/>
                     <span>Search</span>
                 </a>
             </li>
@@ -146,13 +208,13 @@ Note that because m = 0, there are no elements in nums1. The 0 is only there to 
 <p>We will have 3 pointers, p1 pointing to m-1
 p pointing to m+n-1
 p2 pointing to n-1</p>
-<p><img alt="alt text" loading="lazy" src="http://localhost:1313/posts/mergingtwosortedarrays/image.png"></p>
+<p><img alt="alt text" loading="lazy" src="https://justinmathew.com/posts/mergingtwosortedarrays/image.png"></p>
 <p>We continue this for next element.</p>
-<p><img alt="alt text" loading="lazy" src="http://localhost:1313/posts/mergingtwosortedarrays/image-1.png"></p>
+<p><img alt="alt text" loading="lazy" src="https://justinmathew.com/posts/mergingtwosortedarrays/image-1.png"></p>
 <p>Now on the next step we will have p1 pointing to 3, p2 pointing to 3, and p pointing to nums[3]. Look at the below image.</p>
-<p><img alt="alt text" loading="lazy" src="http://localhost:1313/posts/mergingtwosortedarrays/image-2.png"></p>
+<p><img alt="alt text" loading="lazy" src="https://justinmathew.com/posts/mergingtwosortedarrays/image-2.png"></p>
 <p>On the final iteration,</p>
-<p><img alt="alt text" loading="lazy" src="http://localhost:1313/posts/mergingtwosortedarrays/image-3.png"></p>
+<p><img alt="alt text" loading="lazy" src="https://justinmathew.com/posts/mergingtwosortedarrays/image-3.png"></p>
 <p>The last part is a bit tricky. If you look at the original array what we do in our mind is shifting of elements. But what we are doing is dupicating the element and replacing it. This same approach we have seen in a problem where i wanted to remove a particular element from an array with o(1) time complexity.</p>
 <p>From this Problem , Leetcode: <a href="https://leetcode.com/problems/insert-delete-getrandom-o1/">https://leetcode.com/problems/insert-delete-getrandom-o1/</a></p>
 <p>Both of this probelms are similar in nature.</p>
@@ -220,12 +282,26 @@ p2 pointing to n-1</p>
   <footer class="post-footer">
     <ul class="post-tags">
     </ul>
-  </footer>
+  </footer><script src="https://giscus.app/client.js"
+        data-repo="mathewjustin/justinmathew"
+        data-repo-id="R_kgDOOVcB9A"
+        data-category="General"
+        data-category-id="DIC_kwDOOVcB9M4Co3QS"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="preferred_color_scheme"
+        data-lang="en"
+        crossorigin="anonymous"
+        async>
+</script>
 </article>
     </main>
     
 <footer class="footer">
-        <span>&copy; 2025 <a href="http://localhost:1313/">Department of random technical stuffs</a></span> · 
+        <span>&copy; 2025 <a href="https://justinmathew.com/">Department of random technical stuffs</a></span> · 
 
     <span>
         Powered by

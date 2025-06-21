@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Microservices on Department of random technical stuffs</title>
-    <link>http://localhost:1313/tags/microservices/</link>
+    <link>https://justinmathew.com/tags/microservices/</link>
     <description>Recent content in Microservices on Department of random technical stuffs</description>
     <generator>Hugo -- 0.145.0</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 01 Oct 2020 13:21:00 -0700</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/microservices/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://justinmathew.com/tags/microservices/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Custom annotations in Spring Boot</title>
-      <link>http://localhost:1313/2020/10/custom-annotations-in-spring-boot.html</link>
+      <link>https://justinmathew.com/2020/10/custom-annotations-in-spring-boot.html</link>
       <pubDate>Thu, 01 Oct 2020 13:21:00 -0700</pubDate>
-      <guid>http://localhost:1313/2020/10/custom-annotations-in-spring-boot.html</guid>
+      <guid>https://justinmathew.com/2020/10/custom-annotations-in-spring-boot.html</guid>
       <description>&lt;p&gt;           I had worked on spring framework extensively throughout my career. The one thing which I am always try to implement in any Spring project I work on is Custom annotation. Its a fancy stuff but useful in many ways. &lt;/p&gt;
 &lt;p&gt;         Say you have numerous micro services (Duplicate code bases which will f*** you up) running on your cluster, the best and first thing you do is - Build a common library to push all your model classes, so called util package of your organization :p and the fancy stuffs  . I am fortunate that I get to do all these experiments early on my career. So lets start with the problem.&lt;/p&gt;</description>
     </item>

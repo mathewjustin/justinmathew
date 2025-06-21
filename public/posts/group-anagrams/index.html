@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Grouping anagrams | Department of random technical stuffs</title>
+<meta name="keywords" content="">
+<meta name="description" content="A medium but easy one!">
+<meta name="author" content="">
+<link rel="canonical" href="https://justinmathew.com/posts/group-anagrams/">
+<link crossorigin="anonymous" href="https://justinmathew.com/assets/css/stylesheet.f49d66caae9ea0fd43f21f29e71a8d3e284517ed770f2aa86fa012953ad3c9ef.css" integrity="sha256-9J1myq6eoP1D8h8p5xqNPihFF&#43;13Dyqob6ASlTrTye8=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://justinmathew.com/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://justinmathew.com/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://justinmathew.com/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://justinmathew.com/apple-touch-icon.png">
+<link rel="mask-icon" href="https://justinmathew.com/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://justinmathew.com/posts/group-anagrams/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:url" content="https://justinmathew.com/posts/group-anagrams/">
+  <meta property="og:site_name" content="Department of random technical stuffs">
+  <meta property="og:title" content="Grouping anagrams">
+  <meta property="og:description" content="A medium but easy one!">
+  <meta property="og:locale" content="en-us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-06-11T23:04:00+05:30">
+    <meta property="article:modified_time" content="2025-06-11T23:04:00+05:30">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Grouping anagrams">
+<meta name="twitter:description" content="A medium but easy one!">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://justinmathew.com/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Grouping anagrams",
+      "item": "https://justinmathew.com/posts/group-anagrams/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Grouping anagrams",
+  "name": "Grouping anagrams",
+  "description": "A medium but easy one!",
+  "keywords": [
+    
+  ],
+  "articleBody": "Problem Given an array of strings strs, group the anagrams together. You can return the answer in any order.\nExample 1:\nInput: strs = [“eat”,“tea”,“tan”,“ate”,“nat”,“bat”]\nOutput: [[“bat”],[“nat”,“tan”],[“ate”,“eat”,“tea”]]\nExplanation:\nThere is no string in strs that can be rearranged to form “bat”. The strings “nat” and “tan” are anagrams as they can be rearranged to form each other. The strings “ate”, “eat”, and “tea” are anagrams as they can be rearranged to form each other. Example 2:\nInput: strs = [\"\"]\nOutput: [[\"\"]]\nExample 3:\nInput: strs = [“a”]\nOutput: [[“a”]]\nSolution or Intuition This doesn’t really deseve my excalidraw diagram. But I will try to explain the logic here.\nSimply take out one string, sort them and use it as a key in a map.\nThe map structure will be like this:\nMap\u003cString, List\u003cString\u003e\u003e map = new HashMap\u003c\u003e(); Then for each string in the input array, sort it and add it to the map.\n/** * @author Justin Mathew @dev_io */ public class Anagram { public static List\u003cList\u003cString\u003e\u003e groupAnagrams(String[] strs) { Map\u003cString, List\u003cString\u003e\u003e map = new HashMap\u003c\u003e(); for (String s : strs) { char[] chars = s.toCharArray(); Arrays.sort(chars); String key = new String(chars); map.computeIfAbsent(key, k -\u003e new ArrayList\u003c\u003e()).add(s); } return new ArrayList\u003c\u003e(map.values()); } } Time complexity: For each string:\n1.\tSorting the string: O(K log K) for each string (since average string length is K) 2.\tBuilding the key and inserting into a map: O(1) amortized (hash map insert) Across all strings: Total = N * O(K log K) Time Complexity: O(N * K log K) Space complexity: •\tMap storage: Stores up to N strings → O(N * K) •\tSorted key strings: You generate sorted strings as keys → up to O(N * K) •\tFinal list of grouped anagrams: again O(N * K) Space Complexity: O(N * K) Yeah this is kind of nice. I like this solution. We can actually implement this with pure lambda but i cant do without an LLM at my disposal.\n",
+  "wordCount" : "329",
+  "inLanguage": "en",
+  "datePublished": "2025-06-11T23:04:00+05:30",
+  "dateModified": "2025-06-11T23:04:00+05:30",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://justinmathew.com/posts/group-anagrams/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Department of random technical stuffs",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://justinmathew.com/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://justinmathew.com/" accesskey="h" title="Department of random technical stuffs (Alt + H)">Department of random technical stuffs</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://justinmathew.com/search/" title="Search (Alt &#43; /)" accesskey=/>
+                    <span>Search</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      Grouping anagrams
+    </h1>
+    <div class="post-description">
+      A medium but easy one!
+    </div>
+    <div class="post-meta"><span title='2025-06-11 23:04:00 +0530 IST'>June 11, 2025</span>
+
+</div>
+  </header> 
+  <div class="post-content"><h1 id="problem">Problem<a hidden class="anchor" aria-hidden="true" href="#problem">#</a></h1>
+<p>Given an array of strings strs, group the anagrams together. You can return the answer in any order.</p>
+<p>Example 1:</p>
+<p>Input: strs = [&ldquo;eat&rdquo;,&ldquo;tea&rdquo;,&ldquo;tan&rdquo;,&ldquo;ate&rdquo;,&ldquo;nat&rdquo;,&ldquo;bat&rdquo;]</p>
+<p>Output: [[&ldquo;bat&rdquo;],[&ldquo;nat&rdquo;,&ldquo;tan&rdquo;],[&ldquo;ate&rdquo;,&ldquo;eat&rdquo;,&ldquo;tea&rdquo;]]</p>
+<p>Explanation:</p>
+<p>There is no string in strs that can be rearranged to form &ldquo;bat&rdquo;.
+The strings &ldquo;nat&rdquo; and &ldquo;tan&rdquo; are anagrams as they can be rearranged to form each other.
+The strings &ldquo;ate&rdquo;, &ldquo;eat&rdquo;, and &ldquo;tea&rdquo; are anagrams as they can be rearranged to form each other.
+Example 2:</p>
+<p>Input: strs = [&quot;&quot;]</p>
+<p>Output: [[&quot;&quot;]]</p>
+<p>Example 3:</p>
+<p>Input: strs = [&ldquo;a&rdquo;]</p>
+<p>Output: [[&ldquo;a&rdquo;]]</p>
+<h2 id="solution-or-intuition">Solution or Intuition<a hidden class="anchor" aria-hidden="true" href="#solution-or-intuition">#</a></h2>
+<p>This doesn&rsquo;t really deseve my excalidraw diagram. But I will try to explain the logic here.</p>
+<p>Simply take out one string, sort them and use it as a key in a map.</p>
+<p>The map structure will be like this:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>Map<span style="color:#f92672">&lt;</span>String, List<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;&gt;</span> map <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> HashMap<span style="color:#f92672">&lt;&gt;</span>();
+</span></span></code></pre></div><p>Then for each string in the input array, sort it and add it to the map.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">/**
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> * @author Justin Mathew @dev_io
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> */</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Anagram</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> List<span style="color:#f92672">&lt;</span>List<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;&gt;</span> <span style="color:#a6e22e">groupAnagrams</span>(String<span style="color:#f92672">[]</span> strs) {
+</span></span><span style="display:flex;"><span>        Map<span style="color:#f92672">&lt;</span>String, List<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;&gt;</span> map <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> HashMap<span style="color:#f92672">&lt;&gt;</span>();
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> (String s : strs) {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">char</span><span style="color:#f92672">[]</span> chars <span style="color:#f92672">=</span> s.<span style="color:#a6e22e">toCharArray</span>();
+</span></span><span style="display:flex;"><span>            Arrays.<span style="color:#a6e22e">sort</span>(chars);
+</span></span><span style="display:flex;"><span>            String key <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> String(chars);
+</span></span><span style="display:flex;"><span>            map.<span style="color:#a6e22e">computeIfAbsent</span>(key, k <span style="color:#f92672">-&gt;</span> <span style="color:#66d9ef">new</span> ArrayList<span style="color:#f92672">&lt;&gt;</span>()).<span style="color:#a6e22e">add</span>(s);
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> ArrayList<span style="color:#f92672">&lt;&gt;</span>(map.<span style="color:#a6e22e">values</span>());
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="time-complexity">Time complexity:<a hidden class="anchor" aria-hidden="true" href="#time-complexity">#</a></h3>
+<p>For each string:</p>
+<pre><code>1.	Sorting the string: O(K log K) for each string (since average string length is K)
+2.	Building the key and inserting into a map: O(1) amortized (hash map insert)
+</code></pre>
+<h4 id="across-all-strings-total--n--ok-log-k-time-complexity-on--k-log-k">Across all strings: Total = N * O(K log K) Time Complexity: O(N * K log K)<a hidden class="anchor" aria-hidden="true" href="#across-all-strings-total--n--ok-log-k-time-complexity-on--k-log-k">#</a></h4>
+<h3 id="space-complexity">Space complexity:<a hidden class="anchor" aria-hidden="true" href="#space-complexity">#</a></h3>
+<pre><code>•	Map storage: Stores up to N strings → O(N * K)
+•	Sorted key strings: You generate sorted strings as keys → up to O(N * K)
+•	Final list of grouped anagrams: again O(N * K)
+</code></pre>
+<h4 id="space-complexity-on--k">Space Complexity: O(N * K)<a hidden class="anchor" aria-hidden="true" href="#space-complexity-on--k">#</a></h4>
+<p>Yeah this is kind of nice. I like this solution. We can actually implement this with pure lambda but i cant do without an LLM at my disposal.</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+  </footer><script src="https://giscus.app/client.js"
+        data-repo="mathewjustin/justinmathew"
+        data-repo-id="R_kgDOOVcB9A"
+        data-category="General"
+        data-category-id="DIC_kwDOOVcB9M4Co3QS"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="preferred_color_scheme"
+        data-lang="en"
+        crossorigin="anonymous"
+        async>
+</script>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="https://justinmathew.com/">Department of random technical stuffs</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

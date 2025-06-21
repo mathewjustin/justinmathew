@@ -2,137 +2,125 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/</loc>
-    <lastmod>2025-06-10T00:54:39+05:30</lastmod>
+    <loc>https://justinmathew.com/</loc>
+    <lastmod>2025-06-18T05:47:00-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/</loc>
-    <lastmod>2025-06-10T00:54:39+05:30</lastmod>
+    <loc>https://justinmathew.com/posts/</loc>
+    <lastmod>2025-06-18T05:47:00-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/inplace-element-removal/</loc>
+    <loc>https://justinmathew.com/posts/stock-tick-design/</loc>
+    <lastmod>2025-06-15T23:02:39+05:30</lastmod>
+  </url><url>
+    <loc>https://justinmathew.com/posts/group-anagrams/</loc>
+    <lastmod>2025-06-11T23:04:00+05:30</lastmod>
+  </url><url>
+    <loc>https://justinmathew.com/posts/removeduplicates/</loc>
+    <lastmod>2025-06-09T23:04:00+05:30</lastmod>
+  </url><url>
+    <loc>https://justinmathew.com/posts/inplace-element-removal/</loc>
     <lastmod>2025-06-07T11:54:39+05:30</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/mergingtwosortedarrays/</loc>
+    <loc>https://justinmathew.com/posts/mergingtwosortedarrays/</loc>
     <lastmod>2025-06-06T23:02:39+05:30</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/stock-tick-design/</loc>
-    <lastmod>2025-06-05T23:02:39+05:30</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/posts/grpc/</loc>
+    <loc>https://justinmathew.com/posts/grpc/</loc>
     <lastmod>2025-06-03T23:02:39+05:30</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/replication/</loc>
+    <loc>https://justinmathew.com/posts/replication/</loc>
     <lastmod>2025-05-20T19:02:39+05:30</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/ipv4-subneting-concepts/</loc>
+    <loc>https://justinmathew.com/posts/ipv4-subneting-concepts/</loc>
     <lastmod>2025-05-13T19:02:39+05:30</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/ipv4-utils/</loc>
+    <loc>https://justinmathew.com/posts/ipv4-utils/</loc>
     <lastmod>2025-05-13T19:02:39+05:30</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/mindblowing-over-engineering/</loc>
+    <loc>https://justinmathew.com/posts/mindblowing-over-engineering/</loc>
     <lastmod>2025-04-27T20:39:00-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/2025/04/blog-post.html</loc>
+    <loc>https://justinmathew.com/2025/04/blog-post.html</loc>
     <lastmod>2025-04-06T07:08:00-07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/2024/05/managing-concurrent-updates-with.html</loc>
+    <loc>https://justinmathew.com/2024/05/managing-concurrent-updates-with.html</loc>
     <lastmod>2024-05-30T10:21:00-07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/data-structures/</loc>
+    <loc>https://justinmathew.com/tags/data-structures/</loc>
     <lastmod>2024-03-19T13:11:00-07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/dynamicprogramming/</loc>
+    <loc>https://justinmathew.com/tags/dynamicprogramming/</loc>
     <lastmod>2024-03-19T13:11:00-07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/2024/03/httpswww.justinmathew.com202403dynamic-programming-revisiting.html.html</loc>
+    <loc>https://justinmathew.com/2024/03/httpswww.justinmathew.com202403dynamic-programming-revisiting.html.html</loc>
     <lastmod>2024-03-19T13:11:00-07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/</loc>
+    <loc>https://justinmathew.com/tags/</loc>
     <lastmod>2024-03-19T13:11:00-07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/2024/03/java-design-patterns-jdp.html</loc>
+    <loc>https://justinmathew.com/2024/03/java-design-patterns-jdp.html</loc>
     <lastmod>2024-03-07T17:23:00-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/2024/02/fed-27-2024-day-of-compassion-and.html</loc>
+    <loc>https://justinmathew.com/2024/02/fed-27-2024-day-of-compassion-and.html</loc>
     <lastmod>2024-02-27T09:55:00-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/2024/02/jump-game.html</loc>
+    <loc>https://justinmathew.com/2024/02/jump-game.html</loc>
     <lastmod>2024-02-22T17:18:00-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/2024/02/from-painful-tables-to-performance_15.html</loc>
+    <loc>https://justinmathew.com/2024/02/from-painful-tables-to-performance_15.html</loc>
     <lastmod>2024-02-15T20:39:00-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/2024/02/from-painful-tables-to-performance.html</loc>
+    <loc>https://justinmathew.com/2024/02/from-painful-tables-to-performance.html</loc>
     <lastmod>2024-02-11T17:18:00-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/2024/02/event-sourcing-moving-out-of-traditions.html</loc>
+    <loc>https://justinmathew.com/2024/02/event-sourcing-moving-out-of-traditions.html</loc>
     <lastmod>2024-02-06T17:59:00-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/2024/02/unlocking-hidden-patterns-wonders-of.html</loc>
-    <lastmod>2024-02-05T17:00:00-08:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/posts/ai-in-software-engineering-a-case-study/</loc>
-    <lastmod>2024-02-05T05:47:00-08:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/2024/02/designing-browser-history-feature.html</loc>
+    <loc>https://justinmathew.com/2024/02/designing-browser-history-feature.html</loc>
     <lastmod>2024-02-04T00:01:00-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/2024/01/an-early-morning-adventure.html</loc>
+    <loc>https://justinmathew.com/2024/01/an-early-morning-adventure.html</loc>
     <lastmod>2024-01-31T17:41:00-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/2022/04/an-engineers-view-to-religion.html</loc>
+    <loc>https://justinmathew.com/2022/04/an-engineers-view-to-religion.html</loc>
     <lastmod>2022-04-03T07:39:00-07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/2021/12/moving-from-wonderful-organiztion.html</loc>
+    <loc>https://justinmathew.com/2021/12/moving-from-wonderful-organiztion.html</loc>
     <lastmod>2021-12-23T23:20:00-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/2021/08/automate-upstream-update-using-github.html</loc>
+    <loc>https://justinmathew.com/2021/08/automate-upstream-update-using-github.html</loc>
     <lastmod>2021-08-26T10:22:00-07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/2021/05/cheap-fast-good.html</loc>
+    <loc>https://justinmathew.com/2021/05/cheap-fast-good.html</loc>
     <lastmod>2021-05-30T22:16:00-07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/2021/01/python-linked-list-implementation.html</loc>
+    <loc>https://justinmathew.com/2021/01/python-linked-list-implementation.html</loc>
     <lastmod>2021-01-04T08:21:00-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/custom-annotation/</loc>
+    <loc>https://justinmathew.com/tags/custom-annotation/</loc>
     <lastmod>2020-10-01T13:21:00-07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/2020/10/custom-annotations-in-spring-boot.html</loc>
+    <loc>https://justinmathew.com/2020/10/custom-annotations-in-spring-boot.html</loc>
     <lastmod>2020-10-01T13:21:00-07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/microservices/</loc>
+    <loc>https://justinmathew.com/tags/microservices/</loc>
     <lastmod>2020-10-01T13:21:00-07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/spring-boot/</loc>
+    <loc>https://justinmathew.com/tags/spring-boot/</loc>
     <lastmod>2020-10-01T13:21:00-07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/algorithms-and-data-structures-on-python-notes-2/</loc>
-    <lastmod>2020-09-30T10:57:00-07:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/data-structures-in-python/</loc>
-    <lastmod>2020-09-30T10:57:00-07:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/linkedlist/</loc>
-    <lastmod>2020-09-30T10:57:00-07:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/posts/-algorithms-and-data-structures-on-python-notes-1/</loc>
-    <lastmod>2020-09-20T11:23:00-07:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/factorial/</loc>
+    <loc>https://justinmathew.com/tags/factorial/</loc>
     <lastmod>2019-12-31T22:06:00-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/python/</loc>
+    <loc>https://justinmathew.com/tags/python/</loc>
     <lastmod>2019-12-31T22:06:00-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/2020/09/what-i-found-on-python-basics-1.html</loc>
+    <loc>https://justinmathew.com/2020/09/what-i-found-on-python-basics-1.html</loc>
     <lastmod>2019-12-31T22:06:00-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/python-unit-tests/</loc>
+    <loc>https://justinmathew.com/tags/python-unit-tests/</loc>
     <lastmod>2019-12-31T22:06:00-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/</loc>
+    <loc>https://justinmathew.com/categories/</loc>
   </url><url>
-    <loc>http://localhost:1313/search/</loc>
+    <loc>https://justinmathew.com/search/</loc>
   </url>
 </urlset>
