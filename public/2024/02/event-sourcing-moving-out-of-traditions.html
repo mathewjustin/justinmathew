@@ -1,25 +1,25 @@
 <!DOCTYPE html>
 <html lang="en" dir="auto">
 
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<head><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="noindex, nofollow">
+<meta name="robots" content="index, follow">
 <title>Event Sourcing - Moving out of traditions | Simplified version | Department of random technical stuffs</title>
 <meta name="keywords" content="">
 <meta name="description" content=" Introduction
 A colleague recommended Martin Kleppmann&rsquo;s &ldquo;Designing Data-Intensive Applications&rdquo; to me. Initially, I found the beginning somewhat tedious and opted for a non-linear approach, selecting topics of interest at random rather than reading from start to finish as one might with a novel. This strategy seemed fitting given the book&rsquo;s comprehensive coverage of software system design, akin to an engineering bible. Today, I&rsquo;ve chosen to delve into the concept of Event Sourcing. Let&rsquo;s explore this topic together.">
 <meta name="author" content="">
-<link rel="canonical" href="http://localhost:1313/2024/02/event-sourcing-moving-out-of-traditions.html">
-<link crossorigin="anonymous" href="http://localhost:1313/assets/css/stylesheet.f49d66caae9ea0fd43f21f29e71a8d3e284517ed770f2aa86fa012953ad3c9ef.css" integrity="sha256-9J1myq6eoP1D8h8p5xqNPihFF&#43;13Dyqob6ASlTrTye8=" rel="preload stylesheet" as="style">
-<link rel="icon" href="http://localhost:1313/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
-<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
-<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<link rel="canonical" href="https://justinmathew.com/2024/02/event-sourcing-moving-out-of-traditions.html">
+<link crossorigin="anonymous" href="https://justinmathew.com/assets/css/stylesheet.f49d66caae9ea0fd43f21f29e71a8d3e284517ed770f2aa86fa012953ad3c9ef.css" integrity="sha256-9J1myq6eoP1D8h8p5xqNPihFF&#43;13Dyqob6ASlTrTye8=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://justinmathew.com/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://justinmathew.com/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://justinmathew.com/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://justinmathew.com/apple-touch-icon.png">
+<link rel="mask-icon" href="https://justinmathew.com/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="en" href="http://localhost:1313/2024/02/event-sourcing-moving-out-of-traditions.html">
+<link rel="alternate" hreflang="en" href="https://justinmathew.com/2024/02/event-sourcing-moving-out-of-traditions.html">
 <noscript>
     <style>
         #theme-toggle,
@@ -56,7 +56,70 @@ A colleague recommended Martin Kleppmann&rsquo;s &ldquo;Designing Data-Intensive
         }
 
     </style>
-</noscript>
+</noscript><meta property="og:url" content="https://justinmathew.com/2024/02/event-sourcing-moving-out-of-traditions.html">
+  <meta property="og:site_name" content="Department of random technical stuffs">
+  <meta property="og:title" content="Event Sourcing - Moving out of traditions | Simplified version">
+  <meta property="og:description" content=" Introduction A colleague recommended Martin Kleppmann’s “Designing Data-Intensive Applications” to me. Initially, I found the beginning somewhat tedious and opted for a non-linear approach, selecting topics of interest at random rather than reading from start to finish as one might with a novel. This strategy seemed fitting given the book’s comprehensive coverage of software system design, akin to an engineering bible. Today, I’ve chosen to delve into the concept of Event Sourcing. Let’s explore this topic together.">
+  <meta property="og:locale" content="en-us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2024-02-06T17:59:00-08:00">
+    <meta property="article:modified_time" content="2024-02-06T17:59:00-08:00">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Event Sourcing - Moving out of traditions | Simplified version">
+<meta name="twitter:description" content=" Introduction
+A colleague recommended Martin Kleppmann&rsquo;s &ldquo;Designing Data-Intensive Applications&rdquo; to me. Initially, I found the beginning somewhat tedious and opted for a non-linear approach, selecting topics of interest at random rather than reading from start to finish as one might with a novel. This strategy seemed fitting given the book&rsquo;s comprehensive coverage of software system design, akin to an engineering bible. Today, I&rsquo;ve chosen to delve into the concept of Event Sourcing. Let&rsquo;s explore this topic together.">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://justinmathew.com/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Event Sourcing - Moving out of traditions | Simplified version",
+      "item": "https://justinmathew.com/2024/02/event-sourcing-moving-out-of-traditions.html"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Event Sourcing - Moving out of traditions | Simplified version",
+  "name": "Event Sourcing - Moving out of traditions | Simplified version",
+  "description": " Introduction A colleague recommended Martin Kleppmann\u0026rsquo;s \u0026ldquo;Designing Data-Intensive Applications\u0026rdquo; to me. Initially, I found the beginning somewhat tedious and opted for a non-linear approach, selecting topics of interest at random rather than reading from start to finish as one might with a novel. This strategy seemed fitting given the book\u0026rsquo;s comprehensive coverage of software system design, akin to an engineering bible. Today, I\u0026rsquo;ve chosen to delve into the concept of Event Sourcing. Let\u0026rsquo;s explore this topic together.\n",
+  "keywords": [
+    
+  ],
+  "articleBody": " Introduction A colleague recommended Martin Kleppmann’s “Designing Data-Intensive Applications” to me. Initially, I found the beginning somewhat tedious and opted for a non-linear approach, selecting topics of interest at random rather than reading from start to finish as one might with a novel. This strategy seemed fitting given the book’s comprehensive coverage of software system design, akin to an engineering bible. Today, I’ve chosen to delve into the concept of Event Sourcing. Let’s explore this topic together.\nWhy Event Sourcing?\nRelevance: It’s a critical concept in building scalable, resilient distributed systems and is widely applicable in modern software architectures, including microservices. Foundational Knowledge: Understanding event sourcing will deepen your knowledge of how large-scale systems manage state and handle data changes over time. Practical Application: It’s highly relevant to real-world systems, particularly in scenarios requiring audit trails, historical data analysis, or complex business transactions. Lets see an Order table schema below which is written on the traditional approach.\nTraditional Approach schema\nHere :\norder_id is a unique identifier for each order. customer_id links to a customers table (not shown) that contains customer details. order_date is the date and time the order was placed. total_amount is the total cost of the order. status could be values like ‘Placed’, ‘Paid’, ‘Shipped’, ‘Delivered’, etc. Simple right..?\nObviously you have seen this kind of schema in your career. 100% , All of us seen this.\nEvent Sourcing Approach Schema\nAnd a simplified orders table to store order IDs\nYou are starting to get what is event sourcing is now. But still doubtfull right, well everyone is will be doubtful until you see some real data. So lets insert some dummy data into the traditional table and to the event sourcing table. This will create four orders with different statuses in the orders table.\nNow the event sourcing data.\nIn this example Order 1 goes through the full lifecycle from being placed to delivery. Order 2 is placed and paid for but hasn’t been shipped yet. Order 3 is placed, paid for, and shipped, but not yet delivered. Order 4 is only placed. Event sourcing is much more descriptive when it comes to the historical events that have happened to an order. Imagine a bug occurred during the order placing flow; we can always replay this particular event and debug the system, instead of permanently losing that flow and saying “not reproducible,” then waiting for the next order placement to occur. You know, the infamous “not reproducible” bug.\nThe ideal places to apply this?\nConsidering the earlier discussion about the “not reproducible” bug, let’s contemplate its implications in more critical scenarios. Would a bank ever be content with labeling a transactional glitch as “not reproducible” and leaving it at that? Or imagine placing an order on Amazon, only to encounter an error during packaging that erroneously signals a payment problem. Would such explanations be satisfactory?\nEvent sourcing is well-suited for systems that undergo a series of discrete events, each affecting the system’s state.\nThis is just an introducton : Please watch/read the following videos to understand more\nhttps://www.youtube.com/watch?v=MA_3fPBFBtg. About linkedins uses of kafka\nEvent sourcing from martin kleppmann designing data-intensive applications\nSo that’s 10 Minutes in the morning!\n",
+  "wordCount" : "532",
+  "inLanguage": "en",
+  "datePublished": "2024-02-06T17:59:00-08:00",
+  "dateModified": "2024-02-06T17:59:00-08:00",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://justinmathew.com/2024/02/event-sourcing-moving-out-of-traditions.html"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Department of random technical stuffs",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://justinmathew.com/favicon.ico"
+    }
+  }
+}
+</script>
 </head>
 
 <body class="" id="top">
@@ -74,7 +137,7 @@ A colleague recommended Martin Kleppmann&rsquo;s &ldquo;Designing Data-Intensive
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="http://localhost:1313/" accesskey="h" title="Department of random technical stuffs (Alt + H)">Department of random technical stuffs</a>
+            <a href="https://justinmathew.com/" accesskey="h" title="Department of random technical stuffs (Alt + H)">Department of random technical stuffs</a>
             <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
@@ -100,7 +163,7 @@ A colleague recommended Martin Kleppmann&rsquo;s &ldquo;Designing Data-Intensive
         </div>
         <ul id="menu">
             <li>
-                <a href="http://localhost:1313/search/" title="Search (Alt &#43; /)" accesskey=/>
+                <a href="https://justinmathew.com/search/" title="Search (Alt &#43; /)" accesskey=/>
                     <span>Search</span>
                 </a>
             </li>
@@ -178,12 +241,26 @@ A colleague recommended Martin Kleppmann&rsquo;s &ldquo;Designing Data-Intensive
   <footer class="post-footer">
     <ul class="post-tags">
     </ul>
-  </footer>
+  </footer><script src="https://giscus.app/client.js"
+        data-repo="mathewjustin/justinmathew"
+        data-repo-id="R_kgDOOVcB9A"
+        data-category="General"
+        data-category-id="DIC_kwDOOVcB9M4Co3QS"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="preferred_color_scheme"
+        data-lang="en"
+        crossorigin="anonymous"
+        async>
+</script>
 </article>
     </main>
     
 <footer class="footer">
-        <span>&copy; 2025 <a href="http://localhost:1313/">Department of random technical stuffs</a></span> · 
+        <span>&copy; 2025 <a href="https://justinmathew.com/">Department of random technical stuffs</a></span> · 
 
     <span>
         Powered by

@@ -1,25 +1,25 @@
 <!DOCTYPE html>
 <html lang="en" dir="auto">
 
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<head><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="noindex, nofollow">
+<meta name="robots" content="index, follow">
 <title>Automate fetch upstream using github actions | Department of random technical stuffs</title>
 <meta name="keywords" content="">
 <meta name="description" content="      I like to fork interesting github repositories and experiment with it. Those who do this actively might have faced the problem of upstream sync, where we need to sync our repository with the upstream repository. Imagine you forked a repository contains some articles which are being updated everyday, you will like them to have it synced everyday. I do ;) 
   Github introduced a feature called fetch upstream this year to solve this issue. But in this case you need to click on the fetch upstream button by yourself, this article is for the lazy ones who want it to be done automatically. ">
 <meta name="author" content="">
-<link rel="canonical" href="http://localhost:1313/2021/08/automate-upstream-update-using-github.html">
-<link crossorigin="anonymous" href="http://localhost:1313/assets/css/stylesheet.f49d66caae9ea0fd43f21f29e71a8d3e284517ed770f2aa86fa012953ad3c9ef.css" integrity="sha256-9J1myq6eoP1D8h8p5xqNPihFF&#43;13Dyqob6ASlTrTye8=" rel="preload stylesheet" as="style">
-<link rel="icon" href="http://localhost:1313/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
-<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
-<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<link rel="canonical" href="https://justinmathew.com/2021/08/automate-upstream-update-using-github.html">
+<link crossorigin="anonymous" href="https://justinmathew.com/assets/css/stylesheet.f49d66caae9ea0fd43f21f29e71a8d3e284517ed770f2aa86fa012953ad3c9ef.css" integrity="sha256-9J1myq6eoP1D8h8p5xqNPihFF&#43;13Dyqob6ASlTrTye8=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://justinmathew.com/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://justinmathew.com/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://justinmathew.com/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://justinmathew.com/apple-touch-icon.png">
+<link rel="mask-icon" href="https://justinmathew.com/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="en" href="http://localhost:1313/2021/08/automate-upstream-update-using-github.html">
+<link rel="alternate" hreflang="en" href="https://justinmathew.com/2021/08/automate-upstream-update-using-github.html">
 <noscript>
     <style>
         #theme-toggle,
@@ -56,7 +56,70 @@
         }
 
     </style>
-</noscript>
+</noscript><meta property="og:url" content="https://justinmathew.com/2021/08/automate-upstream-update-using-github.html">
+  <meta property="og:site_name" content="Department of random technical stuffs">
+  <meta property="og:title" content="Automate fetch upstream using github actions">
+  <meta property="og:description" content=" I like to fork interesting github repositories and experiment with it. Those who do this actively might have faced the problem of upstream sync, where we need to sync our repository with the upstream repository. Imagine you forked a repository contains some articles which are being updated everyday, you will like them to have it synced everyday. I do ;) Github introduced a feature called fetch upstream this year to solve this issue. But in this case you need to click on the fetch upstream button by yourself, this article is for the lazy ones who want it to be done automatically. ">
+  <meta property="og:locale" content="en-us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2021-08-26T10:22:00-07:00">
+    <meta property="article:modified_time" content="2021-08-26T10:22:00-07:00">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Automate fetch upstream using github actions">
+<meta name="twitter:description" content="      I like to fork interesting github repositories and experiment with it. Those who do this actively might have faced the problem of upstream sync, where we need to sync our repository with the upstream repository. Imagine you forked a repository contains some articles which are being updated everyday, you will like them to have it synced everyday. I do ;) 
+  Github introduced a feature called fetch upstream this year to solve this issue. But in this case you need to click on the fetch upstream button by yourself, this article is for the lazy ones who want it to be done automatically. ">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://justinmathew.com/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Automate fetch upstream using github actions",
+      "item": "https://justinmathew.com/2021/08/automate-upstream-update-using-github.html"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Automate fetch upstream using github actions",
+  "name": "Automate fetch upstream using github actions",
+  "description": " I like to fork interesting github repositories and experiment with it. Those who do this actively might have faced the problem of upstream sync, where we need to sync our repository with the upstream repository. Imagine you forked a repository contains some articles which are being updated everyday, you will like them to have it synced everyday. I do ;) Github introduced a feature called fetch upstream this year to solve this issue. But in this case you need to click on the fetch upstream button by yourself, this article is for the lazy ones who want it to be done automatically. ",
+  "keywords": [
+    
+  ],
+  "articleBody": " I like to fork interesting github repositories and experiment with it. Those who do this actively might have faced the problem of upstream sync, where we need to sync our repository with the upstream repository. Imagine you forked a repository contains some articles which are being updated everyday, you will like them to have it synced everyday. I do ;) Github introduced a feature called fetch upstream this year to solve this issue. But in this case you need to click on the fetch upstream button by yourself, this article is for the lazy ones who want it to be done automatically. In this blog we are about to learn how to automate upstream fetch of any repository you cloned. We are using Github actions to do this. The below is the yaml configuration for my github action\nHere you can see the cron is set to run at midnight, also as you might have already noticed i have created a simple bat file to be excecuted, you can see it below. Next step is to configure a github action with the yml file we created. Go to Actions tab\nClick on New Workflow-\u003e Skip this and set up workflow yourself.\nHere you can select the yml file you created under your repository. Once you set it it up your fork will automatically sync every night. You can see this example live on my github repository : every-programmer-should-know\n",
+  "wordCount" : "238",
+  "inLanguage": "en",
+  "datePublished": "2021-08-26T10:22:00-07:00",
+  "dateModified": "2021-08-26T10:22:00-07:00",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://justinmathew.com/2021/08/automate-upstream-update-using-github.html"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Department of random technical stuffs",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://justinmathew.com/favicon.ico"
+    }
+  }
+}
+</script>
 </head>
 
 <body class="" id="top">
@@ -74,7 +137,7 @@
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="http://localhost:1313/" accesskey="h" title="Department of random technical stuffs (Alt + H)">Department of random technical stuffs</a>
+            <a href="https://justinmathew.com/" accesskey="h" title="Department of random technical stuffs (Alt + H)">Department of random technical stuffs</a>
             <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
@@ -100,7 +163,7 @@
         </div>
         <ul id="menu">
             <li>
-                <a href="http://localhost:1313/search/" title="Search (Alt &#43; /)" accesskey=/>
+                <a href="https://justinmathew.com/search/" title="Search (Alt &#43; /)" accesskey=/>
                     <span>Search</span>
                 </a>
             </li>
@@ -134,12 +197,26 @@
   <footer class="post-footer">
     <ul class="post-tags">
     </ul>
-  </footer>
+  </footer><script src="https://giscus.app/client.js"
+        data-repo="mathewjustin/justinmathew"
+        data-repo-id="R_kgDOOVcB9A"
+        data-category="General"
+        data-category-id="DIC_kwDOOVcB9M4Co3QS"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="preferred_color_scheme"
+        data-lang="en"
+        crossorigin="anonymous"
+        async>
+</script>
 </article>
     </main>
     
 <footer class="footer">
-        <span>&copy; 2025 <a href="http://localhost:1313/">Department of random technical stuffs</a></span> · 
+        <span>&copy; 2025 <a href="https://justinmathew.com/">Department of random technical stuffs</a></span> · 
 
     <span>
         Powered by

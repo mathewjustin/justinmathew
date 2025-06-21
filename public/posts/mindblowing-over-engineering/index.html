@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en" dir="auto">
 
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<head><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="noindex, nofollow">
+<meta name="robots" content="index, follow">
 <title>Enterprise Over Engineering | Department of random technical stuffs</title>
 <meta name="keywords" content="">
 <meta name="description" content="The Hidden Pitfalls of Overusing Design Patterns
@@ -14,16 +14,16 @@ Before we dive in, here&rsquo;s a quote from one of my favorite authors, Khaled 
 
 &ldquo;There is only one sin, only one. And that is theft. Every other sin is a variation of theft.&rdquo;">
 <meta name="author" content="">
-<link rel="canonical" href="http://localhost:1313/posts/mindblowing-over-engineering/">
-<link crossorigin="anonymous" href="http://localhost:1313/assets/css/stylesheet.f49d66caae9ea0fd43f21f29e71a8d3e284517ed770f2aa86fa012953ad3c9ef.css" integrity="sha256-9J1myq6eoP1D8h8p5xqNPihFF&#43;13Dyqob6ASlTrTye8=" rel="preload stylesheet" as="style">
-<link rel="icon" href="http://localhost:1313/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
-<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
-<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<link rel="canonical" href="https://justinmathew.com/posts/mindblowing-over-engineering/">
+<link crossorigin="anonymous" href="https://justinmathew.com/assets/css/stylesheet.f49d66caae9ea0fd43f21f29e71a8d3e284517ed770f2aa86fa012953ad3c9ef.css" integrity="sha256-9J1myq6eoP1D8h8p5xqNPihFF&#43;13Dyqob6ASlTrTye8=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://justinmathew.com/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://justinmathew.com/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://justinmathew.com/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://justinmathew.com/apple-touch-icon.png">
+<link rel="mask-icon" href="https://justinmathew.com/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/mindblowing-over-engineering/">
+<link rel="alternate" hreflang="en" href="https://justinmathew.com/posts/mindblowing-over-engineering/">
 <noscript>
     <style>
         #theme-toggle,
@@ -60,7 +60,77 @@ Before we dive in, here&rsquo;s a quote from one of my favorite authors, Khaled 
         }
 
     </style>
-</noscript>
+</noscript><meta property="og:url" content="https://justinmathew.com/posts/mindblowing-over-engineering/">
+  <meta property="og:site_name" content="Department of random technical stuffs">
+  <meta property="og:title" content="Enterprise Over Engineering">
+  <meta property="og:description" content="The Hidden Pitfalls of Overusing Design Patterns This is my story of using the Chain of Responsibility pattern after reading about it in a book while preparing for an interview.
+Yes — I actually used it in a real job. And well, it didn’t turn out the way I had imagined.
+Before we dive in, here’s a quote from one of my favorite authors, Khaled Hosseini (The Kite Runner):
+“There is only one sin, only one. And that is theft. Every other sin is a variation of theft.”">
+  <meta property="og:locale" content="en-us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-04-27T20:39:00-08:00">
+    <meta property="article:modified_time" content="2025-04-27T20:39:00-08:00">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Enterprise Over Engineering">
+<meta name="twitter:description" content="The Hidden Pitfalls of Overusing Design Patterns
+This is my story of using the Chain of Responsibility pattern after reading about it in a book while preparing for an interview.
+Yes — I actually used it in a real job. And well, it didn’t turn out the way I had imagined.
+Before we dive in, here&rsquo;s a quote from one of my favorite authors, Khaled Hosseini (The Kite Runner):
+
+&ldquo;There is only one sin, only one. And that is theft. Every other sin is a variation of theft.&rdquo;">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://justinmathew.com/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Enterprise Over Engineering",
+      "item": "https://justinmathew.com/posts/mindblowing-over-engineering/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Enterprise Over Engineering",
+  "name": "Enterprise Over Engineering",
+  "description": "The Hidden Pitfalls of Overusing Design Patterns This is my story of using the Chain of Responsibility pattern after reading about it in a book while preparing for an interview.\nYes — I actually used it in a real job. And well, it didn’t turn out the way I had imagined.\nBefore we dive in, here\u0026rsquo;s a quote from one of my favorite authors, Khaled Hosseini (The Kite Runner):\n\u0026ldquo;There is only one sin, only one. And that is theft. Every other sin is a variation of theft.\u0026rdquo;\n",
+  "keywords": [
+    
+  ],
+  "articleBody": "The Hidden Pitfalls of Overusing Design Patterns This is my story of using the Chain of Responsibility pattern after reading about it in a book while preparing for an interview.\nYes — I actually used it in a real job. And well, it didn’t turn out the way I had imagined.\nBefore we dive in, here’s a quote from one of my favorite authors, Khaled Hosseini (The Kite Runner):\n“There is only one sin, only one. And that is theft. Every other sin is a variation of theft.”\nJust like sins are not separate but variations of one mistake,\nI now believe that the root cause of most mistakes and vulnerabilities in an enterprise codebase is essentially the overuse of design patterns.\nAs I mentioned, this is my story of using Chain of Responsibility — and getting totally screwed because of it.\nIt was during a phase when I was actively preparing for interviews —\n(of course, like every other engineer, preparing to find a new job).\nRight then, a requirement came up:\nYou have an Excel sheet that gets uploaded to blob storage every day. Each row contains some order details. Each row’s information needs to be stored into multiple tables inside our beloved PostgreSQL database. One row could result in inserts across N tables. (Maybe in the future, they could send more fields, and we might have to map to extra tables.) (Pro tip: “Maybe later” will almost never come back as a clear requirement in engineering.) 😄\nThe code looked like the below. So clean I am a f*** great engineer now.\npublic interface RowHandler { void handle(OrderRow row, RowHandler next); } // Handler 1 - Validate format\npublic class ValidateFormatHandler implements RowHandler { @Override public void handle(OrderRow row, RowHandler next) { if (!row.isFormatValid()) { throw new RuntimeException(\"Invalid format in row: \" + row.getRowNumber()); } if (next != null) { next.handle(row, null); } } } // Handler 2 - Validate critical fields\npublic class ValidateCriticalFieldsHandler implements RowHandler { @Override public void handle(OrderRow row, RowHandler next) { if (row.getOrderAmount() == null) { throw new RuntimeException(\"Missing crucial field: Order Amount in row: \" + row.getRowNumber()); } if (next != null) { next.handle(row, null); } } } // Handler 3 - Save to database\npublic class SaveToDatabaseHandler implements RowHandler { @Override public void handle(OrderRow row, RowHandler next) { databaseService.save(row); // Final handler, no next } } How chain was called:\nRowHandler handlerChain = new ValidateFormatHandler(); handlerChain.handle(row, new ValidateCriticalFieldsHandler() .handle(row, new SaveToDatabaseHandler() ) ); It’s now neat. It follows all the prnciples i studied. DRY? Yes dry as hell. SOLID? Of yes super SOLID.\nIt’s nice and cool, running without any problems what so ever. But now we our code is about to face a very common issue in software engineering, that is “new requiremets”.\nFirst requirement, if a non critical field is missing just throw an error and skip processing the entire row and update the status as failed with a reaon, on the status table\nInitially it was a simple requirement validate and save the data. Now i am giong to handle some non critical errors. So the impact on the code?\nEach handler now needs a try catch. Somehow skip the processing of faulty rows Chain was originally designed to throw exceptions — now I had to catch and recover inside the chain. Results.\nI added messy try-catch inside handlers.\nChain became confusing: Should I throw or should I pass silently?\nSmall cracks started appearing.\n@Override public void handle(OrderRow row, RowHandler next) { try { if (row.getCustomerName() == null) { throw new NonCriticalFieldMissingException(\"Customer Name is missing in row: \" + row.getRowNumber()); } if (row.getDeliveryInstructions() == null) { throw new NonCriticalFieldMissingException(\"Delivery Instructions is missing in row: \" + row.getRowNumber()); } // Validation passed if (next != null) { next.handle(row, null); } } catch (NonCriticalFieldMissingException e) { System.out.println(\"Skipping row \" + row.getRowNumber() + \": \" + e.getMessage()); // update failure reason, clever and smart move } } } 🧹 What Changed in the Code: Phase 1 Aspect Before Phase 1 After Phase 1 Error Handling Exception would stop processing immediately Exceptions caught, skip faulty row, continue Handler Responsibilities Pure validation and passing to next handler Validation + error handling + deciding whether to continue Code Clarity Very clean and focused Slightly messy, handlers doing multiple things Risk Low (simple logic) Higher — missing catch could cause wrong behavior Debugging Easy to understand flow Hard to trace which row failed where After Phase 1, my neat Chain of Responsibility started leaking.\nEach handler was no longer just responsible for validation — it also had to handle skipping, catching exceptions, and deciding whether the next handler should even be called.\nWhat started as a clean “pass responsibility forward” model became a fragile, try-catch-infested mess.\n☠️ Phase 2: The Beginning of the End Just when I thought my patched-up Chain of Responsibility could survive a few more release cycles, the universe (read: product owner) had other plans.\nThe next requirement dropped like a nuke:\n📜 New Requirement: Stop Everything on Critical Error “If a critical field like ‘Order Amount’ is missing, stop processing the entire file immediately.” “Update the file status as FAILED with the error message.” “No skipping. No partial saving. Just die. Immediately.” What This Meant for the Code Now each handler needed the power to kill the entire processing flow. No more just skipping rows like earlier. Somehow, one row’s validation failure should abort everything — like pulling the emergency brake on a moving train. 🚂💥 😵 My Reaction At this point, my reaction was:\n“I am not going to throw away my precious Chain of Responsibility. No way.”\nSo I did what every engineer does when trying to cling onto a broken architecture:\n🛠 I invented a new Exception class. public class CrucialFailureException extends RuntimeException { public CrucialFailureException(String message) { super(message); } } This was my emergency eject button\nSo the handler will look like :\npublic class ValidateCriticalFieldsHandler implements RowHandler { @Override public void handle(OrderRow row, RowHandler next) { if (row.getOrderAmount() == null) { throw new CrucialFailureException(\"Critical field 'Order Amount' missing in row: \" + row.getRowNumber()); } if (next != null) { next.handle(row, null); } } } Now the main loop will be:\nRowHandler handlerChain = new ValidateNonCriticalFieldsHandler();\ntry { for (OrderRow row : uploadedRows) { handlerChain.handle(row, new ValidateCriticalFieldsHandler()); } updateFileStatusAsSuccess(fileId); } catch (CrucialFailureException e) { updateFileStatusAsFailed(fileId, e.getMessage()); System.out.println(\"Critical error occurred. Aborting file processing: \" + e.getMessage()); } …\n🧹 What Changed in the Code: Phase 2 Aspect Before Phase 2 After Phase 2 Error Handling One exception type for all validation issues Two exception types: normal vs crucial failure Control Flow Handlers passed forward normally Handlers could throw CrucialFailureException to abort everything Code Clarity Getting slightly messy Now two paths: “normal continue” and “critical death” Debugging Traceable with some effort Needed to track who threw which exception at what point Mental State Managing somehow “Okay, it’s working… but I’m scared to touch it now.” 😅 💀 Phase 3: The Final Requirement That Broke Everything 📜 Partial Success Requirement We cannot afford to lose all the good rows just because one bad row exists. If some rows have critical errors: Process whatever rows are valid. Store bad rows into an error table. Allow reprocessing of those rows after corrections. The file overall should still be marked partially successful. Also track how many rows were successful vs failed for reporting. My Final Realization After the “Partial Success with Reprocessing” requirement hit me like a truck,\nI finally sat back and truly understood:\nI should have just followed simple classes and a simple for-loop.\nThat’s it.\nNo fancy patterns.\nNo hero architecture.\nJust plain, boring, beautiful code.\n🎯 What I Would Do Today I would use plain Java classes — a simple ValidatorService, a DatabaseSaverService, and a StatusUpdater. I would use a straightforward for-loop: Validate each row. Capture errors. Save valid rows. Record partial success/failure cleanly. I would keep each responsibility small and dumb. No complicated object chains. No custom exception magic. No god-like context objects. Just small functions working together quietly like a simple assembly line. 🏭\nReal Wisdom I Learned Elegant design is not what looks good in interviews.\nIt’s what survives requirement changes without becoming a monster. Simple code is not “junior code.”\nIt’s senior code pretending to be junior so that it can survive. If your design needs a special exception just to keep working, it’s already dying. 🧹 Final Thought “When the problem is a simple Excel sheet, you don’t need the Avengers.\nYou just need a broomstick and a dustpan.” 🧹\n",
+  "wordCount" : "1427",
+  "inLanguage": "en",
+  "datePublished": "2025-04-27T20:39:00-08:00",
+  "dateModified": "2025-04-27T20:39:00-08:00",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://justinmathew.com/posts/mindblowing-over-engineering/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Department of random technical stuffs",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://justinmathew.com/favicon.ico"
+    }
+  }
+}
+</script>
 </head>
 
 <body class="" id="top">
@@ -78,7 +148,7 @@ Before we dive in, here&rsquo;s a quote from one of my favorite authors, Khaled 
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="http://localhost:1313/" accesskey="h" title="Department of random technical stuffs (Alt + H)">Department of random technical stuffs</a>
+            <a href="https://justinmathew.com/" accesskey="h" title="Department of random technical stuffs (Alt + H)">Department of random technical stuffs</a>
             <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
@@ -104,7 +174,7 @@ Before we dive in, here&rsquo;s a quote from one of my favorite authors, Khaled 
         </div>
         <ul id="menu">
             <li>
-                <a href="http://localhost:1313/search/" title="Search (Alt &#43; /)" accesskey=/>
+                <a href="https://justinmathew.com/search/" title="Search (Alt &#43; /)" accesskey=/>
                     <span>Search</span>
                 </a>
             </li>
@@ -423,12 +493,26 @@ You just need a broomstick and a dustpan.&rdquo;</strong> 🧹</p></blockquote>
   <footer class="post-footer">
     <ul class="post-tags">
     </ul>
-  </footer>
+  </footer><script src="https://giscus.app/client.js"
+        data-repo="mathewjustin/justinmathew"
+        data-repo-id="R_kgDOOVcB9A"
+        data-category="General"
+        data-category-id="DIC_kwDOOVcB9M4Co3QS"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="preferred_color_scheme"
+        data-lang="en"
+        crossorigin="anonymous"
+        async>
+</script>
 </article>
     </main>
     
 <footer class="footer">
-        <span>&copy; 2025 <a href="http://localhost:1313/">Department of random technical stuffs</a></span> · 
+        <span>&copy; 2025 <a href="https://justinmathew.com/">Department of random technical stuffs</a></span> · 
 
     <span>
         Powered by
