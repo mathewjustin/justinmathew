@@ -15,3 +15,5 @@ title = 'Department of random technical stuffs'
   name = "Search"
   url = "/search/"
   weight = 10    
+[params.comments]
+  enable=true
