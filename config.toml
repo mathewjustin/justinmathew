@@ -17,3 +17,5 @@ title = 'Department of random technical stuffs'
   weight = 10    
 [params.comments]
   enable=true
+[markup.goldmark.renderer]
+  unsafe = true

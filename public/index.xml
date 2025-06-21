@@ -6,8 +6,90 @@
     <description>Recent content on Department of random technical stuffs</description>
     <generator>Hugo -- 0.145.0</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 06 Apr 2025 07:08:00 -0700</lastBuildDate>
+    <lastBuildDate>Mon, 09 Jun 2025 23:04:00 +0530</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Remove more than two duplicates in-place</title>
+      <link>http://localhost:1313/posts/removeduplicates/</link>
+      <pubDate>Mon, 09 Jun 2025 23:04:00 +0530</pubDate>
+      <guid>http://localhost:1313/posts/removeduplicates/</guid>
+      <description>This is a medium level problem. I think it should be easy. But anyway, lets get to the code.</description>
+    </item>
+    <item>
+      <title>Inplace element removal an easy one</title>
+      <link>http://localhost:1313/posts/inplace-element-removal/</link>
+      <pubDate>Sat, 07 Jun 2025 11:54:39 +0530</pubDate>
+      <guid>http://localhost:1313/posts/inplace-element-removal/</guid>
+      <description>Its an easy problem. But every problem has a trick. This one is no different. I will try to explain the trick in this post.</description>
+    </item>
+    <item>
+      <title>The nicest way to merge two sorted arrays</title>
+      <link>http://localhost:1313/posts/mergingtwosortedarrays/</link>
+      <pubDate>Fri, 06 Jun 2025 23:02:39 +0530</pubDate>
+      <guid>http://localhost:1313/posts/mergingtwosortedarrays/</guid>
+      <description>This is one of the easy but tricky problems. To be really honest I also struggled with tihs one. I am writing this down, and the pitfalls of this problem, so that I can refer to this later.</description>
+    </item>
+    <item>
+      <title>Designing a Stock Ticker Service</title>
+      <link>http://localhost:1313/posts/stock-tick-design/</link>
+      <pubDate>Thu, 05 Jun 2025 23:02:39 +0530</pubDate>
+      <guid>http://localhost:1313/posts/stock-tick-design/</guid>
+      <description>I got pissed off by seeing system design interview videos on this</description>
+    </item>
+    <item>
+      <title>gRPC - The Witchcraft of Remote Procedure Calls</title>
+      <link>http://localhost:1313/posts/grpc/</link>
+      <pubDate>Tue, 03 Jun 2025 23:02:39 +0530</pubDate>
+      <guid>http://localhost:1313/posts/grpc/</guid>
+      <description>A deep dive into gRPC, its benefits, and how to implement it in a Spring Boot application.</description>
+    </item>
+    <item>
+      <title> Replication - Leaders and Followers</title>
+      <link>http://localhost:1313/posts/replication/</link>
+      <pubDate>Tue, 20 May 2025 19:02:39 +0530</pubDate>
+      <guid>http://localhost:1313/posts/replication/</guid>
+      <description>&lt;h2 id=&#34;replication---leaders-and-followers&#34;&gt;Replication - Leaders and Followers&lt;/h2&gt;
+&lt;p&gt;Replication, or read replica is a process of copy pasting data from a primary database to another database. This is done to improve performance, availability, and reliability of the database. Replication can be done in two ways: synchronous and asynchronous.&lt;/p&gt;
+&lt;p&gt;In synchronous replication, the primary database waits for the replica to acknowledge that it has received the data before it can proceed. This ensures that the data is always consistent between the primary and replica databases, but it can also slow down the performance of the primary database.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title> IP V4 Subnetting tricks and basics</title>
+      <link>http://localhost:1313/posts/ipv4-subneting-concepts/</link>
+      <pubDate>Tue, 13 May 2025 19:02:39 +0530</pubDate>
+      <guid>http://localhost:1313/posts/ipv4-subneting-concepts/</guid>
+      <description>&lt;h2 id=&#34;ip-v4-subnetting-tricks-and-basics&#34;&gt;IP V4 Subnetting tricks and basics&lt;/h2&gt;
+&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;As usual lets try to be little intellectual. By saying a qoute i got it from chatgpt.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;“Good subnetting is like good carpentry: measure twice, cut once.”&lt;/strong&gt;&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;What ever it means it doesnt matter. But the point is to understand the concept of subnetting and how it works.&lt;/p&gt;
+&lt;p&gt;This is somehow one of the most mind f**k*ng topic which i encoutered during my job. It simply confuses me all the time. Later i understood that i should simply sit and chat about it with my LLM. My LLM is the best thing it knows me and nowadays its my therapist. (You should try the therapy with LLM, it works like a charm).&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title> Utils</title>
+      <link>http://localhost:1313/posts/ipv4-utils/</link>
+      <pubDate>Tue, 13 May 2025 19:02:39 +0530</pubDate>
+      <guid>http://localhost:1313/posts/ipv4-utils/</guid>
+      <description>&lt;h1 id=&#34;first-tool-subnet-calculator&#34;&gt;First tool: Subnet Calculator&lt;/h1&gt;
+&lt;p&gt;If you want to calculate the subnet, you can use the following tool. It will help you to calculate the subnet, broadcast address, and usable IP addresses.&lt;/p&gt;
+&lt;div id=&#34;my-message&#34; style=&#34;padding:1rem;background:#f5f5f5;&#34;&gt;
+  Loading message...
+&lt;/div&gt;
+
+&lt;script src=&#34;http://localhost:1313/js/script.js&#34;&gt;&lt;/script&gt;</description>
+    </item>
+    <item>
+      <title>Enterprise Over Engineering</title>
+      <link>http://localhost:1313/posts/mindblowing-over-engineering/</link>
+      <pubDate>Sun, 27 Apr 2025 20:39:00 -0800</pubDate>
+      <guid>http://localhost:1313/posts/mindblowing-over-engineering/</guid>
+      <description>&lt;h1 id=&#34;the-hidden-pitfalls-of-overusing-design-patterns&#34;&gt;The Hidden Pitfalls of Overusing Design Patterns&lt;/h1&gt;
+&lt;p&gt;This is my story of using the &lt;strong&gt;Chain of Responsibility&lt;/strong&gt; pattern after reading about it in a book while preparing for an interview.&lt;br&gt;
+Yes — I actually used it in a real job. And well, it didn’t turn out the way I had imagined.&lt;/p&gt;
+&lt;p&gt;Before we dive in, here&amp;rsquo;s a quote from one of my favorite authors, Khaled Hosseini (&lt;em&gt;The Kite Runner&lt;/em&gt;):&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;&amp;ldquo;There is only one sin, only one. And that is theft. Every other sin is a variation of theft.&amp;rdquo;&lt;/strong&gt;&lt;/p&gt;</description>
+    </item>
     <item>
       <title>മധുരം മലയാളം. ഒരു മലയാളം പ്രോബ്ലം സോൾവിങ് </title>
       <link>http://localhost:1313/2025/04/blog-post.html</link>
@@ -144,6 +226,29 @@ There are three types of design patterns in Java:
       <guid>http://localhost:1313/2024/02/event-sourcing-moving-out-of-traditions.html</guid>
       <description>&lt;h2 id=&#34;introduction&#34;&gt; Introduction&lt;/h2&gt;
 &lt;p&gt;A colleague recommended Martin Kleppmann&amp;rsquo;s &amp;ldquo;Designing Data-Intensive Applications&amp;rdquo; to me. Initially, I found the beginning somewhat tedious and opted for a non-linear approach, selecting topics of interest at random rather than reading from start to finish as one might with a novel. This strategy seemed fitting given the book&amp;rsquo;s comprehensive coverage of software system design, akin to an engineering bible. Today, I&amp;rsquo;ve chosen to delve into the concept of Event Sourcing. Let&amp;rsquo;s explore this topic together.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Unlocking the Hidden Patterns: The Wonders of Binomial Coefficients and Pascal&#39;s Triangle</title>
+      <link>http://localhost:1313/2024/02/unlocking-hidden-patterns-wonders-of.html</link>
+      <pubDate>Mon, 05 Feb 2024 17:00:00 -0800</pubDate>
+      <guid>http://localhost:1313/2024/02/unlocking-hidden-patterns-wonders-of.html</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Understanding the Binomial Coefficient:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Imagine you have a group of 5 friends (let&amp;rsquo;s name them A, B, C, D, and E), and you want to select 3 of them to form a team for a game. The binomial coefficient (53)(35​) tells you how many different teams of 3 you can form from the 5 friends.&lt;/p&gt;
+&lt;p&gt;Breaking Down the Formula:&lt;/p&gt;
+&lt;p&gt;The formula for the binomial coefficient is:&lt;/p&gt;
+&lt;p&gt;$$
+\binom{n}{k} = \frac{n!}{k!(n - k)!}
+$$&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>AI In software engineering a case study</title>
+      <link>http://localhost:1313/posts/ai-in-software-engineering-a-case-study/</link>
+      <pubDate>Mon, 05 Feb 2024 05:47:00 -0800</pubDate>
+      <guid>http://localhost:1313/posts/ai-in-software-engineering-a-case-study/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Understanding the Binomial Coefficient:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Imagine you have a group of 5 friends (let&amp;rsquo;s name them A, B, C, D, and E), and you want to select 3 of them to form a team for a game. The binomial coefficient (53)(35​) tells you how many different teams of 3 you can form from the 5 friends.&lt;/p&gt;
+&lt;p&gt;Breaking Down the Formula:&lt;/p&gt;
+&lt;p&gt;The formula for the binomial coefficient is (��)=�!�!(�−�)!(kn​)=k!(n−k)!n!​. Let&amp;rsquo;s break it down using our example where �=5n=5 and �=3k=3:&lt;/p&gt;</description>
     </item>
     <item>
       <title>Designing a Browser History Feature</title>
@@ -306,6 +411,31 @@ linked\_list.traverse()
       <guid>http://localhost:1313/2020/10/custom-annotations-in-spring-boot.html</guid>
       <description>&lt;p&gt;           I had worked on spring framework extensively throughout my career. The one thing which I am always try to implement in any Spring project I work on is Custom annotation. Its a fancy stuff but useful in many ways. &lt;/p&gt;
 &lt;p&gt;         Say you have numerous micro services (Duplicate code bases which will f*** you up) running on your cluster, the best and first thing you do is - Build a common library to push all your model classes, so called util package of your organization :p and the fancy stuffs  . I am fortunate that I get to do all these experiments early on my career. So lets start with the problem.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Algorithms and Data Structures on Python - Notes 2</title>
+      <link>http://localhost:1313/posts/algorithms-and-data-structures-on-python-notes-2/</link>
+      <pubDate>Wed, 30 Sep 2020 10:57:00 -0700</pubDate>
+      <guid>http://localhost:1313/posts/algorithms-and-data-structures-on-python-notes-2/</guid>
+      <description>&lt;p&gt;** Linked list**&lt;/p&gt;
+&lt;p&gt;It needs a node class&lt;/p&gt;
+&lt;p&gt;It should have 2 basic characteristic&lt;/p&gt;
+&lt;p&gt;* Data&lt;/p&gt;
+&lt;p&gt;* Reference to the next node&lt;/p&gt;
+&lt;p&gt;It can be used to implement stack or queues. It does not allow random access as like in Array.&lt;/p&gt;
+&lt;p&gt;Obtaining a last node, locating a particular node requires an iteration over all or most of the items in the linked list. &lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;Advantage&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;* It is dynamic data structures(No need to specify size)&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title> Algorithms and Data Structures on Python  -   Notes 1</title>
+      <link>http://localhost:1313/posts/-algorithms-and-data-structures-on-python-notes-1/</link>
+      <pubDate>Sun, 20 Sep 2020 11:23:00 -0700</pubDate>
+      <guid>http://localhost:1313/posts/-algorithms-and-data-structures-on-python-notes-1/</guid>
+      <description>&lt;p&gt;** Data Structures Overview  **&lt;/p&gt;
+&lt;p&gt;          Bad programmers worry about code , good programmers worry about data structures and their relationships! &lt;/p&gt;
+&lt;p&gt;       Data structures provide efficient ways to store data. A proper data structure can boost an Algorithm. If we need to make a app performs good then we must care about selecting proper data structure.&lt;/p&gt;
+&lt;p&gt;     There is a tradeoff between running time complexity and memory time complexity. Eg. Dijktras algorithm with priority queue performs better but it will take more memory. If we need to minimize the memory then the application will be slow.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Python Unit Test: Basics 1</title>
