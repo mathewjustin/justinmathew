@@ -13,7 +13,7 @@ Breaking Down the Formula:
 The formula for the binomial coefficient is (��)=�!�!(�−�)!(kn​)=k!(n−k)!n!​. Let&rsquo;s break it down using our example where �=5n=5 and �=3k=3:">
 <meta name="author" content="">
 <link rel="canonical" href="http://localhost:1313/posts/ai-in-software-engineering-a-case-study/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.f49d66caae9ea0fd43f21f29e71a8d3e284517ed770f2aa86fa012953ad3c9ef.css" integrity="sha256-9J1myq6eoP1D8h8p5xqNPihFF&#43;13Dyqob6ASlTrTye8=" rel="preload stylesheet" as="style">
+<link crossorigin="anonymous" href="http://localhost:1313/assets/css/stylesheet.f49d66caae9ea0fd43f21f29e71a8d3e284517ed770f2aa86fa012953ad3c9ef.css" integrity="sha256-9J1myq6eoP1D8h8p5xqNPihFF&#43;13Dyqob6ASlTrTye8=" rel="preload stylesheet" as="style">
 <link rel="icon" href="http://localhost:1313/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
@@ -101,6 +101,11 @@ The formula for the binomial coefficient is (��)=�!�!(�−�)!(kn​)
             </div>
         </div>
         <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/search/" title="Search (Alt &#43; /)" accesskey=/>
+                    <span>Search</span>
+                </a>
+            </li>
         </ul>
     </nav>
 </header>
@@ -169,7 +174,7 @@ The formula for the binomial coefficient is (��)=�!�!(�−�)!(kn​)
 <p>The binomial coefficient formula (��)(kn​) gives us a way to calculate the number of unique groups (combinations) of �k items we can choose from a larger set of �n items, without caring about the order of selection. It corrects for the overcounting of arrangements (permutations) by dividing by the factorial of the group size �!k!, ensuring each unique group is only counted once.</p>
 <p>Now lets gets into the most interesting part. The pascals triangle and creating it with Binomial Coefficients.</p>
 <p>First lets start with writing a small program to print pascals matrix to the nth row.</p>
-<p>Idea behind this program is pretty simple List<!-- raw HTML omitted -->  basically represents Column<!-- raw HTML omitted --> or a matrix.  </p>
+<p>Idea behind this program is pretty simple List<List>  basically represents Column<Rows> or a matrix.  </p>
 <p>   Each rows first and last value will be one that we hard code. Then iterate over numRows and construct each rows. One small thing to notice here is the inner for loop it has to run from 1 to &lt; less than rowNum. Basically it runs 1, 2, 3 times from the 2nd  row. So basically rowNum-1 times it runs, basically skipping for first two rows.</p>
 <p>Lets move forward to  to understand the relation between binomial coefficient and the pascals triangle. If you look closely you can find something really interesting. Below is the representation of of pascals triangle </p>
 <p>If you did not catch this yet see the below which will unlock the hidden pattern of the relation between binomial coefficient and pascals triangle</p>

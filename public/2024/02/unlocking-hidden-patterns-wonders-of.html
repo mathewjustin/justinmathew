@@ -16,7 +16,7 @@ $$
 $$">
 <meta name="author" content="">
 <link rel="canonical" href="http://localhost:1313/2024/02/unlocking-hidden-patterns-wonders-of.html">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.f49d66caae9ea0fd43f21f29e71a8d3e284517ed770f2aa86fa012953ad3c9ef.css" integrity="sha256-9J1myq6eoP1D8h8p5xqNPihFF&#43;13Dyqob6ASlTrTye8=" rel="preload stylesheet" as="style">
+<link crossorigin="anonymous" href="http://localhost:1313/assets/css/stylesheet.f49d66caae9ea0fd43f21f29e71a8d3e284517ed770f2aa86fa012953ad3c9ef.css" integrity="sha256-9J1myq6eoP1D8h8p5xqNPihFF&#43;13Dyqob6ASlTrTye8=" rel="preload stylesheet" as="style">
 <link rel="icon" href="http://localhost:1313/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
@@ -104,6 +104,11 @@ $$">
             </div>
         </div>
         <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/search/" title="Search (Alt &#43; /)" accesskey=/>
+                    <span>Search</span>
+                </a>
+            </li>
         </ul>
     </nav>
 </header>
@@ -114,6 +119,12 @@ $$">
     
     <h1 class="post-title entry-hint-parent">
       Unlocking the Hidden Patterns: The Wonders of Binomial Coefficients and Pascal&#39;s Triangle
+      <span class="entry-hint" title="Draft">
+        <svg xmlns="http://www.w3.org/2000/svg" height="35" viewBox="0 -960 960 960" fill="currentColor">
+          <path
+            d="M160-410v-60h300v60H160Zm0-165v-60h470v60H160Zm0-165v-60h470v60H160Zm360 580v-123l221-220q9-9 20-13t22-4q12 0 23 4.5t20 13.5l37 37q9 9 13 20t4 22q0 11-4.5 22.5T862.09-380L643-160H520Zm300-263-37-37 37 37ZM580-220h38l121-122-18-19-19-18-122 121v38Zm141-141-19-18 37 37-18-19Z" />
+        </svg>
+      </span>
     </h1>
     <div class="post-meta"><span title='2024-02-05 17:00:00 -0800 -0800'>February 5, 2024</span>
 
@@ -170,7 +181,7 @@ $$</p>
 <p>The binomial coefficient formula (��)(kn​) gives us a way to calculate the number of unique groups (combinations) of �k items we can choose from a larger set of �n items, without caring about the order of selection. It corrects for the overcounting of arrangements (permutations) by dividing by the factorial of the group size �!k!, ensuring each unique group is only counted once.</p>
 <p>Now lets gets into the most interesting part. The pascals triangle and creating it with Binomial Coefficients.</p>
 <p>First lets start with writing a small program to print pascals matrix to the nth row.</p>
-<p>Idea behind this program is pretty simple List<!-- raw HTML omitted -->  basically represents Column<!-- raw HTML omitted --> or a matrix.  </p>
+<p>Idea behind this program is pretty simple List<List>  basically represents Column<Rows> or a matrix.  </p>
 <p>   Each rows first and last value will be one that we hard code. Then iterate over numRows and construct each rows. One small thing to notice here is the inner for loop it has to run from 1 to &lt; less than rowNum. Basically it runs 1, 2, 3 times from the 2nd  row. So basically rowNum-1 times it runs, basically skipping for first two rows.</p>
 <p>Lets move forward to  to understand the relation between binomial coefficient and the pascals triangle. If you look closely you can find something really interesting. Below is the representation of of pascals triangle </p>
 <p>If you did not catch this yet see the below which will unlock the hidden pattern of the relation between binomial coefficient and pascals triangle</p>

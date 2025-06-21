@@ -78,3 +78,6 @@ The broadcast address is the last address in the subnet, and it is used to send 
 
 ---
 #### This blog will continue as and when i find more tricky things w.r.t subnetting.
+asdasdas
+
+{{< embed-ts >}}

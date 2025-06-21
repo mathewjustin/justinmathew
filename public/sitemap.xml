@@ -3,10 +3,34 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>http://localhost:1313/</loc>
-    <lastmod>2025-04-06T07:08:00-07:00</lastmod>
+    <lastmod>2025-06-10T00:54:39+05:30</lastmod>
   </url><url>
     <loc>http://localhost:1313/posts/</loc>
-    <lastmod>2025-04-06T07:08:00-07:00</lastmod>
+    <lastmod>2025-06-10T00:54:39+05:30</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/inplace-element-removal/</loc>
+    <lastmod>2025-06-07T11:54:39+05:30</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/mergingtwosortedarrays/</loc>
+    <lastmod>2025-06-06T23:02:39+05:30</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/stock-tick-design/</loc>
+    <lastmod>2025-06-05T23:02:39+05:30</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/grpc/</loc>
+    <lastmod>2025-06-03T23:02:39+05:30</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/replication/</loc>
+    <lastmod>2025-05-20T19:02:39+05:30</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/ipv4-subneting-concepts/</loc>
+    <lastmod>2025-05-13T19:02:39+05:30</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/ipv4-utils/</loc>
+    <lastmod>2025-05-13T19:02:39+05:30</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/mindblowing-over-engineering/</loc>
+    <lastmod>2025-04-27T20:39:00-08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/2025/04/blog-post.html</loc>
     <lastmod>2025-04-06T07:08:00-07:00</lastmod>
@@ -44,6 +68,12 @@
     <loc>http://localhost:1313/2024/02/event-sourcing-moving-out-of-traditions.html</loc>
     <lastmod>2024-02-06T17:59:00-08:00</lastmod>
   </url><url>
+    <loc>http://localhost:1313/2024/02/unlocking-hidden-patterns-wonders-of.html</loc>
+    <lastmod>2024-02-05T17:00:00-08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/ai-in-software-engineering-a-case-study/</loc>
+    <lastmod>2024-02-05T05:47:00-08:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/2024/02/designing-browser-history-feature.html</loc>
     <lastmod>2024-02-04T00:01:00-08:00</lastmod>
   </url><url>
@@ -76,6 +106,18 @@
   </url><url>
     <loc>http://localhost:1313/tags/spring-boot/</loc>
     <lastmod>2020-10-01T13:21:00-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/algorithms-and-data-structures-on-python-notes-2/</loc>
+    <lastmod>2020-09-30T10:57:00-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/data-structures-in-python/</loc>
+    <lastmod>2020-09-30T10:57:00-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/linkedlist/</loc>
+    <lastmod>2020-09-30T10:57:00-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/-algorithms-and-data-structures-on-python-notes-1/</loc>
+    <lastmod>2020-09-20T11:23:00-07:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/factorial/</loc>
     <lastmod>2019-12-31T22:06:00-08:00</lastmod>
