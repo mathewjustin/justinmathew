@@ -1,8 +1,8 @@
 ---
-title: 'B-Tree a data structures -  Postgres Internals rabbit hole.. '
-date: 2025-29-05T05:47:00.000-08:00
+date: '2025-06-29T23:02:39+05:30'
 draft: false
-url: 
+title: 'B-Tree a data structures -  Postgres Internals rabbit hole..'
+description: 'Another sunday night, another rabbit hole.'
 ---
 ## Introduction
 
