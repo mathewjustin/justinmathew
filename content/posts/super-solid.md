@@ -1,5 +1,5 @@
 ---
-title: 'Solid Principles" 
+title: "Solid Principles" 
 date: 2025-11-06T11:23:00.002-07:00
 draft: false
 url: 
