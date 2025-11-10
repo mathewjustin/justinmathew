@@ -115,6 +115,61 @@ We will visit the remaing in the coming days. For now this is enough to understa
 
 ## Open/Closed Principle
 
+Just like we read about the SRP, I've collected some qoutes on open closed principles. You know why I collected them? because those one liners has then entire point of OCP. Our aim in the coming years to make sure our code is being understood by AI and AI will make only minimal changes to the code. We might have seen AI regenerating the entire code base with just one slight prompt. Well that's something which we should be avoiding. Our code should be written in a way that it is open for extension and closed for modification. Just like SRP the goal is to avoid motivation for change.
+
+So the quotes again:
+
+> "If adding a feature means touching stable code, you’re probably violating OCP" — I stole it from somewhere.
+
+This is so true in case of legacy applications. I've worked on some very old projects where adding a small change is considered to be risky and bring in regressions. This mostly happens when the code is closed for modification. There were cases where we put hundreds of if else conditions, run time flags to enable or disable a features. Run-time flags were the crazy ones we start with one flag then we end up having this flag for every small feature. Imagine there is an extension feature for feature A. What do we do? We add another flag. This leads to a combinatorial explosion of flags and conditions, making the codebase even more complex and harder to maintain. On legacy software products the first thing to identify before adding a new feature is to find out how to make a runtime flag for it. This is a clear sign of OCP violation. 
+
+I know I should't be preaching something which i practice less, But I am trying to get better at it.
+
+So lets take an example of the emailService we created in the previous section. 
+
+```class EmailService {
+  sendOrderConfirmation(order) {
+    // Send email
+    }
+}
+```
+So now this is just about sending an email. What if we have multiple email providers? For example, SendGrid, Amazon SES, SMTP etc. If we need to add support for multiple email providers, we should not be modifying the EmailService class. Instead we can create an interface for EmailProvider and implement different providers. 
+
+```
+interface EmailProvider {
+  send(email) {
+    throw new Error("Method 'send()' must be implemented.");
+  }
+}
+class SendGridProvider implements EmailProvider {
+  send(email) {
+    // Send email using SendGrid
+  }
+}
+class AmazonSESProvider implements EmailProvider {
+    send(email) {
+    // Send email using Amazon SES
+    }
+}
+class EmailService {
+    constructor(provider) {
+    this.provider = provider;
+    }
+    sendOrderConfirmation(order) {
+    const email = this.createEmail(order);
+    this.provider.send(email);
+    }
+    createEmail(order) {
+    // Create email content
+    }
+}
+```
+For example in Spring boot we can have multiple implementations for email service, and based on lets say which IaaS we are deploying the application we can choose the implementation at runtime using dependency injection. This is very usual for example the same app we deploy on AWS might use Amazon SES provider, while the one on Azure might use SendGrid provider.
+
+Usually it happens for applications which are deployed on multiple cloud providers, like SaaS products. I am fortunate to have worked on such products. Where the same code will be implemented differently based on the cloud provider. 
+
+Now the above code is open for extension, we can add more providers without modifying the EmailService class. This is the essence of OCP.
+
 ## Liskov Substitution Principle
 
 ## Interface Segregation Principle
