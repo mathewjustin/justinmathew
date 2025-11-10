@@ -125,6 +125,8 @@ This is so true in case of legacy applications. I've worked on some very old pro
 
 I know I should't be preaching something which i practice less, But I am trying to get better at it.
 
+Side note: I am oversimplifying OCP here, we don't write this in production grade code. When we write code in production if its just an email sending service, it will incluide retries, proper logging, metrics, outbox pattern..etc and etc. But this is just an evening read, and enough to crack the idea of OCP.
+
 So lets take an example of the emailService we created in the previous section. 
 
 ```class EmailService {
