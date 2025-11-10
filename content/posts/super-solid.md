@@ -121,7 +121,7 @@ So the quotes again:
 
 > "If adding a feature means touching stable code, you’re probably violating OCP" — I stole it from somewhere.
 
-This is so true in case of legacy applications. I've worked on some very old projects where adding a small change is considered to be risky and bring in regressions. This mostly happens when the code is closed for modification. There were cases where we put hundreds of if else conditions, run time flags to enable or disable a features. Run-time flags were the crazy ones we start with one flag then we end up having this flag for every small feature. Imagine there is an extension feature for feature A. What do we do? We add another flag. This leads to a combinatorial explosion of flags and conditions, making the codebase even more complex and harder to maintain. On legacy software products the first thing to identify before adding a new feature is to find out how to make a runtime flag for it. This is a clear sign of OCP violation. 
+This is so true in case of legacy applications. I've worked on some very old projects where adding a small change is considered to be risky and bring in regressions. This mostly happens when the code is closed for extensions. There were cases where we put hundreds of if else conditions, run time flags to enable or disable a features. Run-time flags were the crazy ones we start with one flag then we end up having this flag for every small feature. Imagine there is an extension feature for feature A. What do we do? We add another flag. This leads to a combinatorial explosion of flags and conditions, making the codebase even more complex and harder to maintain. On legacy software products the first thing to identify before adding a new feature is to find out how to make a runtime flag for it. This is a clear sign of OCP violation. 
 
 I know I should't be preaching something which i practice less, But I am trying to get better at it.
 
@@ -169,6 +169,7 @@ For example in Spring boot we can have multiple implementations for email servic
 Usually it happens for applications which are deployed on multiple cloud providers, like SaaS products. I am fortunate to have worked on such products. Where the same code will be implemented differently based on the cloud provider. 
 
 Now the above code is open for extension, we can add more providers without modifying the EmailService class. This is the essence of OCP.
+
 
 ## Liskov Substitution Principle
 
