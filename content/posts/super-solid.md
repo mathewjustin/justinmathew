@@ -175,6 +175,56 @@ Now the above code is open for extension, we can add more providers without modi
 
 ## Liskov Substitution Principle
 
+You know what, this name Liskov substitution principle is sometimes intemidating. Such a facncy name. But the idea is simple. Look at this image which i stole from the globalnerdy.
+
+![alt text](image.png)
+
+Well if i put this into words. In mathematics Square "is a" Rectangle. You are getting the point..? "is a". So based on this you can make square from rectangle, what could go wrong in this? Let's just write it down..
+
+``
+class Rectangle {
+  constructor(width, height) {
+    this.width = width;
+    this.height = height;
+  }
+
+  setWidth(width) {
+    this.width = width;
+  }
+
+  setHeight(height) {
+    this.height = height;
+  }
+
+  getArea() {
+    return this.width * this.height;
+  }
+}
+
+class Square extends Rectangle {
+  constructor(side) {
+    super(side, side);
+  }
+
+  setWidth(width) {
+    this.width = width;
+    this.height = width; // Square must have equal sides
+  }
+
+  setHeight(height) {
+    this.width = height;
+    this.height = height; // Square must have equal sides
+  }
+}
+```
+So now Mathematically yes square is a rectangle, But this code? hmmm...
+It has a problem. This violates Liskoves substitution principle. Why?
+
+The moment you replace Square at the place you want to use Rectangle, you will mess up the code. Liskov substitution says you should be substitutable from the classes it derived. Can i substiture Rectangle with Square in this case? No we cant. 
+
+The moral of the story is : model your classes based on behaviours not on properties; model your data based on properties and not on behaviours. If it behaves like a duck, it's certainly a bird.
+
+
 ## Interface Segregation Principle
 
 ## Dependency Inversion Principle
