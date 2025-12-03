@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html lang="en" dir="auto">
 
-<head><meta charset="utf-8">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="index, follow">
+<meta name="robots" content="noindex, nofollow">
 <title>Grouping anagrams | Department of random technical stuffs</title>
 <meta name="keywords" content="">
 <meta name="description" content="A medium but easy one!">
 <meta name="author" content="">
-<link rel="canonical" href="https://justinmathew.com/posts/group-anagrams/">
-<link crossorigin="anonymous" href="https://justinmathew.com/assets/css/stylesheet.f49d66caae9ea0fd43f21f29e71a8d3e284517ed770f2aa86fa012953ad3c9ef.css" integrity="sha256-9J1myq6eoP1D8h8p5xqNPihFF&#43;13Dyqob6ASlTrTye8=" rel="preload stylesheet" as="style">
-<link rel="icon" href="https://justinmathew.com/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="https://justinmathew.com/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="https://justinmathew.com/favicon-32x32.png">
-<link rel="apple-touch-icon" href="https://justinmathew.com/apple-touch-icon.png">
-<link rel="mask-icon" href="https://justinmathew.com/safari-pinned-tab.svg">
+<link rel="canonical" href="http://localhost:1313/posts/group-anagrams/">
+<link crossorigin="anonymous" href="http://localhost:1313/assets/css/stylesheet.f49d66caae9ea0fd43f21f29e71a8d3e284517ed770f2aa86fa012953ad3c9ef.css" integrity="sha256-9J1myq6eoP1D8h8p5xqNPihFF&#43;13Dyqob6ASlTrTye8=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="en" href="https://justinmathew.com/posts/group-anagrams/">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/group-anagrams/">
 <noscript>
     <style>
         #theme-toggle,
@@ -55,69 +55,7 @@
         }
 
     </style>
-</noscript><meta property="og:url" content="https://justinmathew.com/posts/group-anagrams/">
-  <meta property="og:site_name" content="Department of random technical stuffs">
-  <meta property="og:title" content="Grouping anagrams">
-  <meta property="og:description" content="A medium but easy one!">
-  <meta property="og:locale" content="en-us">
-  <meta property="og:type" content="article">
-    <meta property="article:section" content="posts">
-    <meta property="article:published_time" content="2025-06-11T23:04:00+05:30">
-    <meta property="article:modified_time" content="2025-06-11T23:04:00+05:30">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Grouping anagrams">
-<meta name="twitter:description" content="A medium but easy one!">
-
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position":  1 ,
-      "name": "Posts",
-      "item": "https://justinmathew.com/posts/"
-    }, 
-    {
-      "@type": "ListItem",
-      "position":  2 ,
-      "name": "Grouping anagrams",
-      "item": "https://justinmathew.com/posts/group-anagrams/"
-    }
-  ]
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BlogPosting",
-  "headline": "Grouping anagrams",
-  "name": "Grouping anagrams",
-  "description": "A medium but easy one!",
-  "keywords": [
-    
-  ],
-  "articleBody": "Problem Given an array of strings strs, group the anagrams together. You can return the answer in any order.\nExample 1:\nInput: strs = [“eat”,“tea”,“tan”,“ate”,“nat”,“bat”]\nOutput: [[“bat”],[“nat”,“tan”],[“ate”,“eat”,“tea”]]\nExplanation:\nThere is no string in strs that can be rearranged to form “bat”. The strings “nat” and “tan” are anagrams as they can be rearranged to form each other. The strings “ate”, “eat”, and “tea” are anagrams as they can be rearranged to form each other. Example 2:\nInput: strs = [\"\"]\nOutput: [[\"\"]]\nExample 3:\nInput: strs = [“a”]\nOutput: [[“a”]]\nSolution or Intuition This doesn’t really deseve my excalidraw diagram. But I will try to explain the logic here.\nSimply take out one string, sort them and use it as a key in a map.\nThe map structure will be like this:\nMap\u003cString, List\u003cString\u003e\u003e map = new HashMap\u003c\u003e(); Then for each string in the input array, sort it and add it to the map.\n/** * @author Justin Mathew @dev_io */ public class Anagram { public static List\u003cList\u003cString\u003e\u003e groupAnagrams(String[] strs) { Map\u003cString, List\u003cString\u003e\u003e map = new HashMap\u003c\u003e(); for (String s : strs) { char[] chars = s.toCharArray(); Arrays.sort(chars); String key = new String(chars); map.computeIfAbsent(key, k -\u003e new ArrayList\u003c\u003e()).add(s); } return new ArrayList\u003c\u003e(map.values()); } } Time complexity: For each string:\n1.\tSorting the string: O(K log K) for each string (since average string length is K) 2.\tBuilding the key and inserting into a map: O(1) amortized (hash map insert) Across all strings: Total = N * O(K log K) Time Complexity: O(N * K log K) Space complexity: •\tMap storage: Stores up to N strings → O(N * K) •\tSorted key strings: You generate sorted strings as keys → up to O(N * K) •\tFinal list of grouped anagrams: again O(N * K) Space Complexity: O(N * K) Yeah this is kind of nice. I like this solution. We can actually implement this with pure lambda but i cant do without an LLM at my disposal.\n",
-  "wordCount" : "329",
-  "inLanguage": "en",
-  "datePublished": "2025-06-11T23:04:00+05:30",
-  "dateModified": "2025-06-11T23:04:00+05:30",
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "https://justinmathew.com/posts/group-anagrams/"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "Department of random technical stuffs",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://justinmathew.com/favicon.ico"
-    }
-  }
-}
-</script>
+</noscript>
 </head>
 
 <body class="" id="top">
@@ -135,7 +73,7 @@
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="https://justinmathew.com/" accesskey="h" title="Department of random technical stuffs (Alt + H)">Department of random technical stuffs</a>
+            <a href="http://localhost:1313/" accesskey="h" title="Department of random technical stuffs (Alt + H)">Department of random technical stuffs</a>
             <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
@@ -161,8 +99,13 @@
         </div>
         <ul id="menu">
             <li>
-                <a href="https://justinmathew.com/search/" title="Search (Alt &#43; /)" accesskey=/>
+                <a href="http://localhost:1313/search/" title="Search (Alt &#43; /)" accesskey=/>
                     <span>Search</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/index.xml" title="RSS">
+                    <span>RSS</span>
                 </a>
             </li>
         </ul>
@@ -255,11 +198,13 @@ Example 2:</p>
         crossorigin="anonymous"
         async>
 </script>
+
+
 </article>
     </main>
     
 <footer class="footer">
-        <span>&copy; 2025 <a href="https://justinmathew.com/">Department of random technical stuffs</a></span> · 
+        <span>&copy; 2025 <a href="http://localhost:1313/">Department of random technical stuffs</a></span> · 
 
     <span>
         Powered by

@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en" dir="auto">
 
-<head><meta charset="utf-8">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="index, follow">
+<meta name="robots" content="noindex, nofollow">
 <title>Python linked List implementation | Department of random technical stuffs</title>
 <meta name="keywords" content="">
 <meta name="description" content="  
@@ -92,16 +92,16 @@ linked\_list.deleteAtTail()
 linked\_list.traverse()
 ">
 <meta name="author" content="">
-<link rel="canonical" href="https://justinmathew.com/2021/01/python-linked-list-implementation.html">
-<link crossorigin="anonymous" href="https://justinmathew.com/assets/css/stylesheet.f49d66caae9ea0fd43f21f29e71a8d3e284517ed770f2aa86fa012953ad3c9ef.css" integrity="sha256-9J1myq6eoP1D8h8p5xqNPihFF&#43;13Dyqob6ASlTrTye8=" rel="preload stylesheet" as="style">
-<link rel="icon" href="https://justinmathew.com/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="https://justinmathew.com/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="https://justinmathew.com/favicon-32x32.png">
-<link rel="apple-touch-icon" href="https://justinmathew.com/apple-touch-icon.png">
-<link rel="mask-icon" href="https://justinmathew.com/safari-pinned-tab.svg">
+<link rel="canonical" href="http://localhost:1313/2021/01/python-linked-list-implementation.html">
+<link crossorigin="anonymous" href="http://localhost:1313/assets/css/stylesheet.f49d66caae9ea0fd43f21f29e71a8d3e284517ed770f2aa86fa012953ad3c9ef.css" integrity="sha256-9J1myq6eoP1D8h8p5xqNPihFF&#43;13Dyqob6ASlTrTye8=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="en" href="https://justinmathew.com/2021/01/python-linked-list-implementation.html">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/2021/01/python-linked-list-implementation.html">
 <noscript>
     <style>
         #theme-toggle,
@@ -138,152 +138,7 @@ linked\_list.traverse()
         }
 
     </style>
-</noscript><meta property="og:url" content="https://justinmathew.com/2021/01/python-linked-list-implementation.html">
-  <meta property="og:site_name" content="Department of random technical stuffs">
-  <meta property="og:title" content="Python linked List implementation">
-  <meta property="og:description" content=" class Node: def \_\_init\_\_(self, data): self.data=data self.nextNode=None class LinkedLIst: def \_\_init\_\_(self): self.head = None self.numberOFNodes=0 \# Here we get o(1) constant running time complexity for insertion. def insert\_start(self,data): self.numberOFNodes=self.numberOFNodes&#43;1 new\_node = Node(data) if not self.head: self.head=new\_node else: new\_node.nextNode=self.head self.head = new\_node #Linear running time o(n) def insert\_end(self,data): self.numberOFNodes=self.numberOFNodes&#43;1 new\_node=Node(data) actual\_node=self.head while actual\_node.nextNode is not None: actual\_node=actual\_node.nextNode actual\_node.nextNode=new\_node def size\_of\_list(self): actual\_node = self.head while actual\_node is not None: print(actual\_node) actual\_node=actual\_node.nextNode def traverse(self): actual\_node=self.head while actual\_node is not None: print(actual\_node.data) actual\_node=actual\_node.nextNode def deleteAtHead(self): self.head=self.head.nextNode self.numberOFNodes=self.numberOFNodes-1 def deleteAtTail(self): actual\_node = self.head while actual\_node.nextNode.nextNode is not None: actual\_node=actual\_node.nextNode actual\_node.nextNode=None self.numberOFNodes=self.numberOFNodes-1 linked\_list=LinkedLIst() linked\_list.insert\_start(4) linked\_list.insert\_start(3) linked\_list.insert\_start(&#39;A String type&#39;) linked\_list.insert\_start(1.232) linked\_list.insert\_end(12.232) linked\_list.traverse() print(&#39;Deleting at the front&#39;) linked\_list.deleteAtHead() linked\_list.traverse() print(&#39;Delete at the last position&#39;) linked\_list.deleteAtTail() linked\_list.traverse() ">
-  <meta property="og:locale" content="en-us">
-  <meta property="og:type" content="article">
-    <meta property="article:section" content="posts">
-    <meta property="article:published_time" content="2021-01-04T08:21:00-08:00">
-    <meta property="article:modified_time" content="2021-01-04T08:21:00-08:00">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Python linked List implementation">
-<meta name="twitter:description" content="  
-class Node:  
-     def \_\_init\_\_(self, data):  
-         self.data=data  
-         self.nextNode=None  
-  
-  
-  
-class LinkedLIst:  
-  
-    def \_\_init\_\_(self):  
-        self.head = None  
-  self.numberOFNodes=0  
-  \# Here we get o(1) constant running time complexity for insertion.  
-  def insert\_start(self,data):  
-  
-        self.numberOFNodes=self.numberOFNodes&#43;1  
-  new\_node = Node(data)  
-  
-        if not self.head:  
-            self.head=new\_node  
-        else:  
-            new\_node.nextNode=self.head  
-            self.head = new\_node  
- #Linear running time o(n)  
-  def insert\_end(self,data):  
-        self.numberOFNodes=self.numberOFNodes&#43;1  
-  new\_node=Node(data)  
-  
-        actual\_node=self.head  
-  
-        while actual\_node.nextNode is not None:  
-            actual\_node=actual\_node.nextNode  
-  
-        actual\_node.nextNode=new\_node  
-  
-    def size\_of\_list(self):  
-  
-        actual\_node = self.head  
-  
-        while actual\_node is not None:  
-            print(actual\_node)  
-            actual\_node=actual\_node.nextNode  
-  
-    def traverse(self):  
-        actual\_node=self.head  
-  
-        while actual\_node is not None:  
-            print(actual\_node.data)  
-            actual\_node=actual\_node.nextNode  
-  
-    def deleteAtHead(self):  
-  
-        self.head=self.head.nextNode  
-        self.numberOFNodes=self.numberOFNodes-1  
-  
-  def deleteAtTail(self):  
-  
-        actual\_node = self.head  
-  
-        while actual\_node.nextNode.nextNode is not None:  
-            actual\_node=actual\_node.nextNode  
-  
-        actual\_node.nextNode=None  
-  self.numberOFNodes=self.numberOFNodes-1  
-  
-  
-  
-linked\_list=LinkedLIst()  
-linked\_list.insert\_start(4)  
-linked\_list.insert\_start(3)  
-linked\_list.insert\_start(&#39;A String type&#39;)  
-linked\_list.insert\_start(1.232)  
-linked\_list.insert\_end(12.232)  
-linked\_list.traverse()  
-  
-print(&#39;Deleting at the front&#39;)  
-linked\_list.deleteAtHead()  
-linked\_list.traverse()  
-  
-print(&#39;Delete at the last position&#39;)  
-linked\_list.deleteAtTail()  
-linked\_list.traverse()
-">
-
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position":  1 ,
-      "name": "Posts",
-      "item": "https://justinmathew.com/posts/"
-    }, 
-    {
-      "@type": "ListItem",
-      "position":  2 ,
-      "name": "Python linked List implementation",
-      "item": "https://justinmathew.com/2021/01/python-linked-list-implementation.html"
-    }
-  ]
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BlogPosting",
-  "headline": "Python linked List implementation",
-  "name": "Python linked List implementation",
-  "description": " class Node: def \\_\\_init\\_\\_(self, data): self.data=data self.nextNode=None class LinkedLIst: def \\_\\_init\\_\\_(self): self.head = None self.numberOFNodes=0 \\# Here we get o(1) constant running time complexity for insertion. def insert\\_start(self,data): self.numberOFNodes=self.numberOFNodes+1 new\\_node = Node(data) if not self.head: self.head=new\\_node else: new\\_node.nextNode=self.head self.head = new\\_node #Linear running time o(n) def insert\\_end(self,data): self.numberOFNodes=self.numberOFNodes+1 new\\_node=Node(data) actual\\_node=self.head while actual\\_node.nextNode is not None: actual\\_node=actual\\_node.nextNode actual\\_node.nextNode=new\\_node def size\\_of\\_list(self): actual\\_node = self.head while actual\\_node is not None: print(actual\\_node) actual\\_node=actual\\_node.nextNode def traverse(self): actual\\_node=self.head while actual\\_node is not None: print(actual\\_node.data) actual\\_node=actual\\_node.nextNode def deleteAtHead(self): self.head=self.head.nextNode self.numberOFNodes=self.numberOFNodes-1 def deleteAtTail(self): actual\\_node = self.head while actual\\_node.nextNode.nextNode is not None: actual\\_node=actual\\_node.nextNode actual\\_node.nextNode=None self.numberOFNodes=self.numberOFNodes-1 linked\\_list=LinkedLIst() linked\\_list.insert\\_start(4) linked\\_list.insert\\_start(3) linked\\_list.insert\\_start(\u0026#39;A String type\u0026#39;) linked\\_list.insert\\_start(1.232) linked\\_list.insert\\_end(12.232) linked\\_list.traverse() print(\u0026#39;Deleting at the front\u0026#39;) linked\\_list.deleteAtHead() linked\\_list.traverse() print(\u0026#39;Delete at the last position\u0026#39;) linked\\_list.deleteAtTail() linked\\_list.traverse() ",
-  "keywords": [
-    
-  ],
-  "articleBody": " class Node: def \\_\\_init\\_\\_(self, data): self.data=data self.nextNode=None class LinkedLIst: def \\_\\_init\\_\\_(self): self.head = None self.numberOFNodes=0 \\# Here we get o(1) constant running time complexity for insertion. def insert\\_start(self,data): self.numberOFNodes=self.numberOFNodes+1 new\\_node = Node(data) if not self.head: self.head=new\\_node else: new\\_node.nextNode=self.head self.head = new\\_node #Linear running time o(n) def insert\\_end(self,data): self.numberOFNodes=self.numberOFNodes+1 new\\_node=Node(data) actual\\_node=self.head while actual\\_node.nextNode is not None: actual\\_node=actual\\_node.nextNode actual\\_node.nextNode=new\\_node def size\\_of\\_list(self): actual\\_node = self.head while actual\\_node is not None: print(actual\\_node) actual\\_node=actual\\_node.nextNode def traverse(self): actual\\_node=self.head while actual\\_node is not None: print(actual\\_node.data) actual\\_node=actual\\_node.nextNode def deleteAtHead(self): self.head=self.head.nextNode self.numberOFNodes=self.numberOFNodes-1 def deleteAtTail(self): actual\\_node = self.head while actual\\_node.nextNode.nextNode is not None: actual\\_node=actual\\_node.nextNode actual\\_node.nextNode=None self.numberOFNodes=self.numberOFNodes-1 linked\\_list=LinkedLIst() linked\\_list.insert\\_start(4) linked\\_list.insert\\_start(3) linked\\_list.insert\\_start('A String type') linked\\_list.insert\\_start(1.232) linked\\_list.insert\\_end(12.232) linked\\_list.traverse() print('Deleting at the front') linked\\_list.deleteAtHead() linked\\_list.traverse() print('Delete at the last position') linked\\_list.deleteAtTail() linked\\_list.traverse() ",
-  "wordCount" : "118",
-  "inLanguage": "en",
-  "datePublished": "2021-01-04T08:21:00-08:00",
-  "dateModified": "2021-01-04T08:21:00-08:00",
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "https://justinmathew.com/2021/01/python-linked-list-implementation.html"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "Department of random technical stuffs",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://justinmathew.com/favicon.ico"
-    }
-  }
-}
-</script>
+</noscript>
 </head>
 
 <body class="" id="top">
@@ -301,7 +156,7 @@ linked\_list.traverse()
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="https://justinmathew.com/" accesskey="h" title="Department of random technical stuffs (Alt + H)">Department of random technical stuffs</a>
+            <a href="http://localhost:1313/" accesskey="h" title="Department of random technical stuffs (Alt + H)">Department of random technical stuffs</a>
             <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
@@ -327,8 +182,13 @@ linked\_list.traverse()
         </div>
         <ul id="menu">
             <li>
-                <a href="https://justinmathew.com/search/" title="Search (Alt &#43; /)" accesskey=/>
+                <a href="http://localhost:1313/search/" title="Search (Alt &#43; /)" accesskey=/>
                     <span>Search</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/index.xml" title="RSS">
+                    <span>RSS</span>
                 </a>
             </li>
         </ul>
@@ -451,11 +311,13 @@ linked\_list.traverse()
         crossorigin="anonymous"
         async>
 </script>
+
+
 </article>
     </main>
     
 <footer class="footer">
-        <span>&copy; 2025 <a href="https://justinmathew.com/">Department of random technical stuffs</a></span> · 
+        <span>&copy; 2025 <a href="http://localhost:1313/">Department of random technical stuffs</a></span> · 
 
     <span>
         Powered by

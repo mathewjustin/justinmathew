@@ -1,25 +1,25 @@
 <!DOCTYPE html>
 <html lang="en" dir="auto">
 
-<head><meta charset="utf-8">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="index, follow">
+<meta name="robots" content="noindex, nofollow">
 <title>Custom annotations in Spring Boot | Department of random technical stuffs</title>
 <meta name="keywords" content="Spring boot, Custom annotation, Microservices">
 <meta name="description" content="           I had worked on spring framework extensively throughout my career. The one thing which I am always try to implement in any Spring project I work on is Custom annotation. Its a fancy stuff but useful in many ways. 
          Say you have numerous micro services (Duplicate code bases which will f*** you up) running on your cluster, the best and first thing you do is - Build a common library to push all your model classes, so called util package of your organization :p and the fancy stuffs  . I am fortunate that I get to do all these experiments early on my career. So lets start with the problem.">
 <meta name="author" content="">
-<link rel="canonical" href="https://justinmathew.com/2020/10/custom-annotations-in-spring-boot.html">
-<link crossorigin="anonymous" href="https://justinmathew.com/assets/css/stylesheet.f49d66caae9ea0fd43f21f29e71a8d3e284517ed770f2aa86fa012953ad3c9ef.css" integrity="sha256-9J1myq6eoP1D8h8p5xqNPihFF&#43;13Dyqob6ASlTrTye8=" rel="preload stylesheet" as="style">
-<link rel="icon" href="https://justinmathew.com/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="https://justinmathew.com/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="https://justinmathew.com/favicon-32x32.png">
-<link rel="apple-touch-icon" href="https://justinmathew.com/apple-touch-icon.png">
-<link rel="mask-icon" href="https://justinmathew.com/safari-pinned-tab.svg">
+<link rel="canonical" href="http://localhost:1313/2020/10/custom-annotations-in-spring-boot.html">
+<link crossorigin="anonymous" href="http://localhost:1313/assets/css/stylesheet.f49d66caae9ea0fd43f21f29e71a8d3e284517ed770f2aa86fa012953ad3c9ef.css" integrity="sha256-9J1myq6eoP1D8h8p5xqNPihFF&#43;13Dyqob6ASlTrTye8=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="en" href="https://justinmathew.com/2020/10/custom-annotations-in-spring-boot.html">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/2020/10/custom-annotations-in-spring-boot.html">
 <noscript>
     <style>
         #theme-toggle,
@@ -56,73 +56,7 @@
         }
 
     </style>
-</noscript><meta property="og:url" content="https://justinmathew.com/2020/10/custom-annotations-in-spring-boot.html">
-  <meta property="og:site_name" content="Department of random technical stuffs">
-  <meta property="og:title" content="Custom annotations in Spring Boot">
-  <meta property="og:description" content=" I had worked on spring framework extensively throughout my career. The one thing which I am always try to implement in any Spring project I work on is Custom annotation. Its a fancy stuff but useful in many ways. Say you have numerous micro services (Duplicate code bases which will f*** you up) running on your cluster, the best and first thing you do is - Build a common library to push all your model classes, so called util package of your organization :p and the fancy stuffs . I am fortunate that I get to do all these experiments early on my career. So lets start with the problem.">
-  <meta property="og:locale" content="en-us">
-  <meta property="og:type" content="article">
-    <meta property="article:section" content="posts">
-    <meta property="article:published_time" content="2020-10-01T13:21:00-07:00">
-    <meta property="article:modified_time" content="2020-10-01T13:21:00-07:00">
-    <meta property="article:tag" content="Spring Boot">
-    <meta property="article:tag" content="Custom Annotation">
-    <meta property="article:tag" content="Microservices">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Custom annotations in Spring Boot">
-<meta name="twitter:description" content="           I had worked on spring framework extensively throughout my career. The one thing which I am always try to implement in any Spring project I work on is Custom annotation. Its a fancy stuff but useful in many ways. 
-         Say you have numerous micro services (Duplicate code bases which will f*** you up) running on your cluster, the best and first thing you do is - Build a common library to push all your model classes, so called util package of your organization :p and the fancy stuffs  . I am fortunate that I get to do all these experiments early on my career. So lets start with the problem.">
-
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position":  1 ,
-      "name": "Posts",
-      "item": "https://justinmathew.com/posts/"
-    }, 
-    {
-      "@type": "ListItem",
-      "position":  2 ,
-      "name": "Custom annotations in Spring Boot",
-      "item": "https://justinmathew.com/2020/10/custom-annotations-in-spring-boot.html"
-    }
-  ]
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BlogPosting",
-  "headline": "Custom annotations in Spring Boot",
-  "name": "Custom annotations in Spring Boot",
-  "description": " I had worked on spring framework extensively throughout my career. The one thing which I am always try to implement in any Spring project I work on is Custom annotation. Its a fancy stuff but useful in many ways. Say you have numerous micro services (Duplicate code bases which will f*** you up) running on your cluster, the best and first thing you do is - Build a common library to push all your model classes, so called util package of your organization :p and the fancy stuffs . I am fortunate that I get to do all these experiments early on my career. So lets start with the problem.\n",
-  "keywords": [
-    "Spring boot", "Custom annotation", "Microservices"
-  ],
-  "articleBody": " I had worked on spring framework extensively throughout my career. The one thing which I am always try to implement in any Spring project I work on is Custom annotation. Its a fancy stuff but useful in many ways. Say you have numerous micro services (Duplicate code bases which will f*** you up) running on your cluster, the best and first thing you do is - Build a common library to push all your model classes, so called util package of your organization :p and the fancy stuffs . I am fortunate that I get to do all these experiments early on my career. So lets start with the problem.\nWe have many micro services which are built on top of spring framework. We want to use a common service bean in all our boot apps. This bean should be enabled with @EnableMyBean annotation. Once the spring boot app loads it should intercept this annotation and inject our MyBean service to our Spring boot application. So the first step to do is create the annotation itself\nThe @Import is from org.springframework.context.annotation package You can find the documentation over here\nNext is the implementation of MyBeanSelector class. We can define it as follows.\nLets look at each components. First the importSelector interface. As the definition on the Spring document “Interface to be implemented by types that determine which @Configuration__ class(es) should be imported based on a given selection criteria, usually one or more annotation attributes.” This class is accountable for which Bean should be injected to the spring context. It has many other cool features as well. Say you want to read some property from the environment in which the common library is used. Ie, from the Yaml file of the spring boot app which is using your common library. Then you can implement EnvironmentAware Interface. Once we do the above, next we can define the actual service class inside “com.commons.service”. So now You can use @EnableMyBean on your main method of the spring boot application. And you can Autowire MyService class anywhere inside your application. At the time of start up spring would automatically detect the @EnableMyBean annotation and push the Service Bean to the app’s context.\n",
-  "wordCount" : "367",
-  "inLanguage": "en",
-  "datePublished": "2020-10-01T13:21:00-07:00",
-  "dateModified": "2020-10-01T13:21:00-07:00",
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "https://justinmathew.com/2020/10/custom-annotations-in-spring-boot.html"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "Department of random technical stuffs",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://justinmathew.com/favicon.ico"
-    }
-  }
-}
-</script>
+</noscript>
 </head>
 
 <body class="" id="top">
@@ -140,7 +74,7 @@
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="https://justinmathew.com/" accesskey="h" title="Department of random technical stuffs (Alt + H)">Department of random technical stuffs</a>
+            <a href="http://localhost:1313/" accesskey="h" title="Department of random technical stuffs (Alt + H)">Department of random technical stuffs</a>
             <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
@@ -166,8 +100,13 @@
         </div>
         <ul id="menu">
             <li>
-                <a href="https://justinmathew.com/search/" title="Search (Alt &#43; /)" accesskey=/>
+                <a href="http://localhost:1313/search/" title="Search (Alt &#43; /)" accesskey=/>
                     <span>Search</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/index.xml" title="RSS">
+                    <span>RSS</span>
                 </a>
             </li>
         </ul>
@@ -205,9 +144,9 @@
 
   <footer class="post-footer">
     <ul class="post-tags">
-      <li><a href="https://justinmathew.com/tags/spring-boot/">Spring Boot</a></li>
-      <li><a href="https://justinmathew.com/tags/custom-annotation/">Custom Annotation</a></li>
-      <li><a href="https://justinmathew.com/tags/microservices/">Microservices</a></li>
+      <li><a href="http://localhost:1313/tags/spring-boot/">Spring Boot</a></li>
+      <li><a href="http://localhost:1313/tags/custom-annotation/">Custom Annotation</a></li>
+      <li><a href="http://localhost:1313/tags/microservices/">Microservices</a></li>
     </ul>
   </footer><script src="https://giscus.app/client.js"
         data-repo="mathewjustin/justinmathew"
@@ -224,11 +163,13 @@
         crossorigin="anonymous"
         async>
 </script>
+
+
 </article>
     </main>
     
 <footer class="footer">
-        <span>&copy; 2025 <a href="https://justinmathew.com/">Department of random technical stuffs</a></span> · 
+        <span>&copy; 2025 <a href="http://localhost:1313/">Department of random technical stuffs</a></span> · 
 
     <span>
         Powered by

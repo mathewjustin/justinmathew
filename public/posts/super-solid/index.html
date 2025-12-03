@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>Solid Principles | Department of random technical stuffs</title>
+<meta name="keywords" content="Clean code, SRP, SOLID Principles, Design Principles">
+<meta name="description" content="Solid Principles
+
+&ldquo;Complexity is the enemy of execution.&rdquo; — Tony Robbins(From a youtube short)
+
+Most of the times complexity in code, or complex explanation of a simple problem leads to failure in the longterm. If you can&#39;t keep things simple, or explain things simply, either you have not understood it fully or you are trying to make an impression of being smart. At times I used to act like I know something which I dont have a clue about. This is may be a defense mechanism to hide my insecurities. But there comes a day when someone asks you a question which you cant answer and you feel embarrassed.
+">
+<meta name="author" content="">
+<link rel="canonical" href="http://localhost:1313/posts/super-solid/">
+<link crossorigin="anonymous" href="http://localhost:1313/assets/css/stylesheet.f49d66caae9ea0fd43f21f29e71a8d3e284517ed770f2aa86fa012953ad3c9ef.css" integrity="sha256-9J1myq6eoP1D8h8p5xqNPihFF&#43;13Dyqob6ASlTrTye8=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/super-solid/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="Department of random technical stuffs (Alt + H)">Department of random technical stuffs</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/search/" title="Search (Alt &#43; /)" accesskey=/>
+                    <span>Search</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/index.xml" title="RSS">
+                    <span>RSS</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      Solid Principles
+    </h1>
+    <div class="post-meta"><span title='2025-11-06 11:23:00.002 -0700 -0700'>November 6, 2025</span>
+
+</div>
+  </header> 
+  <div class="post-content"><h1 id="solid-principles">Solid Principles<a hidden class="anchor" aria-hidden="true" href="#solid-principles">#</a></h1>
+<blockquote>
+<p>&ldquo;Complexity is the enemy of execution.&rdquo; — Tony Robbins(From a youtube short)</p>
+</blockquote>
+<p>Most of the times complexity in code, or complex explanation of a simple problem leads to failure in the longterm. If you can't keep things simple, or explain things simply, either you have not understood it fully or you are trying to make an impression of being smart. At times I used to act like I know something which I dont have a clue about. This is may be a defense mechanism to hide my insecurities. But there comes a day when someone asks you a question which you cant answer and you feel embarrassed.
+</p>
+<p>Why am I saying all these, we are just talking about solid principles. I have this stupid habbit of making things complex than it should be, may be that&rsquo;s why i should read SOLID principles again, and try to make the code little simple for humans and AI to understand.</p>
+<h2 id="table-of-contents">Table of Contents<a hidden class="anchor" aria-hidden="true" href="#table-of-contents">#</a></h2>
+<ol>
+<li><a href="#single-responsibility-principle">Single Responsibility Principle (SRP)</a></li>
+<li><a href="#openclosed-principle">Open/Closed Principle (OCP)</a></li>
+<li><a href="#liskov-substitution-principle">Liskov Substitution Principle (LSP)</a></li>
+<li><a href="#interface-segregation-principle">Interface Segregation Principle (ISP)</a></li>
+<li><a href="#dependency-inversion-principle">Dependency Inversion Principle (DIP)</a></li>
+</ol>
+<hr>
+<h2 id="single-responsibility-principle">Single Responsibility Principle<a hidden class="anchor" aria-hidden="true" href="#single-responsibility-principle">#</a></h2>
+<p>We all might have seen a person who can do many things at a time but not really good in any one thing. For example, I&rsquo;ve been a mediocre fullstack developer for long time, there was a time i thought i fully understand how DOM works and how javascript manipulate DOM, at the same time i had this false impression that I can possibly find a memory leak in a legacy java application written 20 years ago. The truth is I was not really good at any one thing.</p>
+<p>This is somewhat happening in code as well. A big ass file which does way too many things. I am someone who believes that the name of a class or a file should reflect its responsibility. If a class or a file is doing too many things, it&rsquo;s a sign that it needs to be refactored into smaller, more focused components.</p>
+<p>As usually lets take an example. Unlike well defined examples which AI generates, i would like to make something my own. Lets take this example of an e-commerce appliaction. We all might have came across this class called Order.</p>
+<pre tabindex="0"><code>class Order {
+  constructor(id, items) {
+    this.id = id;
+    this.items = items;
+  }
+
+  calculateTotal() {
+    return this.items.reduce((total, item) =&gt; total + item.price, 0);
+  }
+
+  save() {
+    // Save order to database
+  }
+
+  sendConfirmationEmail() {
+    // Send confirmation email to customer
+  }
+}
+</code></pre><p>This class at a glance look really perfect. See another example,</p>
+<pre tabindex="0"><code>class OrderPostProcessor {
+  constructor(order) {
+    this.order = order;
+  }
+
+  process() {
+    this.order.save();
+    this.order.sendConfirmationEmail();
+  }
+}
+</code></pre><p>At first glance this looks good, you have a class to control the order processing. If we look carefully and understand the reasoning behing SRP, it is to avoid motivation for change. If we need to change the way we save order, or send email, we will have to change the Order class. This is a violation of SRP.</p>
+<p>If there is a logic change in email sending, we should not have to touch the Order class. So we can refactor the code like this.</p>
+<pre tabindex="0"><code>class Order {
+  constructor(id, items) {
+    this.id = id;
+    this.items = items;
+  }
+
+  calculateTotal() {
+    return this.items.reduce((total, item) =&gt; total + item.price, 0);
+  }
+}
+
+class OrderRepository {
+  save(order) {
+    // Save to DB
+  }
+}
+
+class EmailService {
+  sendOrderConfirmation(order) {
+    // Send email
+  }
+}
+
+class OrderPostProcessor {
+  constructor(orderRepo, emailService) {
+    this.orderRepo = orderRepo;
+    this.emailService = emailService;
+  }
+
+  process(order) {
+    this.orderRepo.save(order);
+    this.emailService.sendOrderConfirmation(order);
+  }
+}
+</code></pre><p>Well what about the Order processing class? No it doen&rsquo;t violate SRP because its only responsible for post processing the order, not how to save or send email. Although it looks like more code, it avoids the need for changing the Order class when there is a problem in email sending or saving to DB.</p>
+<p>We will visit the remaing in the coming days. For now this is enough to understand SRP.</p>
+<h2 id="openclosed-principle">Open/Closed Principle<a hidden class="anchor" aria-hidden="true" href="#openclosed-principle">#</a></h2>
+<p>Just like we read about the SRP, I&rsquo;ve collected some qoutes on open closed principles. You know why I collected them? because those one liners has then entire point of OCP. Our aim in the coming years to make sure our code is being understood by AI and AI will make only minimal changes to the code. We might have seen AI regenerating the entire code base with just one slight prompt. Well that&rsquo;s something which we should be avoiding. Our code should be written in a way that it is open for extension and closed for modification. Just like SRP the goal is to avoid motivation for change.</p>
+<p>So the quotes again:</p>
+<blockquote>
+<p>&ldquo;If adding a feature means touching stable code, you’re probably violating OCP&rdquo; — I stole it from somewhere.</p>
+</blockquote>
+<p>This is so true in case of legacy applications. I&rsquo;ve worked on some very old projects where adding a small change is considered to be risky and bring in regressions. This mostly happens when the code is closed for extensions. There were cases where we put hundreds of if else conditions, run time flags to enable or disable a features. Run-time flags were the crazy ones we start with one flag then we end up having this flag for every small feature. Imagine there is an extension feature for feature A. What do we do? We add another flag. This leads to a combinatorial explosion of flags and conditions, making the codebase even more complex and harder to maintain. On legacy software products the first thing to identify before adding a new feature is to find out how to make a runtime flag for it. This is a clear sign of OCP violation.</p>
+<p>I know I should&rsquo;t be preaching something which i practice less, But I am trying to get better at it.</p>
+<p>Side note: I am oversimplifying OCP here, we don&rsquo;t write this in production grade code. When we write code in production if its just an email sending service, it will incluide retries, proper logging, metrics, outbox pattern..etc and etc. But this is just an evening read, and enough to crack the idea of OCP.</p>
+<p>So lets take an example of the emailService we created in the previous section.</p>
+<pre tabindex="0"><code class="language-class" data-lang="class">  sendOrderConfirmation(order) {
+    // Send email
+    }
+}
+</code></pre><p>So now this is just about sending an email. What if we have multiple email providers? For example, SendGrid, Amazon SES, SMTP etc. If we need to add support for multiple email providers, we should not be modifying the EmailService class. Instead we can create an interface for EmailProvider and implement different providers.</p>
+<pre tabindex="0"><code>interface EmailProvider {
+  send(email) {
+    throw new Error(&#34;Method &#39;send()&#39; must be implemented.&#34;);
+  }
+}
+class SendGridProvider implements EmailProvider {
+  send(email) {
+    // Send email using SendGrid
+  }
+}
+class AmazonSESProvider implements EmailProvider {
+    send(email) {
+    // Send email using Amazon SES
+    }
+}
+class EmailService {
+    constructor(provider) {
+    this.provider = provider;
+    }
+    sendOrderConfirmation(order) {
+    const email = this.createEmail(order);
+    this.provider.send(email);
+    }
+    createEmail(order) {
+    // Create email content
+    }
+}
+</code></pre><p>For example in Spring boot we can have multiple implementations for email service, and based on lets say which IaaS we are deploying the application we can choose the implementation at runtime using dependency injection. This is very usual for example the same app we deploy on AWS might use Amazon SES provider, while the one on Azure might use SendGrid provider.</p>
+<p>Usually it happens for applications which are deployed on multiple cloud providers, like SaaS products. I am fortunate to have worked on such products. Where the same code will be implemented differently based on the cloud provider.</p>
+<p>Now the above code is open for extension, we can add more providers without modifying the EmailService class. This is the essence of OCP.</p>
+<h2 id="liskov-substitution-principle">Liskov Substitution Principle<a hidden class="anchor" aria-hidden="true" href="#liskov-substitution-principle">#</a></h2>
+<p>You know what, this name Liskov substitution principle is sometimes intemidating. Such a facncy name. But the idea is simple. Look at this image which i stole from the globalnerdy.</p>
+<p><img alt="alt text" loading="lazy" src="image.png"></p>
+<p>Well if i put this into words. In mathematics Square &ldquo;is a&rdquo; Rectangle. You are getting the point..? &ldquo;is a&rdquo;. So based on this you can make square from rectangle, what could go wrong in this? Let&rsquo;s just write it down..</p>
+<pre tabindex="0"><code>class Rectangle {
+  constructor(width, height) {
+    this.width = width;
+    this.height = height;
+  }
+
+  setWidth(width) {
+    this.width = width;
+  }
+
+  setHeight(height) {
+    this.height = height;
+  }
+
+  getArea() {
+    return this.width * this.height;
+  }
+}
+
+class Square extends Rectangle {
+  constructor(side) {
+    super(side, side);
+  }
+
+  setWidth(width) {
+    this.width = width;
+    this.height = width; // Square must have equal sides
+  }
+
+  setHeight(height) {
+    this.width = height;
+    this.height = height; // Square must have equal sides
+  }
+}
+</code></pre><p>So now Mathematically yes square is a rectangle, But this code? hmmm&hellip;
+It has a problem. This violates Liskoves substitution principle. Why?</p>
+<p>The moment you replace Square at the place you want to use Rectangle, you will mess up the code. Liskov substitution says you should be substitutable from the classes it derived. Can i substiture Rectangle with Square in this case? No we cant.</p>
+<p>The moral of the story is : model your classes based on behaviours not on properties; model your data based on properties and not on behaviours. If it behaves like a duck, it&rsquo;s certainly a bird.</p>
+<h2 id="interface-segregation-principle">Interface Segregation Principle<a hidden class="anchor" aria-hidden="true" href="#interface-segregation-principle">#</a></h2>
+<h2 id="dependency-inversion-principle">Dependency Inversion Principle<a hidden class="anchor" aria-hidden="true" href="#dependency-inversion-principle">#</a></h2>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="http://localhost:1313/tags/clean-code-srp-solid-principles-design-principles/">Clean Code, SRP, SOLID Principles, Design Principles</a></li>
+    </ul>
+  </footer><script src="https://giscus.app/client.js"
+        data-repo="mathewjustin/justinmathew"
+        data-repo-id="R_kgDOOVcB9A"
+        data-category="General"
+        data-category-id="DIC_kwDOOVcB9M4Co3QS"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="preferred_color_scheme"
+        data-lang="en"
+        crossorigin="anonymous"
+        async>
+</script>
+
+
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="http://localhost:1313/">Department of random technical stuffs</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

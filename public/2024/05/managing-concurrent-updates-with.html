@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en" dir="auto">
 
-<head><meta charset="utf-8">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="index, follow">
+<meta name="robots" content="noindex, nofollow">
 <title>Managing Concurrent Updates with Distributed Locks | Department of random technical stuffs</title>
 <meta name="keywords" content="">
 <meta name="description" content="Managing Concurrent Updates with Distributed Locks
@@ -13,16 +13,16 @@ In distributed systems, managing concurrent access to shared resources is crucia
 Basic Implementation Without Proper Lock Handling
 Here&rsquo;s a simple version of a method that tries to acquire a distributed lock, perform an update, and release the lock:">
 <meta name="author" content="">
-<link rel="canonical" href="https://justinmathew.com/2024/05/managing-concurrent-updates-with.html">
-<link crossorigin="anonymous" href="https://justinmathew.com/assets/css/stylesheet.f49d66caae9ea0fd43f21f29e71a8d3e284517ed770f2aa86fa012953ad3c9ef.css" integrity="sha256-9J1myq6eoP1D8h8p5xqNPihFF&#43;13Dyqob6ASlTrTye8=" rel="preload stylesheet" as="style">
-<link rel="icon" href="https://justinmathew.com/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="https://justinmathew.com/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="https://justinmathew.com/favicon-32x32.png">
-<link rel="apple-touch-icon" href="https://justinmathew.com/apple-touch-icon.png">
-<link rel="mask-icon" href="https://justinmathew.com/safari-pinned-tab.svg">
+<link rel="canonical" href="http://localhost:1313/2024/05/managing-concurrent-updates-with.html">
+<link crossorigin="anonymous" href="http://localhost:1313/assets/css/stylesheet.f49d66caae9ea0fd43f21f29e71a8d3e284517ed770f2aa86fa012953ad3c9ef.css" integrity="sha256-9J1myq6eoP1D8h8p5xqNPihFF&#43;13Dyqob6ASlTrTye8=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="en" href="https://justinmathew.com/2024/05/managing-concurrent-updates-with.html">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/2024/05/managing-concurrent-updates-with.html">
 <noscript>
     <style>
         #theme-toggle,
@@ -59,75 +59,7 @@ Here&rsquo;s a simple version of a method that tries to acquire a distributed lo
         }
 
     </style>
-</noscript><meta property="og:url" content="https://justinmathew.com/2024/05/managing-concurrent-updates-with.html">
-  <meta property="og:site_name" content="Department of random technical stuffs">
-  <meta property="og:title" content="Managing Concurrent Updates with Distributed Locks">
-  <meta property="og:description" content="Managing Concurrent Updates with Distributed Locks
-Managing Concurrent Updates with Distributed Locks In distributed systems, managing concurrent access to shared resources is crucial to ensure data consistency and prevent corruption. Let’s explore how to handle this using a Java example, starting with a basic implementation and improving it step-by-step.
-Basic Implementation Without Proper Lock Handling Here’s a simple version of a method that tries to acquire a distributed lock, perform an update, and release the lock:">
-  <meta property="og:locale" content="en-us">
-  <meta property="og:type" content="article">
-    <meta property="article:section" content="posts">
-    <meta property="article:published_time" content="2024-05-30T10:21:00-07:00">
-    <meta property="article:modified_time" content="2024-05-30T10:21:00-07:00">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Managing Concurrent Updates with Distributed Locks">
-<meta name="twitter:description" content="Managing Concurrent Updates with Distributed Locks
-Managing Concurrent Updates with Distributed Locks
-In distributed systems, managing concurrent access to shared resources is crucial to ensure data consistency and prevent corruption. Let’s explore how to handle this using a Java example, starting with a basic implementation and improving it step-by-step.
-Basic Implementation Without Proper Lock Handling
-Here&rsquo;s a simple version of a method that tries to acquire a distributed lock, perform an update, and release the lock:">
-
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position":  1 ,
-      "name": "Posts",
-      "item": "https://justinmathew.com/posts/"
-    }, 
-    {
-      "@type": "ListItem",
-      "position":  2 ,
-      "name": "Managing Concurrent Updates with Distributed Locks",
-      "item": "https://justinmathew.com/2024/05/managing-concurrent-updates-with.html"
-    }
-  ]
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BlogPosting",
-  "headline": "Managing Concurrent Updates with Distributed Locks",
-  "name": "Managing Concurrent Updates with Distributed Locks",
-  "description": "Managing Concurrent Updates with Distributed Locks\nManaging Concurrent Updates with Distributed Locks In distributed systems, managing concurrent access to shared resources is crucial to ensure data consistency and prevent corruption. Let’s explore how to handle this using a Java example, starting with a basic implementation and improving it step-by-step.\nBasic Implementation Without Proper Lock Handling Here\u0026rsquo;s a simple version of a method that tries to acquire a distributed lock, perform an update, and release the lock:\n",
-  "keywords": [
-    
-  ],
-  "articleBody": "Managing Concurrent Updates with Distributed Locks\nManaging Concurrent Updates with Distributed Locks In distributed systems, managing concurrent access to shared resources is crucial to ensure data consistency and prevent corruption. Let’s explore how to handle this using a Java example, starting with a basic implementation and improving it step-by-step.\nBasic Implementation Without Proper Lock Handling Here’s a simple version of a method that tries to acquire a distributed lock, perform an update, and release the lock:\npublic void updateResource() { try { // Attempt to acquire the distributed lock acquireLock(); // Perform the update operation doUpdate(); } catch (LockAcquisitionException e) { // Handle the case where the lock could not be acquired System.out.println(\"Failed to acquire lock: \" + e.getMessage()); } catch (Exception e) { // Handle any other exceptions that occurred during the update operation e.printStackTrace(); } finally { // Ensure the lock is released in the finally block unlock(); } } private void acquireLock() throws LockAcquisitionException { // Implement your logic to acquire a distributed lock here // Throw LockAcquisitionException if the lock cannot be acquired } private void unlock() { // Implement your logic to release the distributed lock here } private void doUpdate() { // Implement your update logic here } // Custom exception for lock acquisition failure public class LockAcquisitionException extends Exception { public LockAcquisitionException(String message) { super(message); } } What Happens with Concurrent Threads? Imagine three threads (A, B, and C) are running this method at the same time:\nThread A acquires the lock and starts updating the resource. Thread B tries to acquire the lock but fails because Thread A is holding it, so it throws an exception. Thread B incorrectly releases the lock in the finally block, it will release the lock that Thread A is still using. Thread C then acquires the lock, potentially corrupting the data if it starts updating the resource while Thread A is still working. Can We Use Synchronized Methods? In a single JVM (Java Virtual Machine), you can use the synchronized keyword to ensure only one thread can execute the method at a time:\npublic synchronized void updateResource() { try { // Perform the update operation doUpdate(); } catch (Exception e) { // Handle exceptions e.printStackTrace(); } } However, this doesn’t work in a distributed system where multiple JVM instances might be running on different servers. The synchronized keyword only works within the same JVM.\nThe Lost Update Problem The “lost update” problem occurs when multiple threads read the same data, modify it, and write it back, overwriting each other’s changes. For example, if Thread A reads a value and then Thread B reads the same value, both might update the value and save it, resulting in one of the updates being lost.\nProper Lock Handling To handle this correctly in a distributed system, we need to ensure that the lock is only released if it was successfully acquired. Here’s how to do it:\npublic void updateResource() { boolean lockAcquired = false; // Flag to track if the lock was acquired try { // Attempt to acquire the distributed lock acquireLock(); lockAcquired = true; // Set the flag to true if the lock is acquired // Perform the update operation doUpdate(); } catch (LockAcquisitionException e) { // Handle the case where the lock could not be acquired System.out.println(\"Failed to acquire lock: \" + e.getMessage()); } catch (Exception e) { // Handle any other exceptions that occurred during the update operation e.printStackTrace(); } finally { // Ensure the lock is released in the finally block if it was acquired if (lockAcquired) { unlock(); } } } private void acquireLock() throws LockAcquisitionException { // Implement your logic to acquire a distributed lock here // Throw LockAcquisitionException if the lock cannot be acquired } private void unlock() { // Implement your logic to release the distributed lock here } private void doUpdate() { // Implement your update logic here } // Custom exception for lock acquisition failure public class LockAcquisitionException extends Exception { public LockAcquisitionException(String message) { super(message); } } Explanation of the Solution Flag Initialization: A boolean flag lockAcquired is set to false initially. This flag will be set to true only if the lock is successfully acquired by the thread. Lock Acquisition: The acquireLock method attempts to acquire the lock. If it fails, it throws a LockAcquisitionException. Flag Update: If the lock is successfully acquired, lockAcquired is set to true. Update Operation: The doUpdate method performs the necessary update operations while holding the lock. Exception Handling: LockAcquisitionException: Handles the scenario where the lock acquisition fails. General Exception Handling: Catches any other exceptions that might occur during the update operation. Finally Block: The finally block checks if the lockAcquired flag is true before calling the unlock method. This ensures that the lock is only released if it was successfully acquired, preventing any attempt to release a lock that wasn’t acquired. Conclusion By managing the acquisition and release of distributed locks properly, you can ensure that your application handles concurrent updates safely and efficiently. This approach prevents race conditions and lost updates, maintaining data consistency across distributed systems. Using a boolean flag to track lock acquisition ensures that the lock is only released if it was acquired, preventing potential data corruption and ensuring robust lock management.\n",
-  "wordCount" : "876",
-  "inLanguage": "en",
-  "datePublished": "2024-05-30T10:21:00-07:00",
-  "dateModified": "2024-05-30T10:21:00-07:00",
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "https://justinmathew.com/2024/05/managing-concurrent-updates-with.html"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "Department of random technical stuffs",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://justinmathew.com/favicon.ico"
-    }
-  }
-}
-</script>
+</noscript>
 </head>
 
 <body class="" id="top">
@@ -145,7 +77,7 @@ Here&rsquo;s a simple version of a method that tries to acquire a distributed lo
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="https://justinmathew.com/" accesskey="h" title="Department of random technical stuffs (Alt + H)">Department of random technical stuffs</a>
+            <a href="http://localhost:1313/" accesskey="h" title="Department of random technical stuffs (Alt + H)">Department of random technical stuffs</a>
             <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
@@ -171,8 +103,13 @@ Here&rsquo;s a simple version of a method that tries to acquire a distributed lo
         </div>
         <ul id="menu">
             <li>
-                <a href="https://justinmathew.com/search/" title="Search (Alt &#43; /)" accesskey=/>
+                <a href="http://localhost:1313/search/" title="Search (Alt &#43; /)" accesskey=/>
                     <span>Search</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/index.xml" title="RSS">
+                    <span>RSS</span>
                 </a>
             </li>
         </ul>
@@ -337,11 +274,13 @@ public class LockAcquisitionException extends Exception {
         crossorigin="anonymous"
         async>
 </script>
+
+
 </article>
     </main>
     
 <footer class="footer">
-        <span>&copy; 2025 <a href="https://justinmathew.com/">Department of random technical stuffs</a></span> · 
+        <span>&copy; 2025 <a href="http://localhost:1313/">Department of random technical stuffs</a></span> · 
 
     <span>
         Powered by

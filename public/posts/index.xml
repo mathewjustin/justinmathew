@@ -1,95 +1,123 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Posts on Department of random technical stuffs</title>
-    <link>https://justinmathew.com/posts/</link>
-    <description>Recent content in Posts on Department of random technical stuffs</description>
-    <generator>Hugo -- 0.145.0</generator>
+    <title>Department of random technical stuffs</title>
+    <link>http://localhost:1313/</link>
+    <description>Welcome to my blog — Its some random thoughts from a foolish developer!</description>
     <language>en-us</language>
-    <lastBuildDate>Sun, 15 Jun 2025 23:02:39 +0530</lastBuildDate>
-    <atom:link href="https://justinmathew.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Solid Principles</title>
+      <link>http://localhost:1313/posts/super-solid/</link>
+      <pubDate>Thu, 06 Nov 2025 11:23:00 -0700</pubDate>
+      <guid>http://localhost:1313/posts/super-solid/</guid>
+      <description>&lt;h1 id=&#34;solid-principles&#34;&gt;Solid Principles&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&amp;ldquo;Complexity is the enemy of execution.&amp;rdquo; — Tony Robbins(From a youtube short)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Most of the times complexity in code, or complex explanation of a simple problem leads to failure in the longterm. If you can&#39;t keep things simple, or explain things simply, either you have not understood it fully or you are trying to make an impression of being smart. At times I used to act like I know something which I dont have a clue about. This is may be a defense mechanism to hide my insecurities. But there comes a day when someone asks you a question which you cant answer and you feel embarrassed.
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>B-Tree a data structures -  Postgres Internals rabbit hole..</title>
+      <link>http://localhost:1313/posts/btree-whats-inside-your-db/</link>
+      <pubDate>Sun, 29 Jun 2025 23:02:39 &#43;0530</pubDate>
+      <guid>http://localhost:1313/posts/btree-whats-inside-your-db/</guid>
+      <description>Another sunday night, another rabbit hole.</description>
+    </item>
+    
     <item>
       <title>Designing a Stock Ticker Service</title>
-      <link>https://justinmathew.com/posts/stock-tick-design/</link>
-      <pubDate>Sun, 15 Jun 2025 23:02:39 +0530</pubDate>
-      <guid>https://justinmathew.com/posts/stock-tick-design/</guid>
+      <link>http://localhost:1313/posts/stock-tick-design/</link>
+      <pubDate>Sun, 15 Jun 2025 23:02:39 &#43;0530</pubDate>
+      <guid>http://localhost:1313/posts/stock-tick-design/</guid>
       <description>I got pissed off by seeing system design interview videos on this</description>
     </item>
+    
     <item>
       <title>Grouping anagrams</title>
-      <link>https://justinmathew.com/posts/group-anagrams/</link>
-      <pubDate>Wed, 11 Jun 2025 23:04:00 +0530</pubDate>
-      <guid>https://justinmathew.com/posts/group-anagrams/</guid>
+      <link>http://localhost:1313/posts/group-anagrams/</link>
+      <pubDate>Wed, 11 Jun 2025 23:04:00 &#43;0530</pubDate>
+      <guid>http://localhost:1313/posts/group-anagrams/</guid>
       <description>A medium but easy one!</description>
     </item>
+    
     <item>
       <title>Remove more than two duplicates in-place</title>
-      <link>https://justinmathew.com/posts/removeduplicates/</link>
-      <pubDate>Mon, 09 Jun 2025 23:04:00 +0530</pubDate>
-      <guid>https://justinmathew.com/posts/removeduplicates/</guid>
+      <link>http://localhost:1313/posts/removeduplicates/</link>
+      <pubDate>Mon, 09 Jun 2025 23:04:00 &#43;0530</pubDate>
+      <guid>http://localhost:1313/posts/removeduplicates/</guid>
       <description>This is a medium level problem. I think it should be easy. But anyway, lets get to the code.</description>
     </item>
+    
     <item>
       <title>Inplace element removal an easy one</title>
-      <link>https://justinmathew.com/posts/inplace-element-removal/</link>
-      <pubDate>Sat, 07 Jun 2025 11:54:39 +0530</pubDate>
-      <guid>https://justinmathew.com/posts/inplace-element-removal/</guid>
+      <link>http://localhost:1313/posts/inplace-element-removal/</link>
+      <pubDate>Sat, 07 Jun 2025 11:54:39 &#43;0530</pubDate>
+      <guid>http://localhost:1313/posts/inplace-element-removal/</guid>
       <description>Its an easy problem. But every problem has a trick. This one is no different. I will try to explain the trick in this post.</description>
     </item>
+    
     <item>
       <title>The nicest way to merge two sorted arrays</title>
-      <link>https://justinmathew.com/posts/mergingtwosortedarrays/</link>
-      <pubDate>Fri, 06 Jun 2025 23:02:39 +0530</pubDate>
-      <guid>https://justinmathew.com/posts/mergingtwosortedarrays/</guid>
+      <link>http://localhost:1313/posts/mergingtwosortedarrays/</link>
+      <pubDate>Fri, 06 Jun 2025 23:02:39 &#43;0530</pubDate>
+      <guid>http://localhost:1313/posts/mergingtwosortedarrays/</guid>
       <description>This is one of the easy but tricky problems. To be really honest I also struggled with tihs one. I am writing this down, and the pitfalls of this problem, so that I can refer to this later.</description>
     </item>
+    
     <item>
       <title>gRPC - The Witchcraft of Remote Procedure Calls</title>
-      <link>https://justinmathew.com/posts/grpc/</link>
-      <pubDate>Tue, 03 Jun 2025 23:02:39 +0530</pubDate>
-      <guid>https://justinmathew.com/posts/grpc/</guid>
+      <link>http://localhost:1313/posts/grpc/</link>
+      <pubDate>Tue, 03 Jun 2025 23:02:39 &#43;0530</pubDate>
+      <guid>http://localhost:1313/posts/grpc/</guid>
       <description>A deep dive into gRPC, its benefits, and how to implement it in a Spring Boot application.</description>
     </item>
+    
     <item>
       <title> Replication - Leaders and Followers</title>
-      <link>https://justinmathew.com/posts/replication/</link>
-      <pubDate>Tue, 20 May 2025 19:02:39 +0530</pubDate>
-      <guid>https://justinmathew.com/posts/replication/</guid>
+      <link>http://localhost:1313/posts/replication/</link>
+      <pubDate>Tue, 20 May 2025 19:02:39 &#43;0530</pubDate>
+      <guid>http://localhost:1313/posts/replication/</guid>
       <description>&lt;h2 id=&#34;replication---leaders-and-followers&#34;&gt;Replication - Leaders and Followers&lt;/h2&gt;
 &lt;p&gt;Replication, or read replica is a process of copy pasting data from a primary database to another database. This is done to improve performance, availability, and reliability of the database. Replication can be done in two ways: synchronous and asynchronous.&lt;/p&gt;
 &lt;p&gt;In synchronous replication, the primary database waits for the replica to acknowledge that it has received the data before it can proceed. This ensures that the data is always consistent between the primary and replica databases, but it can also slow down the performance of the primary database.&lt;/p&gt;</description>
     </item>
+    
     <item>
       <title> IP V4 Subnetting tricks and basics</title>
-      <link>https://justinmathew.com/posts/ipv4-subneting-concepts/</link>
-      <pubDate>Tue, 13 May 2025 19:02:39 +0530</pubDate>
-      <guid>https://justinmathew.com/posts/ipv4-subneting-concepts/</guid>
+      <link>http://localhost:1313/posts/ipv4-subneting-concepts/</link>
+      <pubDate>Tue, 13 May 2025 19:02:39 &#43;0530</pubDate>
+      <guid>http://localhost:1313/posts/ipv4-subneting-concepts/</guid>
       <description>&lt;h2 id=&#34;ip-v4-subnetting-tricks-and-basics&#34;&gt;IP V4 Subnetting tricks and basics&lt;/h2&gt;
 &lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
 &lt;p&gt;As usual lets try to be little intellectual. By saying a qoute i got it from chatgpt.&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;“Good subnetting is like good carpentry: measure twice, cut once.”&lt;/strong&gt;&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;“Good subnetting is like good carpentry: measure twice, cut once.”&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;What ever it means it doesnt matter. But the point is to understand the concept of subnetting and how it works.&lt;/p&gt;
 &lt;p&gt;This is somehow one of the most mind f**k*ng topic which i encoutered during my job. It simply confuses me all the time. Later i understood that i should simply sit and chat about it with my LLM. My LLM is the best thing it knows me and nowadays its my therapist. (You should try the therapy with LLM, it works like a charm).&lt;/p&gt;</description>
     </item>
+    
     <item>
       <title> Utils</title>
-      <link>https://justinmathew.com/posts/ipv4-utils/</link>
-      <pubDate>Tue, 13 May 2025 19:02:39 +0530</pubDate>
-      <guid>https://justinmathew.com/posts/ipv4-utils/</guid>
+      <link>http://localhost:1313/posts/ipv4-utils/</link>
+      <pubDate>Tue, 13 May 2025 19:02:39 &#43;0530</pubDate>
+      <guid>http://localhost:1313/posts/ipv4-utils/</guid>
       <description>&lt;h1 id=&#34;first-tool-subnet-calculator&#34;&gt;First tool: Subnet Calculator&lt;/h1&gt;
 &lt;p&gt;If you want to calculate the subnet, you can use the following tool. It will help you to calculate the subnet, broadcast address, and usable IP addresses.&lt;/p&gt;
 &lt;div id=&#34;my-message&#34; style=&#34;padding:1rem;background:#f5f5f5;&#34;&gt;
   Loading message...
 &lt;/div&gt;
 
-&lt;script src=&#34;https://justinmathew.com/js/script.js&#34;&gt;&lt;/script&gt;</description>
+&lt;script src=&#34;http://localhost:1313/js/script.js&#34;&gt;&lt;/script&gt;</description>
     </item>
+    
     <item>
       <title>Enterprise Over Engineering</title>
-      <link>https://justinmathew.com/posts/mindblowing-over-engineering/</link>
+      <link>http://localhost:1313/posts/mindblowing-over-engineering/</link>
       <pubDate>Sun, 27 Apr 2025 20:39:00 -0800</pubDate>
-      <guid>https://justinmathew.com/posts/mindblowing-over-engineering/</guid>
+      <guid>http://localhost:1313/posts/mindblowing-over-engineering/</guid>
       <description>&lt;h1 id=&#34;the-hidden-pitfalls-of-overusing-design-patterns&#34;&gt;The Hidden Pitfalls of Overusing Design Patterns&lt;/h1&gt;
 &lt;p&gt;This is my story of using the &lt;strong&gt;Chain of Responsibility&lt;/strong&gt; pattern after reading about it in a book while preparing for an interview.&lt;br&gt;
 Yes — I actually used it in a real job. And well, it didn’t turn out the way I had imagined.&lt;/p&gt;
@@ -97,31 +125,34 @@ Yes — I actually used it in a real job. And well, it didn’t turn out the way
 &lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;&amp;ldquo;There is only one sin, only one. And that is theft. Every other sin is a variation of theft.&amp;rdquo;&lt;/strong&gt;&lt;/p&gt;</description>
     </item>
+    
     <item>
       <title>മധുരം മലയാളം. ഒരു മലയാളം പ്രോബ്ലം സോൾവിങ് </title>
-      <link>https://justinmathew.com/2025/04/blog-post.html</link>
+      <link>http://localhost:1313/2025/04/blog-post.html</link>
       <pubDate>Sun, 06 Apr 2025 07:08:00 -0700</pubDate>
-      <guid>https://justinmathew.com/2025/04/blog-post.html</guid>
+      <guid>http://localhost:1313/2025/04/blog-post.html</guid>
       <description>&lt;p&gt;എനിക്ക് പലപ്പോഴും തോന്നിയിട്ടുണ്ട് നമ്മുടെ ഏതു ഭാഷയിലാണ് നമ്മളുടെ ബ്രെയിൻ പ്രവർത്തിക്കുന്നത് എന്ന്. ഇന്റർനെറ്റിൽ പരതുമ്പോൾ നമ്മുക്ക് മനസിലാകും ബ്രെയിൻ symbols ഉം മോഡലുകളും ആണ് ഉപയോഗിക്കുന്നത് എന്ന്. &lt;/p&gt;
 &lt;p&gt;പക്ഷെ ഒരു പ്രോബ്ലം സോൾവ് ചെയ്യുമ്പോൾ നമ്മുടെ ബ്രെയിൻ കൂടുതൽ സമയവും ചിലവഴിക്കുന്നത് ഐഡിയകളെ പരിഭാഷ ചെയ്യാൻ ആയിരിക്കും. പ്രത്യേകിച്ച് മലയാളായി ആയ എനിക്ക് ഇതൊരു പ്രശ്നമായി തോന്നിയിട്ടുണ്. ചില പ്രോബ്ലെംസ് സോൾവ് ചെയ്യുമ്പോൾ എനിക്ക് കൂടുതൽ വഴങ്ങുന്ന ഭാഷ അത് മലയാളം ആണ്.&lt;/p&gt;
 &lt;p&gt; ഉദാഹരണത്തിന് ഈ പ്രോബ്ലം നോക്കൂ. Given n non-negative integers representing an elevation map where the width of each bar is 1, compute how much water it can trap after raining. If you look at Leetcode explanation the language barrier will become very evident in finding a solution to this problem. നമുക്ക് ഒരു height array കൊടുത്തിട്ടുണ്ട്: [0,1,0,2,1,0,1,3,2,1,2,1] ഈ each number ഒരു bar ആണെന്ന് ചിന്തിക്കൂ. മഴ കഴിഞ്ഞശേഷം എത്ര units വെള്ളം ഈ structure trap ചെയ്യാമെന്ന് കാണണം.&lt;/p&gt;</description>
     </item>
+    
     <item>
       <title>Managing Concurrent Updates with Distributed Locks</title>
-      <link>https://justinmathew.com/2024/05/managing-concurrent-updates-with.html</link>
+      <link>http://localhost:1313/2024/05/managing-concurrent-updates-with.html</link>
       <pubDate>Thu, 30 May 2024 10:21:00 -0700</pubDate>
-      <guid>https://justinmathew.com/2024/05/managing-concurrent-updates-with.html</guid>
+      <guid>http://localhost:1313/2024/05/managing-concurrent-updates-with.html</guid>
       <description>&lt;p&gt;Managing Concurrent Updates with Distributed Locks&lt;/p&gt;
 &lt;h1 id=&#34;managing-concurrent-updates-with-distributed-locks&#34;&gt;Managing Concurrent Updates with Distributed Locks&lt;/h1&gt;
 &lt;p&gt;In distributed systems, managing concurrent access to shared resources is crucial to ensure data consistency and prevent corruption. Let’s explore how to handle this using a Java example, starting with a basic implementation and improving it step-by-step.&lt;/p&gt;
 &lt;h2 id=&#34;basic-implementation-without-proper-lock-handling&#34;&gt;Basic Implementation Without Proper Lock Handling&lt;/h2&gt;
 &lt;p&gt;Here&amp;rsquo;s a simple version of a method that tries to acquire a distributed lock, perform an update, and release the lock:&lt;/p&gt;</description>
     </item>
+    
     <item>
       <title>Revisiting Dynamic Programming</title>
-      <link>https://justinmathew.com/2024/03/httpswww.justinmathew.com202403dynamic-programming-revisiting.html.html</link>
+      <link>http://localhost:1313/2024/03/httpswww.justinmathew.com202403dynamic-programming-revisiting.html.html</link>
       <pubDate>Tue, 19 Mar 2024 13:11:00 -0700</pubDate>
-      <guid>https://justinmathew.com/2024/03/httpswww.justinmathew.com202403dynamic-programming-revisiting.html.html</guid>
+      <guid>http://localhost:1313/2024/03/httpswww.justinmathew.com202403dynamic-programming-revisiting.html.html</guid>
       <description>&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;
 
 The main problem with me w.r.t DP problem is forgetting it if i don&amp;#39;t 
@@ -171,11 +202,12 @@ The logic of the above is :
  \* If n is 1 then there is only one way to climb the stair. \* If n is 2 then there are two ways to climb the stair. \* If n is greater than 2 then the number of ways to climb the stair is  the sum of the number of ways to climb the stair when n-1 and n-2.
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;So we recursively call climbStairs(n-1) and climbStairs(n-2) and&lt;/p&gt;</description>
     </item>
+    
     <item>
       <title>Java Design Patterns - JDP Series #1</title>
-      <link>https://justinmathew.com/2024/03/java-design-patterns-jdp.html</link>
+      <link>http://localhost:1313/2024/03/java-design-patterns-jdp.html</link>
       <pubDate>Thu, 07 Mar 2024 17:23:00 -0800</pubDate>
-      <guid>https://justinmathew.com/2024/03/java-design-patterns-jdp.html</guid>
+      <guid>http://localhost:1313/2024/03/java-design-patterns-jdp.html</guid>
       <description>&lt;h2 id=&#34;design-patterns-are-general-reusable-solutions-to-common-problems-that-occur-in-software-design-they-are-not-code-but-rather-guidelines-on-how-to-solve-a-particular-problem-in-a-particular-context-they-are-not-a-finished-design-that-can-be-transformed-directly-into-code-they-are-a-description-or-template-for-how-to-solve-a-problem-that-can-be-used-in-many-different-situations&#34;&gt;Design patterns are general reusable solutions to common problems that occur in software design. They are not code, but rather guidelines on how to solve a particular problem in a particular context. They are not a finished design that can be transformed directly into code. They are a description or template for how to solve a problem that can be used in many different situations.&lt;/h2&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;  
   
@@ -190,220 +222,46 @@ There are three types of design patterns in Java:
 * Structural&lt;br&gt;
 * Behavioral&lt;/p&gt;</description>
     </item>
+    
     <item>
       <title>Fed 27 2024. A Day of Compassion and Unexpected Encounters</title>
-      <link>https://justinmathew.com/2024/02/fed-27-2024-day-of-compassion-and.html</link>
+      <link>http://localhost:1313/2024/02/fed-27-2024-day-of-compassion-and.html</link>
       <pubDate>Tue, 27 Feb 2024 09:55:00 -0800</pubDate>
-      <guid>https://justinmathew.com/2024/02/fed-27-2024-day-of-compassion-and.html</guid>
+      <guid>http://localhost:1313/2024/02/fed-27-2024-day-of-compassion-and.html</guid>
       <description>&lt;p&gt;Today was not an ordinary day for me; it began with the need to take an unexpected sick day. The morning unfolded with urgency as I planned to drop off my child, but fate had a different story in store. Around 9:30 AM, near Hopefarm in Whitefield, my day took a dramatic turn. As I attempted to overtake a car on the right, an elderly man crossing the road appeared in my path. Despite his slow pace and my high speed, I managed to brake just in time, reducing the impact of the collision. The man, although not severely injured, fell and sustained minor scratches on his knees.&lt;/p&gt;</description>
     </item>
+    
     <item>
       <title>Jump Game</title>
-      <link>https://justinmathew.com/2024/02/jump-game.html</link>
+      <link>http://localhost:1313/2024/02/jump-game.html</link>
       <pubDate>Thu, 22 Feb 2024 17:18:00 -0800</pubDate>
-      <guid>https://justinmathew.com/2024/02/jump-game.html</guid>
+      <guid>http://localhost:1313/2024/02/jump-game.html</guid>
       <description>&lt;h2 id=&#34;jump-game-peak-and-valley-approach&#34;&gt;Jump Game Peak and Valley approach.&lt;/h2&gt;
 &lt;p&gt;Jump game is a medium level leetcode problem which is very interesting yet brainy. Once you understand the problem correctly then the answer is obvious. The probelm goes like this according to leetcode. &lt;/p&gt;
 &lt;p&gt;You are given an integer array &lt;code&gt;nums&lt;/code&gt;. You are initially positioned at the array&amp;rsquo;sfirst index, and each element in the array represents your maximum jump length at that position.&lt;/p&gt;
 &lt;p&gt;Return &lt;code&gt;true&lt;/code&gt;_ if you can reach the last index, or &lt;em&gt;&lt;code&gt;false&lt;/code&gt;&lt;/em&gt; otherwise_.&lt;/p&gt;</description>
     </item>
+    
     <item>
       <title>From Painful Tables to Performance Bliss: My Journey with Database Partitioning - Part II</title>
-      <link>https://justinmathew.com/2024/02/from-painful-tables-to-performance_15.html</link>
+      <link>http://localhost:1313/2024/02/from-painful-tables-to-performance_15.html</link>
       <pubDate>Thu, 15 Feb 2024 20:39:00 -0800</pubDate>
-      <guid>https://justinmathew.com/2024/02/from-painful-tables-to-performance_15.html</guid>
+      <guid>http://localhost:1313/2024/02/from-painful-tables-to-performance_15.html</guid>
       <description>&lt;h2 id=&#34;skewed-workloads-and-relieving-hot-spots&#34;&gt;Skewed workloads and Relieving Hot Spots&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&#34;https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgoJClAUTSTj0roZIBCR4_qM3sXJihaJLvPpviq5z25FrwP_N-Tv_SipKyDUAISzWKIb2gRY52GxbIx6uQ71HQaTjjW9UEhJuNiYc1X3fBfcCWRvjE7zTz-3l6YXKBxLFNDtTCb4GXpk2BxGLPc9IJAm_dRsWJpE4JWF2UiTR1WJF9TQFwW7wng8IikazsH/s1024/DALL%C2%B7E%202024-02-16%2010.03.06%20-%20Create%20an%20abstract,%20visually%20engaging%20image%20that%20symbolizes%20the%20concept%20of%20database%20partitioning.%20Use%20geometric%20shapes,%20lines,%20and%20vibrant%20colors%20to%20d.webp&#34;&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgoJClAUTSTj0roZIBCR4_qM3sXJihaJLvPpviq5z25FrwP_N-Tv_SipKyDUAISzWKIb2gRY52GxbIx6uQ71HQaTjjW9UEhJuNiYc1X3fBfcCWRvjE7zTz-3l6YXKBxLFNDtTCb4GXpk2BxGLPc9IJAm_dRsWJpE4JWF2UiTR1WJF9TQFwW7wng8IikazsH/s320/DALL%C2%B7E%202024-02-16%2010.03.06%20-%20Create%20an%20abstract,%20visually%20engaging%20image%20that%20symbolizes%20the%20concept%20of%20database%20partitioning.%20Use%20geometric%20shapes,%20lines,%20and%20vibrant%20colors%20to%20d.webp&#34;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Imagine you have a library with books categorized by their first letter (A-Z). This is like partitioning data based on a key (like the first letter of a book title).&lt;/p&gt;
 &lt;p&gt;Problem: One letter (say, &amp;ldquo;X&amp;rdquo;) becomes super popular (a celebrity author!). Everyone wants to read &amp;ldquo;X&amp;rdquo; books, causing a &amp;ldquo;hot spot&amp;rdquo; (overcrowding) in the &amp;ldquo;X&amp;rdquo; section.&lt;/p&gt;
 &lt;p&gt;Hashing doesn&amp;rsquo;t fix it: Even if you assign different &amp;ldquo;buckets&amp;rdquo; based on a hash of the title, all &amp;ldquo;X&amp;rdquo; books still end up in the &amp;ldquo;X&amp;rdquo; bucket.&lt;/p&gt;</description>
     </item>
+    
     <item>
       <title>From Painful Tables to Performance Bliss: My Journey with Database Partitioning - Part I</title>
-      <link>https://justinmathew.com/2024/02/from-painful-tables-to-performance.html</link>
+      <link>http://localhost:1313/2024/02/from-painful-tables-to-performance.html</link>
       <pubDate>Sun, 11 Feb 2024 17:18:00 -0800</pubDate>
-      <guid>https://justinmathew.com/2024/02/from-painful-tables-to-performance.html</guid>
+      <guid>http://localhost:1313/2024/02/from-painful-tables-to-performance.html</guid>
       <description>&lt;p&gt;Ah, the early days of wrangling massive data tables! I vividly remember the struggle – slow queries, performance bottlenecks, and the ever-growing cloud bill. It was an uphill battle until we unearthed the magic bullet:  database partitioning. Talk about a revelation! This newfound approach not only eradicated performance issues but also slashed computational costs.&lt;/p&gt;
 &lt;p&gt;But the story doesn&amp;rsquo;t end there. My exploration revealed a treasure trove of partitioning techniques, each unlocking unique advantages. Inspired by &amp;ldquo;Designing Data-Intensive Applications&amp;rdquo;, I embarked on a quest to master this data management superpower. This blog chronicles my learnings, shedding light on the various ways you can partition your data for optimal performance and cost-efficiency.&lt;/p&gt;</description>
     </item>
-    <item>
-      <title>Event Sourcing - Moving out of traditions | Simplified version</title>
-      <link>https://justinmathew.com/2024/02/event-sourcing-moving-out-of-traditions.html</link>
-      <pubDate>Tue, 06 Feb 2024 17:59:00 -0800</pubDate>
-      <guid>https://justinmathew.com/2024/02/event-sourcing-moving-out-of-traditions.html</guid>
-      <description>&lt;h2 id=&#34;introduction&#34;&gt; Introduction&lt;/h2&gt;
-&lt;p&gt;A colleague recommended Martin Kleppmann&amp;rsquo;s &amp;ldquo;Designing Data-Intensive Applications&amp;rdquo; to me. Initially, I found the beginning somewhat tedious and opted for a non-linear approach, selecting topics of interest at random rather than reading from start to finish as one might with a novel. This strategy seemed fitting given the book&amp;rsquo;s comprehensive coverage of software system design, akin to an engineering bible. Today, I&amp;rsquo;ve chosen to delve into the concept of Event Sourcing. Let&amp;rsquo;s explore this topic together.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Designing a Browser History Feature</title>
-      <link>https://justinmathew.com/2024/02/designing-browser-history-feature.html</link>
-      <pubDate>Sun, 04 Feb 2024 00:01:00 -0800</pubDate>
-      <guid>https://justinmathew.com/2024/02/designing-browser-history-feature.html</guid>
-      <description>&lt;h3 id=&#34;objective&#34;&gt;Objective&lt;/h3&gt;
-&lt;p&gt;The goal is to create a class capable of handling browser history operations efficiently. This includes:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Initializing the browser with a specified homepage.&lt;/li&gt;
-&lt;li&gt;Navigating to new URLs (visiting pages).&lt;/li&gt;
-&lt;li&gt;Enabling backward and forward navigation through the history.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;key-components&#34;&gt;Key Components&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Constructor&lt;/strong&gt;: Initializes the browser with a homepage.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Visit(URL)&lt;/strong&gt;: Navigates to a new URL and updates the current position in the history.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Back(steps)&lt;/strong&gt;: Moves back a specified number of steps in history and returns the current URL.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Forward(steps)&lt;/strong&gt;: Moves forward a specified number of steps in history and returns the current URL.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;implementation&#34;&gt;Implementation&lt;/h3&gt;
-&lt;p&gt;We will use a doubly linked list to manage the history of visited URLs, allowing for efficient navigation both backward and forward.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>An early morning adventure</title>
-      <link>https://justinmathew.com/2024/01/an-early-morning-adventure.html</link>
-      <pubDate>Wed, 31 Jan 2024 17:41:00 -0800</pubDate>
-      <guid>https://justinmathew.com/2024/01/an-early-morning-adventure.html</guid>
-      <description>&lt;p&gt;On the early morning of February 1st, I decided to tackle a problem from the Striver&amp;rsquo;s SDE sheet.&lt;/p&gt;
-&lt;p&gt;I came across an intriguing challenge titled &amp;ldquo;Set Matrix Zeroes&amp;rdquo;.&lt;/p&gt;
-&lt;p&gt;Here&amp;rsquo;s how I approached it:&lt;/p&gt;
-&lt;p&gt;Initially, I attempted a brute force method. The usual strategy of iterating through a matrix and setting rows and columns to zero has a drawback: it can lead to the loss of the matrix&amp;rsquo;s original state, potentially zeroing out the entire matrix, which isn&amp;rsquo;t the desired outcome. To avoid this, my approach involved marking the rows and columns that intersect at a zero element with a temporary value of -1. This way, the matrix&amp;rsquo;s original elements remain unchanged until the final step, where a second pass converts all -1 values back to zeros.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>An engineers view to religion</title>
-      <link>https://justinmathew.com/2022/04/an-engineers-view-to-religion.html</link>
-      <pubDate>Sun, 03 Apr 2022 07:39:00 -0700</pubDate>
-      <guid>https://justinmathew.com/2022/04/an-engineers-view-to-religion.html</guid>
-      <description>&lt;p&gt;KEEP ONE HAND DISTANCE!&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Moving from a wonderful organiztion !</title>
-      <link>https://justinmathew.com/2021/12/moving-from-wonderful-organiztion.html</link>
-      <pubDate>Thu, 23 Dec 2021 23:20:00 -0800</pubDate>
-      <guid>https://justinmathew.com/2021/12/moving-from-wonderful-organiztion.html</guid>
-      <description>&lt;p&gt;Cycle travelled all the way from Bangalore to Kannan devan hills, Idukki. ;) &lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://blogger.googleusercontent.com/img/a/AVvXsEhf3De-WXVocLoeSz6TAH3rhUUqwui_q2DBZMiUYpKx6f__tWEfmn1ctsLAO_q6KSmGrE_u8QNvDwAlDTdTVn8ayBInEF-V01eVkMnLmtlVcc1xonfZJ4JncASVF9TzY4ESGAgeSZF1b6JT1RrcuuLM3XcM04IsebMAas5NMjDdFnnWpfa-1krWSiWKPg=s1024&#34;&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blogger.googleusercontent.com/img/a/AVvXsEhf3De-WXVocLoeSz6TAH3rhUUqwui_q2DBZMiUYpKx6f__tWEfmn1ctsLAO_q6KSmGrE_u8QNvDwAlDTdTVn8ayBInEF-V01eVkMnLmtlVcc1xonfZJ4JncASVF9TzY4ESGAgeSZF1b6JT1RrcuuLM3XcM04IsebMAas5NMjDdFnnWpfa-1krWSiWKPg=w379-h379&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;A wonderful journey of last 3 years has come to an end. Moved out of MBRDI / DTICI ( Daimler Trucks Innovation Center India)&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Automate fetch upstream using github actions</title>
-      <link>https://justinmathew.com/2021/08/automate-upstream-update-using-github.html</link>
-      <pubDate>Thu, 26 Aug 2021 10:22:00 -0700</pubDate>
-      <guid>https://justinmathew.com/2021/08/automate-upstream-update-using-github.html</guid>
-      <description>&lt;p&gt;      I like to fork interesting github repositories and experiment with it. Those who do this actively might have faced the problem of upstream sync, where we need to sync our repository with the upstream repository. Imagine you forked a repository contains some articles which are being updated everyday, you will like them to have it synced everyday. I do ;) &lt;/p&gt;
-&lt;p&gt;  Github introduced a feature called &lt;a href=&#34;https://docs.github.com/en/github/collaborating-with-pull-requests/working-with-forks/syncing-a-fork&#34;&gt;fetch upstream&lt;/a&gt; this year to solve this issue. But in this case you need to click on the fetch upstream button by yourself, this article is for the lazy ones who want it to be done automatically. &lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Cheap Fast Good</title>
-      <link>https://justinmathew.com/2021/05/cheap-fast-good.html</link>
-      <pubDate>Sun, 30 May 2021 22:16:00 -0700</pubDate>
-      <guid>https://justinmathew.com/2021/05/cheap-fast-good.html</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://live.staticflickr.com/3055/2647397230_16b0828cc1.jpg&#34;&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://live.staticflickr.com/3055/2647397230_16b0828cc1.jpg&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;You can make a great software but you have to choose 2 out of this above 3. There is no way to get around!&lt;/strong&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Python linked List implementation</title>
-      <link>https://justinmathew.com/2021/01/python-linked-list-implementation.html</link>
-      <pubDate>Mon, 04 Jan 2021 08:21:00 -0800</pubDate>
-      <guid>https://justinmathew.com/2021/01/python-linked-list-implementation.html</guid>
-      <description>&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;  
-class Node:  
-     def \_\_init\_\_(self, data):  
-         self.data=data  
-         self.nextNode=None  
-  
-  
-  
-class LinkedLIst:  
-  
-    def \_\_init\_\_(self):  
-        self.head = None  
-  self.numberOFNodes=0  
-  \# Here we get o(1) constant running time complexity for insertion.  
-  def insert\_start(self,data):  
-  
-        self.numberOFNodes=self.numberOFNodes+1  
-  new\_node = Node(data)  
-  
-        if not self.head:  
-            self.head=new\_node  
-        else:  
-            new\_node.nextNode=self.head  
-            self.head = new\_node  
- #Linear running time o(n)  
-  def insert\_end(self,data):  
-        self.numberOFNodes=self.numberOFNodes+1  
-  new\_node=Node(data)  
-  
-        actual\_node=self.head  
-  
-        while actual\_node.nextNode is not None:  
-            actual\_node=actual\_node.nextNode  
-  
-        actual\_node.nextNode=new\_node  
-  
-    def size\_of\_list(self):  
-  
-        actual\_node = self.head  
-  
-        while actual\_node is not None:  
-            print(actual\_node)  
-            actual\_node=actual\_node.nextNode  
-  
-    def traverse(self):  
-        actual\_node=self.head  
-  
-        while actual\_node is not None:  
-            print(actual\_node.data)  
-            actual\_node=actual\_node.nextNode  
-  
-    def deleteAtHead(self):  
-  
-        self.head=self.head.nextNode  
-        self.numberOFNodes=self.numberOFNodes-1  
-  
-  def deleteAtTail(self):  
-  
-        actual\_node = self.head  
-  
-        while actual\_node.nextNode.nextNode is not None:  
-            actual\_node=actual\_node.nextNode  
-  
-        actual\_node.nextNode=None  
-  self.numberOFNodes=self.numberOFNodes-1  
-  
-  
-  
-linked\_list=LinkedLIst()  
-linked\_list.insert\_start(4)  
-linked\_list.insert\_start(3)  
-linked\_list.insert\_start(&amp;#39;A String type&amp;#39;)  
-linked\_list.insert\_start(1.232)  
-linked\_list.insert\_end(12.232)  
-linked\_list.traverse()  
-  
-print(&amp;#39;Deleting at the front&amp;#39;)  
-linked\_list.deleteAtHead()  
-linked\_list.traverse()  
-  
-print(&amp;#39;Delete at the last position&amp;#39;)  
-linked\_list.deleteAtTail()  
-linked\_list.traverse()
-&lt;/code&gt;&lt;/pre&gt;</description>
-    </item>
-    <item>
-      <title>Custom annotations in Spring Boot</title>
-      <link>https://justinmathew.com/2020/10/custom-annotations-in-spring-boot.html</link>
-      <pubDate>Thu, 01 Oct 2020 13:21:00 -0700</pubDate>
-      <guid>https://justinmathew.com/2020/10/custom-annotations-in-spring-boot.html</guid>
-      <description>&lt;p&gt;           I had worked on spring framework extensively throughout my career. The one thing which I am always try to implement in any Spring project I work on is Custom annotation. Its a fancy stuff but useful in many ways. &lt;/p&gt;
-&lt;p&gt;         Say you have numerous micro services (Duplicate code bases which will f*** you up) running on your cluster, the best and first thing you do is - Build a common library to push all your model classes, so called util package of your organization :p and the fancy stuffs  . I am fortunate that I get to do all these experiments early on my career. So lets start with the problem.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Python Unit Test: Basics 1</title>
-      <link>https://justinmathew.com/2020/09/what-i-found-on-python-basics-1.html</link>
-      <pubDate>Tue, 31 Dec 2019 22:06:00 -0800</pubDate>
-      <guid>https://justinmathew.com/2020/09/what-i-found-on-python-basics-1.html</guid>
-      <description>&lt;p&gt; When comes to any programming language what i check first is how to write a unit test on it. &lt;/p&gt;
-&lt;p&gt;   &lt;em&gt;&amp;ldquo;Coding is not difficult- Bill Gates&amp;rdquo;&lt;/em&gt; So what is difficult? I would say testing is difficult. Here is a basic example on how to test a small piece of python code.&lt;/p&gt;
-&lt;p&gt;                The above snippet is a basic recursive program which will return the factorial of a number. Lets see how we can write a basic test case for this. I have my directory structure as follows.&lt;/p&gt;</description>
-    </item>
+    
   </channel>
 </rss>

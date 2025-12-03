@@ -1,0 +1,21 @@
+{{- /* Custom RSS Template */ -}}
+<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>{{ .Site.Title }}</title>
+    <link>{{ .Site.BaseURL }}</link>
+    <description>{{ .Site.Params.homeInfoParams.Content }}</description>
+    <language>{{ .Site.LanguageCode }}</language>
+    {{ range first 20 .Site.RegularPages }}
+    <item>
+      <title>{{ .Title }}</title>
+      <link>{{ .Permalink }}</link>
+      <pubDate>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" }}</pubDate>
+      <guid>{{ .Permalink }}</guid>
+      <description>{{ with .Description }}{{ . | html }}{{ else }}{{ .Summary | html }}{{ end }}</description>
+      {{- if .Site.Params.ShowFullTextinRSS }}
+      <content:encoded>{{ .Content | html }}</content:encoded>
+      {{- end }}
+    </item>
+    {{ end }}
+  </channel>
+</rss>
