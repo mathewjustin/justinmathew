@@ -181,7 +181,7 @@ You know what, this name Liskov substitution principle is sometimes intemidating
 
 Well if i put this into words. In mathematics Square "is a" Rectangle. You are getting the point..? "is a". So based on this you can make square from rectangle, what could go wrong in this? Let's just write it down..
 
-``
+```
 class Rectangle {
   constructor(width, height) {
     this.width = width;
@@ -217,6 +217,7 @@ class Square extends Rectangle {
   }
 }
 ```
+
 So now Mathematically yes square is a rectangle, But this code? hmmm...
 It has a problem. This violates Liskoves substitution principle. Why?
 
