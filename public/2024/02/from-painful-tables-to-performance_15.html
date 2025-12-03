@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en" dir="auto">
 
-<head><meta charset="utf-8">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="index, follow">
+<meta name="robots" content="noindex, nofollow">
 <title>From Painful Tables to Performance Bliss: My Journey with Database Partitioning - Part II | Department of random technical stuffs</title>
 <meta name="keywords" content="">
 <meta name="description" content="Skewed workloads and Relieving Hot Spots
@@ -13,16 +13,16 @@ Imagine you have a library with books categorized by their first letter (A-Z). T
 Problem: One letter (say, &ldquo;X&rdquo;) becomes super popular (a celebrity author!). Everyone wants to read &ldquo;X&rdquo; books, causing a &ldquo;hot spot&rdquo; (overcrowding) in the &ldquo;X&rdquo; section.
 Hashing doesn&rsquo;t fix it: Even if you assign different &ldquo;buckets&rdquo; based on a hash of the title, all &ldquo;X&rdquo; books still end up in the &ldquo;X&rdquo; bucket.">
 <meta name="author" content="">
-<link rel="canonical" href="https://justinmathew.com/2024/02/from-painful-tables-to-performance_15.html">
-<link crossorigin="anonymous" href="https://justinmathew.com/assets/css/stylesheet.f49d66caae9ea0fd43f21f29e71a8d3e284517ed770f2aa86fa012953ad3c9ef.css" integrity="sha256-9J1myq6eoP1D8h8p5xqNPihFF&#43;13Dyqob6ASlTrTye8=" rel="preload stylesheet" as="style">
-<link rel="icon" href="https://justinmathew.com/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="https://justinmathew.com/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="https://justinmathew.com/favicon-32x32.png">
-<link rel="apple-touch-icon" href="https://justinmathew.com/apple-touch-icon.png">
-<link rel="mask-icon" href="https://justinmathew.com/safari-pinned-tab.svg">
+<link rel="canonical" href="http://localhost:1313/2024/02/from-painful-tables-to-performance_15.html">
+<link crossorigin="anonymous" href="http://localhost:1313/assets/css/stylesheet.f49d66caae9ea0fd43f21f29e71a8d3e284517ed770f2aa86fa012953ad3c9ef.css" integrity="sha256-9J1myq6eoP1D8h8p5xqNPihFF&#43;13Dyqob6ASlTrTye8=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="en" href="https://justinmathew.com/2024/02/from-painful-tables-to-performance_15.html">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/2024/02/from-painful-tables-to-performance_15.html">
 <noscript>
     <style>
         #theme-toggle,
@@ -59,75 +59,7 @@ Hashing doesn&rsquo;t fix it: Even if you assign different &ldquo;buckets&rdquo;
         }
 
     </style>
-</noscript><meta property="og:url" content="https://justinmathew.com/2024/02/from-painful-tables-to-performance_15.html">
-  <meta property="og:site_name" content="Department of random technical stuffs">
-  <meta property="og:title" content="From Painful Tables to Performance Bliss: My Journey with Database Partitioning - Part II">
-  <meta property="og:description" content="Skewed workloads and Relieving Hot Spots Imagine you have a library with books categorized by their first letter (A-Z). This is like partitioning data based on a key (like the first letter of a book title).
-Problem: One letter (say, “X”) becomes super popular (a celebrity author!). Everyone wants to read “X” books, causing a “hot spot” (overcrowding) in the “X” section.
-Hashing doesn’t fix it: Even if you assign different “buckets” based on a hash of the title, all “X” books still end up in the “X” bucket.">
-  <meta property="og:locale" content="en-us">
-  <meta property="og:type" content="article">
-    <meta property="article:section" content="posts">
-    <meta property="article:published_time" content="2024-02-15T20:39:00-08:00">
-    <meta property="article:modified_time" content="2024-02-15T20:39:00-08:00">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="From Painful Tables to Performance Bliss: My Journey with Database Partitioning - Part II">
-<meta name="twitter:description" content="Skewed workloads and Relieving Hot Spots
-
-Imagine you have a library with books categorized by their first letter (A-Z). This is like partitioning data based on a key (like the first letter of a book title).
-Problem: One letter (say, &ldquo;X&rdquo;) becomes super popular (a celebrity author!). Everyone wants to read &ldquo;X&rdquo; books, causing a &ldquo;hot spot&rdquo; (overcrowding) in the &ldquo;X&rdquo; section.
-Hashing doesn&rsquo;t fix it: Even if you assign different &ldquo;buckets&rdquo; based on a hash of the title, all &ldquo;X&rdquo; books still end up in the &ldquo;X&rdquo; bucket.">
-
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position":  1 ,
-      "name": "Posts",
-      "item": "https://justinmathew.com/posts/"
-    }, 
-    {
-      "@type": "ListItem",
-      "position":  2 ,
-      "name": "From Painful Tables to Performance Bliss: My Journey with Database Partitioning - Part II",
-      "item": "https://justinmathew.com/2024/02/from-painful-tables-to-performance_15.html"
-    }
-  ]
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BlogPosting",
-  "headline": "From Painful Tables to Performance Bliss: My Journey with Database Partitioning - Part II",
-  "name": "From Painful Tables to Performance Bliss: My Journey with Database Partitioning - Part II",
-  "description": "Skewed workloads and Relieving Hot Spots Imagine you have a library with books categorized by their first letter (A-Z). This is like partitioning data based on a key (like the first letter of a book title).\nProblem: One letter (say, \u0026ldquo;X\u0026rdquo;) becomes super popular (a celebrity author!). Everyone wants to read \u0026ldquo;X\u0026rdquo; books, causing a \u0026ldquo;hot spot\u0026rdquo; (overcrowding) in the \u0026ldquo;X\u0026rdquo; section.\nHashing doesn\u0026rsquo;t fix it: Even if you assign different \u0026ldquo;buckets\u0026rdquo; based on a hash of the title, all \u0026ldquo;X\u0026rdquo; books still end up in the \u0026ldquo;X\u0026rdquo; bucket.\n",
-  "keywords": [
-    
-  ],
-  "articleBody": "Skewed workloads and Relieving Hot Spots Imagine you have a library with books categorized by their first letter (A-Z). This is like partitioning data based on a key (like the first letter of a book title).\nProblem: One letter (say, “X”) becomes super popular (a celebrity author!). Everyone wants to read “X” books, causing a “hot spot” (overcrowding) in the “X” section.\nHashing doesn’t fix it: Even if you assign different “buckets” based on a hash of the title, all “X” books still end up in the “X” bucket.\nSolution 1: Split the key: Add a random number to each “X” book title (e.g., “X123”, “X456”). This spreads them across different buckets, reducing the crowd in “X”.\nDrawback: Now you need to check all buckets with “X” to find all the books (more work for reading).\nSolution 2 (future): Imagine the library magically adjusts shelves based on popularity, automatically spreading out the “X” books.\nTakeaway: Choose the solution that best fits your needs. Splitting keys helps with hot spots but adds complexity. Future systems might handle this automatically.\nPartitioning and Secondary Indexes A secondary index usually doesn’t identify a record uniquely but rather is a way of searching for occurences of a particular value; find all action by user 123, find all articles containing the word hogwash, find all cars whose color is red. In these statements you can see we use a secondary index for our query. This is essential for any database design. The issue with secondary indexes are they don’t map neatly to partitions. This happens due to non uniqueness, for example find all action by user means find all actions| filter by user, so the find all will go search on all partition. This is a simple example for this problem.\nThere are two main approaches to partitioning a database with secondary indexes : document-based partitioning and term based partitioning. Partitioning Secondary Indexes by Document. If you look at this image you can see within each partition there is another secondary index created. So if you want to search for red cars, you need to send the query to all partitions, and combine all the results you get back. In this approach you can notice each partition creates its own secondary index and when you are writing to it you only need to deal with the partition that contains the document ID that you are writing. For this exact reason a Document-Partitioned index is also known as local index.\nQuerying this kind of partitioned database is known as scatter/gather, and it can make read queries on secondary indexe quite expensive. Even if you query the partition in parallel _scatter/gather _ is prone to tail latency amplifications. Nevertheless it is a widely used approach. On the next blog we will learn more about partitioining from Martin Klepmann’s “Designing Data intensive Applications\n",
-  "wordCount" : "474",
-  "inLanguage": "en",
-  "datePublished": "2024-02-15T20:39:00-08:00",
-  "dateModified": "2024-02-15T20:39:00-08:00",
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "https://justinmathew.com/2024/02/from-painful-tables-to-performance_15.html"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "Department of random technical stuffs",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://justinmathew.com/favicon.ico"
-    }
-  }
-}
-</script>
+</noscript>
 </head>
 
 <body class="" id="top">
@@ -145,7 +77,7 @@ Hashing doesn&rsquo;t fix it: Even if you assign different &ldquo;buckets&rdquo;
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="https://justinmathew.com/" accesskey="h" title="Department of random technical stuffs (Alt + H)">Department of random technical stuffs</a>
+            <a href="http://localhost:1313/" accesskey="h" title="Department of random technical stuffs (Alt + H)">Department of random technical stuffs</a>
             <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
@@ -171,8 +103,13 @@ Hashing doesn&rsquo;t fix it: Even if you assign different &ldquo;buckets&rdquo;
         </div>
         <ul id="menu">
             <li>
-                <a href="https://justinmathew.com/search/" title="Search (Alt &#43; /)" accesskey=/>
+                <a href="http://localhost:1313/search/" title="Search (Alt &#43; /)" accesskey=/>
                     <span>Search</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/index.xml" title="RSS">
+                    <span>RSS</span>
                 </a>
             </li>
         </ul>
@@ -231,11 +168,13 @@ Hashing doesn&rsquo;t fix it: Even if you assign different &ldquo;buckets&rdquo;
         crossorigin="anonymous"
         async>
 </script>
+
+
 </article>
     </main>
     
 <footer class="footer">
-        <span>&copy; 2025 <a href="https://justinmathew.com/">Department of random technical stuffs</a></span> · 
+        <span>&copy; 2025 <a href="http://localhost:1313/">Department of random technical stuffs</a></span> · 
 
     <span>
         Powered by

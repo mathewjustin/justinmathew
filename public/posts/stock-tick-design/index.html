@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html lang="en" dir="auto">
 
-<head><meta charset="utf-8">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="index, follow">
+<meta name="robots" content="noindex, nofollow">
 <title>Designing a Stock Ticker Service | Department of random technical stuffs</title>
 <meta name="keywords" content="">
 <meta name="description" content="I got pissed off by seeing system design interview videos on this">
 <meta name="author" content="">
-<link rel="canonical" href="https://justinmathew.com/posts/stock-tick-design/">
-<link crossorigin="anonymous" href="https://justinmathew.com/assets/css/stylesheet.f49d66caae9ea0fd43f21f29e71a8d3e284517ed770f2aa86fa012953ad3c9ef.css" integrity="sha256-9J1myq6eoP1D8h8p5xqNPihFF&#43;13Dyqob6ASlTrTye8=" rel="preload stylesheet" as="style">
-<link rel="icon" href="https://justinmathew.com/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="https://justinmathew.com/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="https://justinmathew.com/favicon-32x32.png">
-<link rel="apple-touch-icon" href="https://justinmathew.com/apple-touch-icon.png">
-<link rel="mask-icon" href="https://justinmathew.com/safari-pinned-tab.svg">
+<link rel="canonical" href="http://localhost:1313/posts/stock-tick-design/">
+<link crossorigin="anonymous" href="http://localhost:1313/assets/css/stylesheet.f49d66caae9ea0fd43f21f29e71a8d3e284517ed770f2aa86fa012953ad3c9ef.css" integrity="sha256-9J1myq6eoP1D8h8p5xqNPihFF&#43;13Dyqob6ASlTrTye8=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="en" href="https://justinmathew.com/posts/stock-tick-design/">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/stock-tick-design/">
 <noscript>
     <style>
         #theme-toggle,
@@ -55,69 +55,7 @@
         }
 
     </style>
-</noscript><meta property="og:url" content="https://justinmathew.com/posts/stock-tick-design/">
-  <meta property="og:site_name" content="Department of random technical stuffs">
-  <meta property="og:title" content="Designing a Stock Ticker Service">
-  <meta property="og:description" content="I got pissed off by seeing system design interview videos on this">
-  <meta property="og:locale" content="en-us">
-  <meta property="og:type" content="article">
-    <meta property="article:section" content="posts">
-    <meta property="article:published_time" content="2025-06-15T23:02:39+05:30">
-    <meta property="article:modified_time" content="2025-06-15T23:02:39+05:30">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Designing a Stock Ticker Service">
-<meta name="twitter:description" content="I got pissed off by seeing system design interview videos on this">
-
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position":  1 ,
-      "name": "Posts",
-      "item": "https://justinmathew.com/posts/"
-    }, 
-    {
-      "@type": "ListItem",
-      "position":  2 ,
-      "name": "Designing a Stock Ticker Service",
-      "item": "https://justinmathew.com/posts/stock-tick-design/"
-    }
-  ]
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BlogPosting",
-  "headline": "Designing a Stock Ticker Service",
-  "name": "Designing a Stock Ticker Service",
-  "description": "I got pissed off by seeing system design interview videos on this",
-  "keywords": [
-    
-  ],
-  "articleBody": "The Stock Ticker Service Design I got pissed off by seeing system design interview videos on this. So I thought why not write a blog post about it. Why i got pissed off? I have watched a video on youtube about this.\nThis dude introduces a time series database infront of a stock ticker service. I mean come on, this is not a time series database, this is a stock ticker service. That is when i stopped watching this video.\nWhen you design any system we need to understand the requirements first. So lets start with the requirements of a stock ticker service.\nFunctional Requirements Real-time Stock Price Updates/ watchlist: The system should provide real-time updates of stock prices as they change. Don’t put too much drama we just need to get the stock price as fast as possible. Nothing more, nothing less.\nBuy and Sell Stocks: Users should be able to buy and sell stocks.\nNon Functional Requirements High Throughput\nLow Latency\nNow first question do we really know what the difference between throughput and latency is? This is the first thing you need to understand before designing any system.\nIn simple terms, throughput is the number of requests your system can handle per second, and latency is the time it takes to process a request.\nFor example, if your system can handle 1000 requests per second, then your throughput is 1000. If it takes 200 milliseconds to process a request, then your latency is 200 milliseconds. Measurement unit of throughput varies from system to system, but it is usually measured in requests per second (RPS) , transactions per second (TPS) or MB/Sec. Latency is usually measured in milliseconds (ms).\nPlease check this https://github.com/mathewjustin/DesignPatternsAndAbhyasas/blob/main/LatencyAndThroughput.md\nWhen it comes to stock ticker, i want to get the stock price as fast as possible. If NSE sends a stock price update at 10:00:00.000, i want to get that update at 10:00:00.200. This is the latency requirement.\nDo you even think you can have a db that can give you this kind of latency? No, having a db or any kind of storage then reading from that and pushing to user will increase the latency my multifold. So whats the best way?\nLets think how NSE or BSE actually does this.\nWhich feature to implement first? Lets take the watch list feature first. This is interesting. Lets talk the numbers first. How many active users will be there in for our product?\nLets say we have 1 million active users. And they have an average of 10 stocks in their watchlist. So we have 10 million stocks in our watchlist.\nEssentially if we have a simple rest api server is going to recieve a request every time a stock price changes. So if we have 10 million stocks, we will have 10 million requests per second. This is not going to work. We need to have a better way to handle this.\nSolution We can use a publish-subscribe model to handle this.\nAs a broker we will recieve stock price updates from NSE or BSE. We will then publish these updates to all the subscribers who are interested in that stock. This is what we ultimately want.\nSo the change in price should be sent to all the subscribers who are interested in that stock. We should not ideally have any storage in between. Like for example, we may think if NSE is returning same stock price update multiple times, we can store it in a db and then send it to the subscribers. But this is not a good idea. Introducing anything in between will increase the latency. So we should not have any storage in between.\nNow what if have Kafka or any other message broker in between? This is a good idea. We can use Kafka to handle the publish-subscribe model.\nBut there is a catch latency and throughput. We are talking about micro second lantency. Kafka will have to write to disk. The message should reach a partition and then it should be read by the customer. This will increase the latency. So we should not use Kafka or any other message broker.\nWe need something which should be in memory and should be able to handle the publish-subscribe model. For a slow client we can actually drop the message. Zerodha’s design choice is like this. They use a in-memory data structure to handle the publish-subscribe model.\nThe zerodha way of doing this? *I deep dived into Zerodha’s design choices. Particularly this blog from the Zerodha team: https://zerodha.tech/blog/scaling-with-common-sense/\nHere, Kailash talks about the following on “10. Caching is a silver bullet, almost”.*, that is they use redis heavily. Also they optimize redis for the stock ticker service. What they do? They essentially turn off the persistance of redis. This means that redis will not write to disk. So it will be in memory and it will be fast. Also a lot many points caught my attention.\nThen they have a go binary which handles hundreds of thousands of requests per second. This is a good design choice. They use a in-memory data structure to handle the publish-subscribe model.\nI am kind of speculting that the design should be something like the below.\nEssentially the websocket server fan-outs the stock price updates to all the subscribers who are interested in that stock. The websocket server is a go binary which handles hundreds of thousands of requests per second. The websocket server is connected to redis which is used to handle the publish-subscribe model.\nConclusion What we learned?\nFor a any service which needs to be low latency and high throughput, we should not have any storage in between. We must pick the right programming language for the service. Go is a good choice for this kind of service purely because of its performance. I believe java can also do well since the inception of its virtual threads.(More experimentation is needed) Switching off redis persistence, i frankly never thought of this. This is a good design choice. But we need to be careful about the data loss. If redis goes down, we will lose all the data. So we need to have a backup plan for this. ",
-  "wordCount" : "1036",
-  "inLanguage": "en",
-  "datePublished": "2025-06-15T23:02:39+05:30",
-  "dateModified": "2025-06-15T23:02:39+05:30",
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "https://justinmathew.com/posts/stock-tick-design/"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "Department of random technical stuffs",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://justinmathew.com/favicon.ico"
-    }
-  }
-}
-</script>
+</noscript>
 </head>
 
 <body class="" id="top">
@@ -135,7 +73,7 @@
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="https://justinmathew.com/" accesskey="h" title="Department of random technical stuffs (Alt + H)">Department of random technical stuffs</a>
+            <a href="http://localhost:1313/" accesskey="h" title="Department of random technical stuffs (Alt + H)">Department of random technical stuffs</a>
             <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
@@ -161,8 +99,13 @@
         </div>
         <ul id="menu">
             <li>
-                <a href="https://justinmathew.com/search/" title="Search (Alt &#43; /)" accesskey=/>
+                <a href="http://localhost:1313/search/" title="Search (Alt &#43; /)" accesskey=/>
                     <span>Search</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/index.xml" title="RSS">
+                    <span>RSS</span>
                 </a>
             </li>
         </ul>
@@ -232,7 +175,7 @@ NSE is returning same stock price update multiple times, we can store it in a db
 <p>Here, Kailash talks about the following on &ldquo;10. Caching is a silver bullet, almost&rdquo;.*, that is they use redis heavily. Also they optimize redis for the stock ticker service. What they do? They essentially turn off the persistance of redis. This means that redis will not write to disk. So it will be in memory and it will be fast. Also a lot many points caught my attention.</p>
 <p>Then they have a go binary which handles hundreds of thousands of requests per second. This is a good design choice. They use a in-memory data structure to handle the publish-subscribe model.</p>
 <p>I am kind of speculting that the design should be something like the below.</p>
-<p><img alt="alt text" loading="lazy" src="https://justinmathew.com/posts/stock-tick-design/image.png"></p>
+<p><img alt="alt text" loading="lazy" src="http://localhost:1313/posts/stock-tick-design/image.png"></p>
 <p>Essentially the websocket server fan-outs the stock price updates to all the subscribers who are interested in that stock. The websocket server is a go binary which handles hundreds of thousands of requests per second. The websocket server is connected to redis which is used to handle the publish-subscribe model.</p>
 <h1 id="conclusion">Conclusion<a hidden class="anchor" aria-hidden="true" href="#conclusion">#</a></h1>
 <p>What we learned?</p>
@@ -263,11 +206,13 @@ NSE is returning same stock price update multiple times, we can store it in a db
         crossorigin="anonymous"
         async>
 </script>
+
+
 </article>
     </main>
     
 <footer class="footer">
-        <span>&copy; 2025 <a href="https://justinmathew.com/">Department of random technical stuffs</a></span> · 
+        <span>&copy; 2025 <a href="http://localhost:1313/">Department of random technical stuffs</a></span> · 
 
     <span>
         Powered by

@@ -14,7 +14,12 @@ title = 'Department of random technical stuffs'
   identifier = "search"
   name = "Search"
   url = "/search/"
-  weight = 10    
+  weight = 10
+[[menu.main]]
+  identifier = "rss"
+  name = "RSS"
+  url = "/index.xml"
+  weight = 20
 [params.comments]
   enable=true
 [markup.goldmark.renderer]

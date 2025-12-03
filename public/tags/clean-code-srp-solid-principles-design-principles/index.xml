@@ -1,0 +1,267 @@
+<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Department of random technical stuffs</title>
+    <link>http://localhost:1313/</link>
+    <description>Welcome to my blog — Its some random thoughts from a foolish developer!</description>
+    <language>en-us</language>
+    
+    <item>
+      <title>Solid Principles</title>
+      <link>http://localhost:1313/posts/super-solid/</link>
+      <pubDate>Thu, 06 Nov 2025 11:23:00 -0700</pubDate>
+      <guid>http://localhost:1313/posts/super-solid/</guid>
+      <description>&lt;h1 id=&#34;solid-principles&#34;&gt;Solid Principles&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&amp;ldquo;Complexity is the enemy of execution.&amp;rdquo; — Tony Robbins(From a youtube short)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Most of the times complexity in code, or complex explanation of a simple problem leads to failure in the longterm. If you can&#39;t keep things simple, or explain things simply, either you have not understood it fully or you are trying to make an impression of being smart. At times I used to act like I know something which I dont have a clue about. This is may be a defense mechanism to hide my insecurities. But there comes a day when someone asks you a question which you cant answer and you feel embarrassed.
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>B-Tree a data structures -  Postgres Internals rabbit hole..</title>
+      <link>http://localhost:1313/posts/btree-whats-inside-your-db/</link>
+      <pubDate>Sun, 29 Jun 2025 23:02:39 &#43;0530</pubDate>
+      <guid>http://localhost:1313/posts/btree-whats-inside-your-db/</guid>
+      <description>Another sunday night, another rabbit hole.</description>
+    </item>
+    
+    <item>
+      <title>Designing a Stock Ticker Service</title>
+      <link>http://localhost:1313/posts/stock-tick-design/</link>
+      <pubDate>Sun, 15 Jun 2025 23:02:39 &#43;0530</pubDate>
+      <guid>http://localhost:1313/posts/stock-tick-design/</guid>
+      <description>I got pissed off by seeing system design interview videos on this</description>
+    </item>
+    
+    <item>
+      <title>Grouping anagrams</title>
+      <link>http://localhost:1313/posts/group-anagrams/</link>
+      <pubDate>Wed, 11 Jun 2025 23:04:00 &#43;0530</pubDate>
+      <guid>http://localhost:1313/posts/group-anagrams/</guid>
+      <description>A medium but easy one!</description>
+    </item>
+    
+    <item>
+      <title>Remove more than two duplicates in-place</title>
+      <link>http://localhost:1313/posts/removeduplicates/</link>
+      <pubDate>Mon, 09 Jun 2025 23:04:00 &#43;0530</pubDate>
+      <guid>http://localhost:1313/posts/removeduplicates/</guid>
+      <description>This is a medium level problem. I think it should be easy. But anyway, lets get to the code.</description>
+    </item>
+    
+    <item>
+      <title>Inplace element removal an easy one</title>
+      <link>http://localhost:1313/posts/inplace-element-removal/</link>
+      <pubDate>Sat, 07 Jun 2025 11:54:39 &#43;0530</pubDate>
+      <guid>http://localhost:1313/posts/inplace-element-removal/</guid>
+      <description>Its an easy problem. But every problem has a trick. This one is no different. I will try to explain the trick in this post.</description>
+    </item>
+    
+    <item>
+      <title>The nicest way to merge two sorted arrays</title>
+      <link>http://localhost:1313/posts/mergingtwosortedarrays/</link>
+      <pubDate>Fri, 06 Jun 2025 23:02:39 &#43;0530</pubDate>
+      <guid>http://localhost:1313/posts/mergingtwosortedarrays/</guid>
+      <description>This is one of the easy but tricky problems. To be really honest I also struggled with tihs one. I am writing this down, and the pitfalls of this problem, so that I can refer to this later.</description>
+    </item>
+    
+    <item>
+      <title>gRPC - The Witchcraft of Remote Procedure Calls</title>
+      <link>http://localhost:1313/posts/grpc/</link>
+      <pubDate>Tue, 03 Jun 2025 23:02:39 &#43;0530</pubDate>
+      <guid>http://localhost:1313/posts/grpc/</guid>
+      <description>A deep dive into gRPC, its benefits, and how to implement it in a Spring Boot application.</description>
+    </item>
+    
+    <item>
+      <title> Replication - Leaders and Followers</title>
+      <link>http://localhost:1313/posts/replication/</link>
+      <pubDate>Tue, 20 May 2025 19:02:39 &#43;0530</pubDate>
+      <guid>http://localhost:1313/posts/replication/</guid>
+      <description>&lt;h2 id=&#34;replication---leaders-and-followers&#34;&gt;Replication - Leaders and Followers&lt;/h2&gt;
+&lt;p&gt;Replication, or read replica is a process of copy pasting data from a primary database to another database. This is done to improve performance, availability, and reliability of the database. Replication can be done in two ways: synchronous and asynchronous.&lt;/p&gt;
+&lt;p&gt;In synchronous replication, the primary database waits for the replica to acknowledge that it has received the data before it can proceed. This ensures that the data is always consistent between the primary and replica databases, but it can also slow down the performance of the primary database.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title> IP V4 Subnetting tricks and basics</title>
+      <link>http://localhost:1313/posts/ipv4-subneting-concepts/</link>
+      <pubDate>Tue, 13 May 2025 19:02:39 &#43;0530</pubDate>
+      <guid>http://localhost:1313/posts/ipv4-subneting-concepts/</guid>
+      <description>&lt;h2 id=&#34;ip-v4-subnetting-tricks-and-basics&#34;&gt;IP V4 Subnetting tricks and basics&lt;/h2&gt;
+&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;As usual lets try to be little intellectual. By saying a qoute i got it from chatgpt.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;“Good subnetting is like good carpentry: measure twice, cut once.”&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;What ever it means it doesnt matter. But the point is to understand the concept of subnetting and how it works.&lt;/p&gt;
+&lt;p&gt;This is somehow one of the most mind f**k*ng topic which i encoutered during my job. It simply confuses me all the time. Later i understood that i should simply sit and chat about it with my LLM. My LLM is the best thing it knows me and nowadays its my therapist. (You should try the therapy with LLM, it works like a charm).&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title> Utils</title>
+      <link>http://localhost:1313/posts/ipv4-utils/</link>
+      <pubDate>Tue, 13 May 2025 19:02:39 &#43;0530</pubDate>
+      <guid>http://localhost:1313/posts/ipv4-utils/</guid>
+      <description>&lt;h1 id=&#34;first-tool-subnet-calculator&#34;&gt;First tool: Subnet Calculator&lt;/h1&gt;
+&lt;p&gt;If you want to calculate the subnet, you can use the following tool. It will help you to calculate the subnet, broadcast address, and usable IP addresses.&lt;/p&gt;
+&lt;div id=&#34;my-message&#34; style=&#34;padding:1rem;background:#f5f5f5;&#34;&gt;
+  Loading message...
+&lt;/div&gt;
+
+&lt;script src=&#34;http://localhost:1313/js/script.js&#34;&gt;&lt;/script&gt;</description>
+    </item>
+    
+    <item>
+      <title>Enterprise Over Engineering</title>
+      <link>http://localhost:1313/posts/mindblowing-over-engineering/</link>
+      <pubDate>Sun, 27 Apr 2025 20:39:00 -0800</pubDate>
+      <guid>http://localhost:1313/posts/mindblowing-over-engineering/</guid>
+      <description>&lt;h1 id=&#34;the-hidden-pitfalls-of-overusing-design-patterns&#34;&gt;The Hidden Pitfalls of Overusing Design Patterns&lt;/h1&gt;
+&lt;p&gt;This is my story of using the &lt;strong&gt;Chain of Responsibility&lt;/strong&gt; pattern after reading about it in a book while preparing for an interview.&lt;br&gt;
+Yes — I actually used it in a real job. And well, it didn’t turn out the way I had imagined.&lt;/p&gt;
+&lt;p&gt;Before we dive in, here&amp;rsquo;s a quote from one of my favorite authors, Khaled Hosseini (&lt;em&gt;The Kite Runner&lt;/em&gt;):&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;&amp;ldquo;There is only one sin, only one. And that is theft. Every other sin is a variation of theft.&amp;rdquo;&lt;/strong&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>മധുരം മലയാളം. ഒരു മലയാളം പ്രോബ്ലം സോൾവിങ് </title>
+      <link>http://localhost:1313/2025/04/blog-post.html</link>
+      <pubDate>Sun, 06 Apr 2025 07:08:00 -0700</pubDate>
+      <guid>http://localhost:1313/2025/04/blog-post.html</guid>
+      <description>&lt;p&gt;എനിക്ക് പലപ്പോഴും തോന്നിയിട്ടുണ്ട് നമ്മുടെ ഏതു ഭാഷയിലാണ് നമ്മളുടെ ബ്രെയിൻ പ്രവർത്തിക്കുന്നത് എന്ന്. ഇന്റർനെറ്റിൽ പരതുമ്പോൾ നമ്മുക്ക് മനസിലാകും ബ്രെയിൻ symbols ഉം മോഡലുകളും ആണ് ഉപയോഗിക്കുന്നത് എന്ന്. &lt;/p&gt;
+&lt;p&gt;പക്ഷെ ഒരു പ്രോബ്ലം സോൾവ് ചെയ്യുമ്പോൾ നമ്മുടെ ബ്രെയിൻ കൂടുതൽ സമയവും ചിലവഴിക്കുന്നത് ഐഡിയകളെ പരിഭാഷ ചെയ്യാൻ ആയിരിക്കും. പ്രത്യേകിച്ച് മലയാളായി ആയ എനിക്ക് ഇതൊരു പ്രശ്നമായി തോന്നിയിട്ടുണ്. ചില പ്രോബ്ലെംസ് സോൾവ് ചെയ്യുമ്പോൾ എനിക്ക് കൂടുതൽ വഴങ്ങുന്ന ഭാഷ അത് മലയാളം ആണ്.&lt;/p&gt;
+&lt;p&gt; ഉദാഹരണത്തിന് ഈ പ്രോബ്ലം നോക്കൂ. Given n non-negative integers representing an elevation map where the width of each bar is 1, compute how much water it can trap after raining. If you look at Leetcode explanation the language barrier will become very evident in finding a solution to this problem. നമുക്ക് ഒരു height array കൊടുത്തിട്ടുണ്ട്: [0,1,0,2,1,0,1,3,2,1,2,1] ഈ each number ഒരു bar ആണെന്ന് ചിന്തിക്കൂ. മഴ കഴിഞ്ഞശേഷം എത്ര units വെള്ളം ഈ structure trap ചെയ്യാമെന്ന് കാണണം.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Managing Concurrent Updates with Distributed Locks</title>
+      <link>http://localhost:1313/2024/05/managing-concurrent-updates-with.html</link>
+      <pubDate>Thu, 30 May 2024 10:21:00 -0700</pubDate>
+      <guid>http://localhost:1313/2024/05/managing-concurrent-updates-with.html</guid>
+      <description>&lt;p&gt;Managing Concurrent Updates with Distributed Locks&lt;/p&gt;
+&lt;h1 id=&#34;managing-concurrent-updates-with-distributed-locks&#34;&gt;Managing Concurrent Updates with Distributed Locks&lt;/h1&gt;
+&lt;p&gt;In distributed systems, managing concurrent access to shared resources is crucial to ensure data consistency and prevent corruption. Let’s explore how to handle this using a Java example, starting with a basic implementation and improving it step-by-step.&lt;/p&gt;
+&lt;h2 id=&#34;basic-implementation-without-proper-lock-handling&#34;&gt;Basic Implementation Without Proper Lock Handling&lt;/h2&gt;
+&lt;p&gt;Here&amp;rsquo;s a simple version of a method that tries to acquire a distributed lock, perform an update, and release the lock:&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Revisiting Dynamic Programming</title>
+      <link>http://localhost:1313/2024/03/httpswww.justinmathew.com202403dynamic-programming-revisiting.html.html</link>
+      <pubDate>Tue, 19 Mar 2024 13:11:00 -0700</pubDate>
+      <guid>http://localhost:1313/2024/03/httpswww.justinmathew.com202403dynamic-programming-revisiting.html.html</guid>
+      <description>&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;
+
+The main problem with me w.r.t DP problem is forgetting it if i don&amp;#39;t 
+
+practice. So I decided to revisit all the DP problems i solved once again 
+
+just to refresh my memory.
+
+  
+So first Lets start with a simple one. Here we go!!!  
+  
+Climbing stairs from Leetcode.  
+  
+
+Explanation : You are climbing a staircase. 
+
+It takes n steps to reach the top.  
+Each time you can either climb 1 or 2 steps. In how many 
+
+distinct ways can you climb to the top?
+
+Example 1:  
+  
+Input: n = 2  
+Output: 2  
+Explanation: There are two ways to climb to the top.  
+1\. 1 step + 1 step  
+2\. 2 steps  
+  
+Example 2:  
+Input: n = 3  
+Output: 3  
+Explanation: There are three ways to climb to the top.  
+  
+1\. 1 step + 1 step + 1 step  
+2\. 1 step + 2 steps  
+3\. 2 steps + 1 step  
+  
+So how can we solve this simple problem?  
+  
+As usual we can solve this problem using recursion.   
+But the problem with recursion is it will have exponential time complexity.   
+In recursive way the following is the solution     \`\`\`java  
+ public int climbStairs(int n) { if(n == 1) return 1; if(n == 2) return 2; return climbStairs(n-1) + climbStairs(n-2); } \`\`\`  
+The logic of the above is : 
+
+ \* If n is 1 then there is only one way to climb the stair. \* If n is 2 then there are two ways to climb the stair. \* If n is greater than 2 then the number of ways to climb the stair is  the sum of the number of ways to climb the stair when n-1 and n-2.
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;So we recursively call climbStairs(n-1) and climbStairs(n-2) and&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Java Design Patterns - JDP Series #1</title>
+      <link>http://localhost:1313/2024/03/java-design-patterns-jdp.html</link>
+      <pubDate>Thu, 07 Mar 2024 17:23:00 -0800</pubDate>
+      <guid>http://localhost:1313/2024/03/java-design-patterns-jdp.html</guid>
+      <description>&lt;h2 id=&#34;design-patterns-are-general-reusable-solutions-to-common-problems-that-occur-in-software-design-they-are-not-code-but-rather-guidelines-on-how-to-solve-a-particular-problem-in-a-particular-context-they-are-not-a-finished-design-that-can-be-transformed-directly-into-code-they-are-a-description-or-template-for-how-to-solve-a-problem-that-can-be-used-in-many-different-situations&#34;&gt;Design patterns are general reusable solutions to common problems that occur in software design. They are not code, but rather guidelines on how to solve a particular problem in a particular context. They are not a finished design that can be transformed directly into code. They are a description or template for how to solve a problem that can be used in many different situations.&lt;/h2&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;  
+  
+
+Types of design patterns in Java
+--------------------------------
+
+  
+There are three types of design patterns in Java:  
+  
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;* Creational&lt;br&gt;
+* Structural&lt;br&gt;
+* Behavioral&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Fed 27 2024. A Day of Compassion and Unexpected Encounters</title>
+      <link>http://localhost:1313/2024/02/fed-27-2024-day-of-compassion-and.html</link>
+      <pubDate>Tue, 27 Feb 2024 09:55:00 -0800</pubDate>
+      <guid>http://localhost:1313/2024/02/fed-27-2024-day-of-compassion-and.html</guid>
+      <description>&lt;p&gt;Today was not an ordinary day for me; it began with the need to take an unexpected sick day. The morning unfolded with urgency as I planned to drop off my child, but fate had a different story in store. Around 9:30 AM, near Hopefarm in Whitefield, my day took a dramatic turn. As I attempted to overtake a car on the right, an elderly man crossing the road appeared in my path. Despite his slow pace and my high speed, I managed to brake just in time, reducing the impact of the collision. The man, although not severely injured, fell and sustained minor scratches on his knees.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Jump Game</title>
+      <link>http://localhost:1313/2024/02/jump-game.html</link>
+      <pubDate>Thu, 22 Feb 2024 17:18:00 -0800</pubDate>
+      <guid>http://localhost:1313/2024/02/jump-game.html</guid>
+      <description>&lt;h2 id=&#34;jump-game-peak-and-valley-approach&#34;&gt;Jump Game Peak and Valley approach.&lt;/h2&gt;
+&lt;p&gt;Jump game is a medium level leetcode problem which is very interesting yet brainy. Once you understand the problem correctly then the answer is obvious. The probelm goes like this according to leetcode. &lt;/p&gt;
+&lt;p&gt;You are given an integer array &lt;code&gt;nums&lt;/code&gt;. You are initially positioned at the array&amp;rsquo;sfirst index, and each element in the array represents your maximum jump length at that position.&lt;/p&gt;
+&lt;p&gt;Return &lt;code&gt;true&lt;/code&gt;_ if you can reach the last index, or &lt;em&gt;&lt;code&gt;false&lt;/code&gt;&lt;/em&gt; otherwise_.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>From Painful Tables to Performance Bliss: My Journey with Database Partitioning - Part II</title>
+      <link>http://localhost:1313/2024/02/from-painful-tables-to-performance_15.html</link>
+      <pubDate>Thu, 15 Feb 2024 20:39:00 -0800</pubDate>
+      <guid>http://localhost:1313/2024/02/from-painful-tables-to-performance_15.html</guid>
+      <description>&lt;h2 id=&#34;skewed-workloads-and-relieving-hot-spots&#34;&gt;Skewed workloads and Relieving Hot Spots&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgoJClAUTSTj0roZIBCR4_qM3sXJihaJLvPpviq5z25FrwP_N-Tv_SipKyDUAISzWKIb2gRY52GxbIx6uQ71HQaTjjW9UEhJuNiYc1X3fBfcCWRvjE7zTz-3l6YXKBxLFNDtTCb4GXpk2BxGLPc9IJAm_dRsWJpE4JWF2UiTR1WJF9TQFwW7wng8IikazsH/s1024/DALL%C2%B7E%202024-02-16%2010.03.06%20-%20Create%20an%20abstract,%20visually%20engaging%20image%20that%20symbolizes%20the%20concept%20of%20database%20partitioning.%20Use%20geometric%20shapes,%20lines,%20and%20vibrant%20colors%20to%20d.webp&#34;&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgoJClAUTSTj0roZIBCR4_qM3sXJihaJLvPpviq5z25FrwP_N-Tv_SipKyDUAISzWKIb2gRY52GxbIx6uQ71HQaTjjW9UEhJuNiYc1X3fBfcCWRvjE7zTz-3l6YXKBxLFNDtTCb4GXpk2BxGLPc9IJAm_dRsWJpE4JWF2UiTR1WJF9TQFwW7wng8IikazsH/s320/DALL%C2%B7E%202024-02-16%2010.03.06%20-%20Create%20an%20abstract,%20visually%20engaging%20image%20that%20symbolizes%20the%20concept%20of%20database%20partitioning.%20Use%20geometric%20shapes,%20lines,%20and%20vibrant%20colors%20to%20d.webp&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Imagine you have a library with books categorized by their first letter (A-Z). This is like partitioning data based on a key (like the first letter of a book title).&lt;/p&gt;
+&lt;p&gt;Problem: One letter (say, &amp;ldquo;X&amp;rdquo;) becomes super popular (a celebrity author!). Everyone wants to read &amp;ldquo;X&amp;rdquo; books, causing a &amp;ldquo;hot spot&amp;rdquo; (overcrowding) in the &amp;ldquo;X&amp;rdquo; section.&lt;/p&gt;
+&lt;p&gt;Hashing doesn&amp;rsquo;t fix it: Even if you assign different &amp;ldquo;buckets&amp;rdquo; based on a hash of the title, all &amp;ldquo;X&amp;rdquo; books still end up in the &amp;ldquo;X&amp;rdquo; bucket.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>From Painful Tables to Performance Bliss: My Journey with Database Partitioning - Part I</title>
+      <link>http://localhost:1313/2024/02/from-painful-tables-to-performance.html</link>
+      <pubDate>Sun, 11 Feb 2024 17:18:00 -0800</pubDate>
+      <guid>http://localhost:1313/2024/02/from-painful-tables-to-performance.html</guid>
+      <description>&lt;p&gt;Ah, the early days of wrangling massive data tables! I vividly remember the struggle – slow queries, performance bottlenecks, and the ever-growing cloud bill. It was an uphill battle until we unearthed the magic bullet:  database partitioning. Talk about a revelation! This newfound approach not only eradicated performance issues but also slashed computational costs.&lt;/p&gt;
+&lt;p&gt;But the story doesn&amp;rsquo;t end there. My exploration revealed a treasure trove of partitioning techniques, each unlocking unique advantages. Inspired by &amp;ldquo;Designing Data-Intensive Applications&amp;rdquo;, I embarked on a quest to master this data management superpower. This blog chronicles my learnings, shedding light on the various ways you can partition your data for optimal performance and cost-efficiency.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

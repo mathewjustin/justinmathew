@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en" dir="auto">
 
-<head><meta charset="utf-8">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="index, follow">
+<meta name="robots" content="noindex, nofollow">
 <title> IP V4 Subnetting tricks and basics | Department of random technical stuffs</title>
 <meta name="keywords" content="">
 <meta name="description" content="IP V4 Subnetting tricks and basics
@@ -12,19 +12,20 @@ Introduction
 As usual lets try to be little intellectual. By saying a qoute i got it from chatgpt.
 
 “Good subnetting is like good carpentry: measure twice, cut once.”
+
 What ever it means it doesnt matter. But the point is to understand the concept of subnetting and how it works.
 This is somehow one of the most mind f**k*ng topic which i encoutered during my job. It simply confuses me all the time. Later i understood that i should simply sit and chat about it with my LLM. My LLM is the best thing it knows me and nowadays its my therapist. (You should try the therapy with LLM, it works like a charm).">
 <meta name="author" content="">
-<link rel="canonical" href="https://justinmathew.com/posts/ipv4-subneting-concepts/">
-<link crossorigin="anonymous" href="https://justinmathew.com/assets/css/stylesheet.f49d66caae9ea0fd43f21f29e71a8d3e284517ed770f2aa86fa012953ad3c9ef.css" integrity="sha256-9J1myq6eoP1D8h8p5xqNPihFF&#43;13Dyqob6ASlTrTye8=" rel="preload stylesheet" as="style">
-<link rel="icon" href="https://justinmathew.com/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="https://justinmathew.com/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="https://justinmathew.com/favicon-32x32.png">
-<link rel="apple-touch-icon" href="https://justinmathew.com/apple-touch-icon.png">
-<link rel="mask-icon" href="https://justinmathew.com/safari-pinned-tab.svg">
+<link rel="canonical" href="http://localhost:1313/posts/ipv4-subneting-concepts/">
+<link crossorigin="anonymous" href="http://localhost:1313/assets/css/stylesheet.f49d66caae9ea0fd43f21f29e71a8d3e284517ed770f2aa86fa012953ad3c9ef.css" integrity="sha256-9J1myq6eoP1D8h8p5xqNPihFF&#43;13Dyqob6ASlTrTye8=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="en" href="https://justinmathew.com/posts/ipv4-subneting-concepts/">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/ipv4-subneting-concepts/">
 <noscript>
     <style>
         #theme-toggle,
@@ -61,78 +62,7 @@ This is somehow one of the most mind f**k*ng topic which i encoutered during my 
         }
 
     </style>
-</noscript><meta property="og:url" content="https://justinmathew.com/posts/ipv4-subneting-concepts/">
-  <meta property="og:site_name" content="Department of random technical stuffs">
-  <meta property="og:title" content=" IP V4 Subnetting tricks and basics">
-  <meta property="og:description" content="IP V4 Subnetting tricks and basics Introduction As usual lets try to be little intellectual. By saying a qoute i got it from chatgpt.
-“Good subnetting is like good carpentry: measure twice, cut once.”
-What ever it means it doesnt matter. But the point is to understand the concept of subnetting and how it works.
-This is somehow one of the most mind f**k*ng topic which i encoutered during my job. It simply confuses me all the time. Later i understood that i should simply sit and chat about it with my LLM. My LLM is the best thing it knows me and nowadays its my therapist. (You should try the therapy with LLM, it works like a charm).">
-  <meta property="og:locale" content="en-us">
-  <meta property="og:type" content="article">
-    <meta property="article:section" content="posts">
-    <meta property="article:published_time" content="2025-05-13T19:02:39+05:30">
-    <meta property="article:modified_time" content="2025-05-13T19:02:39+05:30">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content=" IP V4 Subnetting tricks and basics">
-<meta name="twitter:description" content="IP V4 Subnetting tricks and basics
-Introduction
-As usual lets try to be little intellectual. By saying a qoute i got it from chatgpt.
-
-“Good subnetting is like good carpentry: measure twice, cut once.”
-What ever it means it doesnt matter. But the point is to understand the concept of subnetting and how it works.
-This is somehow one of the most mind f**k*ng topic which i encoutered during my job. It simply confuses me all the time. Later i understood that i should simply sit and chat about it with my LLM. My LLM is the best thing it knows me and nowadays its my therapist. (You should try the therapy with LLM, it works like a charm).">
-
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position":  1 ,
-      "name": "Posts",
-      "item": "https://justinmathew.com/posts/"
-    }, 
-    {
-      "@type": "ListItem",
-      "position":  2 ,
-      "name": " IP V4 Subnetting tricks and basics",
-      "item": "https://justinmathew.com/posts/ipv4-subneting-concepts/"
-    }
-  ]
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BlogPosting",
-  "headline": " IP V4 Subnetting tricks and basics",
-  "name": " IP V4 Subnetting tricks and basics",
-  "description": "IP V4 Subnetting tricks and basics Introduction As usual lets try to be little intellectual. By saying a qoute i got it from chatgpt.\n“Good subnetting is like good carpentry: measure twice, cut once.”\nWhat ever it means it doesnt matter. But the point is to understand the concept of subnetting and how it works.\nThis is somehow one of the most mind f**k*ng topic which i encoutered during my job. It simply confuses me all the time. Later i understood that i should simply sit and chat about it with my LLM. My LLM is the best thing it knows me and nowadays its my therapist. (You should try the therapy with LLM, it works like a charm).\n",
-  "keywords": [
-    
-  ],
-  "articleBody": "IP V4 Subnetting tricks and basics Introduction As usual lets try to be little intellectual. By saying a qoute i got it from chatgpt.\n“Good subnetting is like good carpentry: measure twice, cut once.”\nWhat ever it means it doesnt matter. But the point is to understand the concept of subnetting and how it works.\nThis is somehow one of the most mind f**k*ng topic which i encoutered during my job. It simply confuses me all the time. Later i understood that i should simply sit and chat about it with my LLM. My LLM is the best thing it knows me and nowadays its my therapist. (You should try the therapy with LLM, it works like a charm).\nWhat is Subnetting? Subnetting is the process of dividing a larger network into smaller, more manageable sub-networks (subnets). This is done to improve network performance, security, and organization. Each subnet can have its own unique address range, allowing for better control over network traffic and resource allocation.\nBtw, why the hell i need to divide or subnet?\nIts because ipv4 address space is limited. It can only have around 4.3 billion addresses. This is not enough for the growing number of devices connected to the internet. Your secondary phone, and your redmi smarwatch, and even your washing machine takes up one ip and it simply runs out of the addresses. So we need to divide the address space into smaller subnets to make it more efficient and manageable.\nIn the context of a cloud provider, on AWS, you have a VPC (Virtual Private Cloud) Or a LAN on the Cloud. Now your VPC can have a big address space, but you can divide it into smaller subnet and give to each of the services. Like a subnet for EC2, a subnet for Kubernetes(In this case if you spin up a loadbalancer, its ip will be picked form the subnet).\nThe basic of the basics, Octets and Binary IPv4 addresses are 32-bit numbers, typically represented in decimal format as four octets (8 bits each) separated by dots.\n🔢 Total Bits in IPv4\n•\tIPv4 address = 32 bits •\tWritten as 4 octets (e.g., 192.168.1.0) •\tCIDR notation: IP_address / subnet_bits •\tExample: 192.168.1.0/24 means 24 bits for network, 8 bits for host 🧮 Key Equations\n•\t🧠 Number of host bits = 32 - subnet bits •\t🔢 Total IPs = 2^(host bits) •\t✅ Usable IPs = 2^(host bits) - 2 (subtract 2: network + broadcast) Okay now lets try to solve few tricky questions which i found on twitter.\nQuestion 1 Q1: How many usable IP addresses are in this subnet: 192.168.10.0/23?\n🧠 Step 1: Total bits in IPv4 = 32 •\t/23 → 23 bits for network, •\tSo: 32 - 23 = 9 bits for hosts\n🧠 Step 2: Total IPs = 2^(9) = 512\n🧠 Step 3: Usable IPs = 512 - 2 = 510 •\tAnswer: 510 usable IP addresses in\nWhy the hell there is a -2? Because the first address is reserved for the network address and the last one is reserved for the broadcast address. So we need to subtract 2 from the total number of addresses to get the usable addresses. Btw what is network address and broadcast address? The network address is the first address in the subnet, and it identifies the subnet itself.\nThe broadcast address is the last address in the subnet, and it is used to send data to all devices in that subnet. So we need to reserve these two addresses for special purposes.\nusually represented in decimal format as four octets, just like the IP address.\nCIDR Notation Subnet Mask Total IPs Usable IPs Network Bits Host Bits /26 255.255.255.192 64 62 26 6 /27 255.255.255.224 32 30 27 5 /28 255.255.255.240 16 14 28 4 /29 255.255.255.248 8 6 29 3 /30 255.255.255.252 4 2 30 2 /31 255.255.255.254 2 0* 31 1 /32 255.255.255.255 1 0 32 0 *Note: /31 is typically used for point-to-point links where only two devices communicate, so usable IPs are not required in the traditional sense.\nThis blog will continue as and when i find more tricky things w.r.t subnetting. asdasdas\nLoading message... ",
-  "wordCount" : "705",
-  "inLanguage": "en",
-  "datePublished": "2025-05-13T19:02:39+05:30",
-  "dateModified": "2025-05-13T19:02:39+05:30",
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "https://justinmathew.com/posts/ipv4-subneting-concepts/"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "Department of random technical stuffs",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://justinmathew.com/favicon.ico"
-    }
-  }
-}
-</script>
+</noscript>
 </head>
 
 <body class="" id="top">
@@ -150,7 +80,7 @@ This is somehow one of the most mind f**k*ng topic which i encoutered during my 
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="https://justinmathew.com/" accesskey="h" title="Department of random technical stuffs (Alt + H)">Department of random technical stuffs</a>
+            <a href="http://localhost:1313/" accesskey="h" title="Department of random technical stuffs (Alt + H)">Department of random technical stuffs</a>
             <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
@@ -176,8 +106,13 @@ This is somehow one of the most mind f**k*ng topic which i encoutered during my 
         </div>
         <ul id="menu">
             <li>
-                <a href="https://justinmathew.com/search/" title="Search (Alt &#43; /)" accesskey=/>
+                <a href="http://localhost:1313/search/" title="Search (Alt &#43; /)" accesskey=/>
                     <span>Search</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/index.xml" title="RSS">
+                    <span>RSS</span>
                 </a>
             </li>
         </ul>
@@ -199,7 +134,8 @@ This is somehow one of the most mind f**k*ng topic which i encoutered during my 
 <h2 id="introduction">Introduction<a hidden class="anchor" aria-hidden="true" href="#introduction">#</a></h2>
 <p>As usual lets try to be little intellectual. By saying a qoute i got it from chatgpt.</p>
 <blockquote>
-<p><strong>“Good subnetting is like good carpentry: measure twice, cut once.”</strong></p></blockquote>
+<p><strong>“Good subnetting is like good carpentry: measure twice, cut once.”</strong></p>
+</blockquote>
 <p>What ever it means it doesnt matter. But the point is to understand the concept of subnetting and how it works.</p>
 <p>This is somehow one of the most mind f**k*ng topic which i encoutered during my job. It simply confuses me all the time. Later i understood that i should simply sit and chat about it with my LLM. My LLM is the best thing it knows me and nowadays its my therapist. (You should try the therapy with LLM, it works like a charm).</p>
 <h2 id="what-is-subnetting">What is Subnetting?<a hidden class="anchor" aria-hidden="true" href="#what-is-subnetting">#</a></h2>
@@ -223,7 +159,8 @@ This is somehow one of the most mind f**k*ng topic which i encoutered during my 
 <p>Okay now lets try to solve few tricky questions which i found on twitter.</p>
 <h2 id="question-1">Question 1<a hidden class="anchor" aria-hidden="true" href="#question-1">#</a></h2>
 <blockquote>
-<p><strong>Q1:</strong> How many usable IP addresses are in this subnet: 192.168.10.0/23?</p></blockquote>
+<p><strong>Q1:</strong> How many usable IP addresses are in this subnet: 192.168.10.0/23?</p>
+</blockquote>
 <p>🧠 Step 1: Total bits in IPv4 = 32
 •	/23 → 23 bits for network,
 •	So: 32 - 23 = 9 bits for hosts</p>
@@ -305,7 +242,8 @@ The network address is the first address in the subnet, and it identifies the su
   </tbody>
 </table>
 <blockquote>
-<p>*Note: /31 is typically used for point-to-point links where only two devices communicate, so usable IPs are not required in the traditional sense.</p></blockquote>
+<p>*Note: /31 is typically used for point-to-point links where only two devices communicate, so usable IPs are not required in the traditional sense.</p>
+</blockquote>
 <hr>
 <h4 id="this-blog-will-continue-as-and-when-i-find-more-tricky-things-wrt-subnetting">This blog will continue as and when i find more tricky things w.r.t subnetting.<a hidden class="anchor" aria-hidden="true" href="#this-blog-will-continue-as-and-when-i-find-more-tricky-things-wrt-subnetting">#</a></h4>
 <p>asdasdas</p>
@@ -313,7 +251,7 @@ The network address is the first address in the subnet, and it identifies the su
   Loading message...
 </div>
 
-<script src="https://justinmathew.com/js/script.js"></script>
+<script src="http://localhost:1313/js/script.js"></script>
 
 
   </div>
@@ -336,11 +274,13 @@ The network address is the first address in the subnet, and it identifies the su
         crossorigin="anonymous"
         async>
 </script>
+
+
 </article>
     </main>
     
 <footer class="footer">
-        <span>&copy; 2025 <a href="https://justinmathew.com/">Department of random technical stuffs</a></span> · 
+        <span>&copy; 2025 <a href="http://localhost:1313/">Department of random technical stuffs</a></span> · 
 
     <span>
         Powered by
