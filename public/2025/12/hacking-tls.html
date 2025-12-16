@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>Hacking TLS | Department of random technical stuffs</title>
+<meta name="keywords" content="Tls hacking, Security, Encryption, Network Security">
+<meta name="description" content="Introduction
+When you deep dive into how tls works and the underline algorithms, we will understand how much of a security issue it has from a security point of view. When I was studing of OLD Tls flow it became very obvious to me that how much of a security issue it has. In this blog post I will try to explain how tls works and what are the security issues with it. I am taking about the old tls flow here so that we can understand how the new flow fixes these issue.">
+<meta name="author" content="">
+<link rel="canonical" href="http://localhost:1313/2025/12/hacking-tls.html">
+<link crossorigin="anonymous" href="http://localhost:1313/assets/css/stylesheet.f49d66caae9ea0fd43f21f29e71a8d3e284517ed770f2aa86fa012953ad3c9ef.css" integrity="sha256-9J1myq6eoP1D8h8p5xqNPihFF&#43;13Dyqob6ASlTrTye8=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/2025/12/hacking-tls.html">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="Department of random technical stuffs (Alt + H)">Department of random technical stuffs</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/search/" title="Search (Alt &#43; /)" accesskey=/>
+                    <span>Search</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/index.xml" title="RSS">
+                    <span>RSS</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      Hacking TLS
+    </h1>
+    <div class="post-meta"><span title='2025-12-15 00:00:00.002 -0700 -0700'>December 15, 2025</span>
+
+</div>
+  </header> 
+  <div class="post-content"><h1 id="introduction">Introduction<a hidden class="anchor" aria-hidden="true" href="#introduction">#</a></h1>
+<p>When you deep dive into how tls works and the underline algorithms, we will understand how much of a security issue it has from a security point of view. When I was studing of OLD Tls flow it became very obvious to me that how much of a security issue it has. In this blog post I will try to explain how tls works and what are the security issues with it. I am taking about the old tls flow here so that we can understand how the new flow fixes these issue.</p>
+<h1 id="tls-overview">TLS Overview<a hidden class="anchor" aria-hidden="true" href="#tls-overview">#</a></h1>
+<h2 id="how-it-works">How it works<a hidden class="anchor" aria-hidden="true" href="#how-it-works">#</a></h2>
+<p>Provide detailed explanations, examples, or narratives for the first main section.</p>
+<p><img alt="alt text" loading="lazy" src="tls-flow.png"></p>
+<p>This is the tls flow which I personally know. Essentially in the process of handshake client and server will end up creating a a symmetric key which will be used for further communication. The end goal of this handshake is to create a symmetric key which will be used for further communication.</p>
+<p>Where exactly shit happens?</p>
+<pre tabindex="0"><code>Client -&gt; Server: ClientKeyExchange
+Encrypted PreMasterSecret
+</code></pre><p>Well why shit happens? At this exact point entire session security for this session and for all future sessions depends on ONE-LONG lived secret. Which is</p>
+<pre tabindex="0"><code>Server RSA Private Key
+</code></pre><h3 id="how-and-why">How and Why?<a hidden class="anchor" aria-hidden="true" href="#how-and-why">#</a></h3>
+<p>Now an attacker does this :</p>
+<ol>
+<li>Record encrypted traffic.</li>
+<li>Wait for years. (I mean the intelligence agencies)</li>
+<li>Steals the servers RSA certificate (Ah simple, put an agent employee in the company and ask them to casually copy that certificate or dump it on a screen and take a photo of it. Your keys are gone!)</li>
+<li>Replays handshake from capture</li>
+<li>Decrypts PreMasterSecret</li>
+<li>Derives session keys</li>
+<li>Decrypts all past traffic</li>
+</ol>
+<p>That&rsquo;s it. Game over. Lets try this out. You probably need the tcp dump and leaked key. So lets try this out</p>
+<h2 id="reproduce-this-nowonly-on-old-tls-it-works">Reproduce this now.(Only on OLD TLS it works)<a hidden class="anchor" aria-hidden="true" href="#reproduce-this-nowonly-on-old-tls-it-works">#</a></h2>
+<p>We’ll use:</p>
+<pre><code>1.openssl
+
+2.tcpdump
+
+3.wireshark
+</code></pre>
+<h4 id="step-1--generate-rsa-cert--key">STEP 1 — Generate RSA cert &amp; key<a hidden class="anchor" aria-hidden="true" href="#step-1--generate-rsa-cert--key">#</a></h4>
+<pre><code>openssl genrsa -out server.key 2048
+
+openssl req -new -x509 \
+-key server.key \
+-out server.crt \
+-days 1 \
+-subj &quot;/CN=localhost&quot;
+</code></pre>
+<h4 id="step-2--start-an-insecure-rsa-tls-server">STEP 2 — Start an insecure RSA TLS server<a hidden class="anchor" aria-hidden="true" href="#step-2--start-an-insecure-rsa-tls-server">#</a></h4>
+<p>This forces old RSA key exchange.</p>
+<pre><code>openssl s_server \
+-accept 8443 \
+-cert server.crt \
+-key server.key \
+-cipher RSA \
+-tls1_2
+</code></pre>
+<p>⚠️ -cipher RSA is the important part.</p>
+<p>TLS sever will look like this:</p>
+<p><img alt="alt text" loading="lazy" src="image-1.png"></p>
+<h4 id="step-3--start-tcpdump-attacker-view">STEP 3 — Start tcpdump (attacker view)<a hidden class="anchor" aria-hidden="true" href="#step-3--start-tcpdump-attacker-view">#</a></h4>
+<p>In another terminal:</p>
+<p>sudo tcpdump -i lo -w rsa_tls.pcap port 8443</p>
+<p><img alt="alt text" loading="lazy" src="image-2.png">
+Leave this running.</p>
+<h4 id="step-4--connect-client--send-secret-data">STEP 4 — Connect client &amp; send secret data<a hidden class="anchor" aria-hidden="true" href="#step-4--connect-client--send-secret-data">#</a></h4>
+<p>In another terminal:</p>
+<pre><code>openssl s_client \
+-connect localhost:8443 \
+-cipher RSA \
+-tls1_2
+</code></pre>
+<p>Type something sensitive:</p>
+<p>MY_SUPER_SECRET_PASSWORD</p>
+<p><img alt="alt text" loading="lazy" src="image-3.png"></p>
+<p>Then press Enter. You can see on the first screenshot of the server terminal that it received the data.</p>
+<p>Stop tcpdump:</p>
+<p>Ctrl+C</p>
+<p><img alt="alt text" loading="lazy" src="image-4.png"></p>
+<h4 id="step-5--decrypt-the-traffic-in-wireshark-attacker-view">STEP 5 — Decrypt the traffic in wireshark (attacker view)<a hidden class="anchor" aria-hidden="true" href="#step-5--decrypt-the-traffic-in-wireshark-attacker-view">#</a></h4>
+<p>Open Wireshark:</p>
+<pre><code>wireshark rsa_tls.pcap
+</code></pre>
+<p><img alt="alt text" loading="lazy" src="image-5.png"></p>
+<p><img alt="alt text" loading="lazy" src="image-6.png">
+Configure RSA key</p>
+<p>Edit → Preferences → Protocols → TLS
+<img alt="alt text" loading="lazy" src="image-7.png"></p>
+<p>In RSA Keys List, add:</p>
+<pre><code>IP: 127.0.0.1
+
+Port: 8443
+
+Protocol: http
+
+Key File: server.key (The leaked one / The one which CIA agent employee gave)
+</code></pre>
+<p>Click OK</p>
+<h3 id="view-decrypted-traffic">View decrypted traffic<a hidden class="anchor" aria-hidden="true" href="#view-decrypted-traffic">#</a></h3>
+<p><img alt="alt text" loading="lazy" src="image-8.png"></p>
+<p>The moment I adds the leaked key Wireshark decrypts everything. You can see the secret password I sent in cleartext.</p>
+<h1 id="conclusion">Conclusion<a hidden class="anchor" aria-hidden="true" href="#conclusion">#</a></h1>
+<p>Old TLS is little stupid. It relies on one long lived secret (server RSA private key) to secure all sessions. If that key is compromised, all sessions past and future are compromised. You just need to pay some money to that CIA agent disguised as a DevOps engineer to get that key.</p>
+<h1 id="references">References<a hidden class="anchor" aria-hidden="true" href="#references">#</a></h1>
+<p>ChatGPT, TLS documentation, OpenSSL documentation</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="http://localhost:1313/tags/tls-hacking-security-encryption-network-security/">Tls Hacking, Security, Encryption, Network Security</a></li>
+    </ul>
+  </footer><script src="https://giscus.app/client.js"
+        data-repo="mathewjustin/justinmathew"
+        data-repo-id="R_kgDOOVcB9A"
+        data-category="General"
+        data-category-id="DIC_kwDOOVcB9M4Co3QS"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="preferred_color_scheme"
+        data-lang="en"
+        crossorigin="anonymous"
+        async>
+</script>
+
+
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="http://localhost:1313/">Department of random technical stuffs</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>
