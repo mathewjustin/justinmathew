@@ -2,7 +2,7 @@
 title: "Hacking TLS"
 date: 2025-12-16T06:00:00.000-08:00
 draft: false
-url: ""
+url: /2025/12/hacking-tls.html
 ---
 
 # Introduction
