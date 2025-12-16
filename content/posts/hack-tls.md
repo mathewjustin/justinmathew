@@ -1,6 +1,6 @@
 ---
 title: "Hacking TLS"
-date: 2024-12-16T06:00:00.000-08:00
+date: 2025-12-16T06:00:00.000-08:00
 draft: true
 url: ""
 ---
