@@ -1,10 +1,11 @@
 ---
-title: "Hacking TLS"
-date: 2025-12-16T06:00:00.000-08:00
+title: "Hacking TLS" 
+date: 2025-12-15T00:00:00.002-07:00
 draft: false
 url: /2025/12/hacking-tls.html
+tags: 
+- Tls hacking, Security, Encryption, Network Security
 ---
-
 # Introduction
 
 When you deep dive into how tls works and the underline algorithms, we will understand how much of a security issue it has from a security point of view. When I was studing of OLD Tls flow it became very obvious to me that how much of a security issue it has. In this blog post I will try to explain how tls works and what are the security issues with it. I am taking about the old tls flow here so that we can understand how the new flow fixes these issue. 
