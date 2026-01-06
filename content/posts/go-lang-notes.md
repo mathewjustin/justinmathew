@@ -1,6 +1,6 @@
 ---
 title: 'Go Lang Notes'
-date: 2026-01-07T20:39:00.000-08:00
+date: 2026-01-06T10:00:00.000-08:00
 draft: false
 url: /2026/01/go-lang-notes.html
 ---
@@ -81,3 +81,6 @@ class RobotDog implements Speakable {
 }
 ```
 Being a java developer, I am kind of pro Go lang after understanding just this concept. Look at how many lines of code we saved in go lang by avoiding all the boilerplate code of interfaces and delegation.
+
+
+---To be continued...---
