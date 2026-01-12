@@ -22,5 +22,7 @@ title = 'Department of random technical stuffs'
   weight = 20
 [params.comments]
   enable=true
+[services.googleAnalytics]
+  ID = "G-WNH0R0YX3N"
 [markup.goldmark.renderer]
   unsafe = true
