@@ -71,7 +71,7 @@ If you have a lot of such queries, row store is not very efficient. Probably you
 
 # Columnar Store
 
-This may not be very accurate, but to simplify the understanding we can assume columnar store stores data in a file in the following format.
+As mentioned earlier, postgres is not a truly columnar database. But there are couple of truely columnar databases in the market. The below representation is to understand how a columnar store stores data in a file.
 
 ```csv
 column         |    pg_relation_file_path
@@ -80,6 +80,7 @@ name          |    /base/12345/67891
 age           |    /base/12345/67892
 city          |    /base/12345/67893
 ```
+Yes it stores age of all employees in a table in a single file. Similarly for name, city etc.
 
 Just by looking at this we can understand **"May be, Just May be its easy to build a column level encryption mechanism much easier here than row store"**. Because each column is stored in a separate file. So encrypting a column means encrypting a file. Encrypting data at rest in columnar store can be more efficient and flexible.
 
