@@ -2,12 +2,12 @@
 date: '2026-01-20T23:02:39+05:30'
 draft: false
 title: 'Postgres Internals: Columnar and Row Store, choosing the right storage not DB'
-description: 'Got a chance to deep dive into how this PG Internals [https://www.percona.com/blog/postgresql-internals-for-newbies-a-guide-to-data-storage-part-one/] well I got hooked.'
+description: 'Some thoughts on PG Internals [https://www.percona.com/blog/postgresql-internals-for-newbies-a-guide-to-data-storage-part-one/] a good read for everyone.'
 ---
 
 # Introduction
 
-Got a change to read this post from percona last night, it's very basic thing if you worked on postgres for long [https://www.percona.com/blog/postgresql-internals-for-newbies-a-guide-to-data-storage-part-one/] it sparked some curiosity. The idea of how Postgres stores data in row store and columnar store with some extensions are pretty interesting, at the same time it opens up your thought process on when to choose a particular storage mechanism. Remember not the database but the storage mechanism that is suitable for your use case. 
+Got a chance to read this post from percona last night, it's very basic thing if you worked on postgres for long [https://www.percona.com/blog/postgresql-internals-for-newbies-a-guide-to-data-storage-part-one/] it sparked some curiosity. The idea of how Postgres stores data in row store and columnar store with some extensions are pretty interesting, at the same time it opens up your thought process on when to choose a particular storage mechanism. Remember not the database but the storage mechanism that is suitable for your use case. 
 
 If you read the above blog the primary understanding we get it not just where postgres stores its data but also how it does and how it impacts the performance of your queries. 
 
