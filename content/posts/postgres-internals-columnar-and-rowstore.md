@@ -7,7 +7,7 @@ description: 'Some thoughts on PG Internals [https://www.percona.com/blog/postgr
 
 # Introduction
 
-Got a chance to read this post from percona last night, it's very basic thing if you worked on postgres for long [https://www.percona.com/blog/postgresql-internals-for-newbies-a-guide-to-data-storage-part-one/] it sparked some curiosity. The idea of how Postgres stores data in row store and columnar store with some extensions are pretty interesting, at the same time it opens up your thought process on when to choose a particular storage mechanism. Remember not the database but the storage mechanism that is suitable for your use case. 
+Got a chance to read this post from percona last night, it's very basic thing if you worked on postgres for long [https://www.percona.com/blog/postgresql-internals-for-newbies-a-guide-to-data-storage-part-one/] it sparked some curiosity. The idea of how Postgres stores data in row store and some other dbs stores in columnar store is really interesting. This makes me think that we should always think in the perspective of choosing the right data storage rather than choosing the right database for a particular use case.
 
 If you read the above blog the primary understanding we get it not just where postgres stores its data but also how it does and how it impacts the performance of your queries. 
 
@@ -88,21 +88,23 @@ Just by looking at this we can understand **"May be, Just May be its easy to bui
 
 Exact oppoisite of row store, all ugly sides of row store are good sides of columnar store.
 
+But here's the key distinction: **Columnar storage is specifically designed for OLAP (Online Analytical Processing) workloads** - think summarization, aggregation, and analytics. While row store excels at OLTP (interactions - inserts, updates, deletes), columnar store shines when you need to analyze data.
+
 1. Same example from the ugly side of row store. When you have a query that needs only a few columns of a row, columnar store is very efficient. Imagine a query like 
 
 ```sql
 SELECT name, city FROM users WHERE id = 1;
 ```
-In this case postgres will read only the name and city columns for id 1, so its very efficient in terms of I/O and CPU resources.
+In this case postgres will read heronly the name and city columns for id 1, so its very efficient in terms of I/O and CPU resources.
 
-2. What happens to the crazy issue of calculating average age of all users. In columnar store postgres will read only the age column for all users, so its very efficient in terms of I/O and CPU resources.
+2. What happens to the crazy issue of calculating average age of all users? This is a classic **analytical query (OLAP workload)** where columnar storage truly shines. In columnar store postgres will read only the age column for all users, so its very efficient in terms of I/O and CPU resources.
 
 ```sql
 SELECT AVG(age) FROM users;
 ```
 Why is it efficient? Because all the age values are stored together in one file, so reading them is very efficient. 
 
-The above query will simply read the age column file and calculate the average. No need to read the entire row for all users.
+The above query will simply read the age column file and calculate the average. No need to read the entire row for all users. This is exactly what columnar storage was designed for - **analytical summarization** rather than transactional interactions.
 
 ## Ugly side of Columnar Store
 
