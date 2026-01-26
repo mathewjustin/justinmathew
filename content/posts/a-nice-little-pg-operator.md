@@ -1,19 +1,18 @@
 ---
 title: 'A whole new operator for PostgreSQL monitoring'
-date: 2026-01-25T17:41:00.000-08:00
+date: 2026-01-26T09:00:00-08:00
 draft: false
 url: /2026/01/a-whole-new-operator-for-postgresql-monitoring.html
 ---
 
-# Introduction
+## Introduction
 
 As I mentioned in my previous blogs, I have started learning Go and Kubernetes operators. What I realized about my softwaren engineering journey is that I love building tools and utilities and tinkering with systems. It's so fun to just change something , tweek things a little bit, and may be build something interesting in the process. This is far better athan learning DSA or watching stupid system design videos on youtube. I can sit for hours on something which I am truely interested and passionate about. 
 
 The learning Journey with Go and Kubernetes operators has been super fun so far. I have built a few small operators and learned a lot of things in the process.
 
-#### IMP: THIS IS A FULLY VIBE CODED OPERATOR! ;)
 
-# The PostgreSQL Operator or as I call postgres-storage-advisor
+## The PostgreSQL Operator or as I call postgres-storage-advisor
 
 ## Why this supid thing?
 
