@@ -1,6 +1,6 @@
 ---
 title: 'A whole new operator for PostgreSQL monitoring'
-date: 2026-01-26T09:00:00-08:00
+date: 2026-01-25T09:00:00-08:00
 draft: false
 url: /2026/01/a-whole-new-operator-for-postgresql-monitoring.html
 ---
