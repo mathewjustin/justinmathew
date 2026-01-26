@@ -11,6 +11,8 @@ As I mentioned in my previous blogs, I have started learning Go and Kubernetes o
 
 The learning Journey with Go and Kubernetes operators has been super fun so far. I have built a few small operators and learned a lot of things in the process.
 
+#### IMP: THIS IS A FULLY VIBE CODED OPERATOR! ;)
+
 # The PostgreSQL Operator or as I call postgres-storage-advisor
 
 ## Why this supid thing?
@@ -48,6 +50,15 @@ It connects to your PostgreSQL database and runs some queries to get bloat infor
     For example, if it detects declining HOT updates, it might recommend: "Consider dropping indexes on frequently updated columns" with a safety level of requires-investigation because dropping indexes is... well, dropping indexes.
 
 ### The Technical Bits (for nerds like me)
+
+#### In Action :
+
+![Storage Operator](storage-operator.png)
+
+#### Sequence diagram(puml):
+
+![alt text](image-9.png)
+
 The operator is built on Kubernetes using the Operator SDK framework. Here's the architecture:
 
 CRD (Custom Resource Definition): StorageAnalysis - you create one of these to tell the operator which database to monitor
@@ -81,6 +92,9 @@ The code is on GitHub  https://github.com/mathewjustin/postgres-storage-advisor.
 If you're into Postgres, Kubernetes, or just like tinkering with systems, give it a try. And if you find bugs (you will), feel free to roast my code in the issues.
 
 That's it for now. Back to adding more pattern detectors and probably creating more bloat in my test database than I'll ever see in production.
+
+How this looks in action:
+
 
 — Justin
 
