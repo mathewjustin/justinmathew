@@ -7,20 +7,20 @@ url: /2026/01/a-whole-new-operator-for-postgresql-monitoring.html
 
 ## Introduction
 
-As I mentioned in my previous blogs, I have started learning Go and Kubernetes operators. What I realized about my softwaren engineering journey is that I love building tools and utilities and tinkering with systems. It's so fun to just change something , tweek things a little bit, and may be build something interesting in the process. This is far better athan learning DSA or watching stupid system design videos on youtube. I can sit for hours on something which I am truely interested and passionate about. 
+As I mentioned in my previous blogs, I have started learning Go and Kubernetes operators. What I realized about my software engineering journey is that I love building tools and utilities and tinkering with systems. It's so fun to just change something, tweak things a little bit, and maybe build something interesting in the process. This is far better than learning DSA or watching stupid system design videos on youtube. I can sit for hours on something which I am truly interested and passionate about. 
 
 The learning Journey with Go and Kubernetes operators has been super fun so far. I have built a few small operators and learned a lot of things in the process.
 
 
 ## The PostgreSQL Operator or as I call postgres-storage-advisor
 
-## Why this supid thing?
+## Why this stupid thing?
 
 ##### Well is it really stupid?
 
 One of the interesting things I have noticed is Hyperscalers like AWS or GCP will provide a lot of data points and metrics about the managed databases they provide. But they will not provide any details directly related to your storage layer, like bloat, and how efficiently your database is using the allocated storage. (This is what the LLMs told me, and I have no reason to doubt them).
 
-Lets take an example of AWS. 
+Let's take an example of AWS. 
 
 Do they flag HOT updates? Recently, GCP added Index Advisors. They can tell you if an index is missing, but they aren't very good at telling you if an index is harmful (i.e., blocking HOT updates).
 
@@ -29,7 +29,7 @@ GCP (Cloud SQL)?
 Do they flag HOT updates? Recently, GCP added Index Advisors(As per the good Gemini). They can tell you if an index is missing, but they aren't very good at telling you if an index is harmful (i.e., blocking HOT updates).
 
 
-### Well will see what my operator does differently here
+### Well we'll see what my operator does differently here
 
 Well let's see what my operator does differently here
 It connects to your PostgreSQL database and runs some queries to get bloat information. No agents installed, no extensions required (well, except for pgstattuple if you want really precise bloat measurements). Just pure SQL queries against pg_stat_user_tables and friends.
