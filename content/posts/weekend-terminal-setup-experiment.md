@@ -29,6 +29,13 @@ Probably not.
 
 So the weekend experiment became a small installable project.
 
+Here is the tiny demo I made for it:
+
+<video controls muted playsinline style="width: 100%; border-radius: 8px;">
+  <source src="https://raw.githubusercontent.com/mathewjustin/pro-terminal-setup/main/assets/install-demo.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
 ## The Problem With Personal Dotfiles
 
 I like dotfiles. I also fear dotfiles.
@@ -151,4 +158,3 @@ small, portable, Kubernetes-friendly terminal setup that I can install on a
 fresh machine without re-learning my own weekend decisions.
 
 And honestly, that is already a win.
-
