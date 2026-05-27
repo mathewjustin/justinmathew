@@ -11,15 +11,20 @@ title = 'Department of random technical stuffs'
 [outputs]
   home = ["HTML", "RSS", "JSON"]
 [[menu.main]]
+  identifier = "leetcode-patterns"
+  name = "LeetCode Patterns"
+  url = "/leetcode-patterns/"
+  weight = 10
+[[menu.main]]
   identifier = "search"
   name = "Search"
   url = "/search/"
-  weight = 10
+  weight = 20
 [[menu.main]]
   identifier = "rss"
   name = "RSS"
   url = "/index.xml"
-  weight = 20
+  weight = 30
 [params.comments]
   enable=true
 [services.googleAnalytics]
