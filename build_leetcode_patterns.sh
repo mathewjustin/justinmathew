@@ -14,6 +14,7 @@ fi
 PATH="$NODE_BIN:$PATH" \
   NEXT_PUBLIC_BASE_PATH=/leetcode-patterns \
   NEXT_PUBLIC_SITE_URL=https://justinmathew.com/leetcode-patterns \
+  NEXT_PUBLIC_GOOGLE_CLIENT_ID="${NEXT_PUBLIC_GOOGLE_CLIENT_ID:-}" \
   npm --prefix "$APP_DIR" run build
 rm -rf "$TARGET_DIR"
 mkdir -p "$TARGET_DIR"
