@@ -7,7 +7,7 @@ on:
     branches: ["main"]
 
   repository_dispatch:
-    types: ["leetcode-patterns-updated"]
+    types: ["leetcode-patterns-updated", "system-design-notes-updated"]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -52,23 +52,38 @@ jobs:
           repository: mathewjustin/leetcode-patterns
           ref: main
           path: leetcode-patterns
+      - name: Checkout System Design Notes app
+        uses: actions/checkout@v4
+        with:
+          repository: mathewjustin/system-design-notes
+          ref: main
+          path: system-design-notes
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 24
           cache: npm
-          cache-dependency-path: leetcode-patterns/package-lock.json
+          cache-dependency-path: |
+            leetcode-patterns/package-lock.json
+            system-design-notes/package-lock.json
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5
       - name: Install LeetCode Patterns dependencies
         run: npm ci --prefix leetcode-patterns
+      - name: Install System Design Notes dependencies
+        run: npm ci --prefix system-design-notes
       - name: Build LeetCode Patterns mount
         env:
           APP_DIR: ${{ github.workspace }}/leetcode-patterns
           NODE_BIN: ""
           NEXT_PUBLIC_GOOGLE_CLIENT_ID: ${{ vars.NEXT_PUBLIC_GOOGLE_CLIENT_ID || secrets.NEXT_PUBLIC_GOOGLE_CLIENT_ID }}
         run: ./build_leetcode_patterns.sh
+      - name: Build System Design Notes mount
+        env:
+          APP_DIR: ${{ github.workspace }}/system-design-notes
+          NODE_BIN: ""
+        run: ./build_system_design_notes.sh
       - name: Build with Hugo
         env:
           HUGO_CACHEDIR: ${{ runner.temp }}/hugo_cache
