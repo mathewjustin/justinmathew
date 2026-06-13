@@ -3,6 +3,9 @@ baseURL = "https://justinmathew.com/"
 canonifyURLs = true
 languageCode = 'en-us'
 title = 'Department of random technical stuffs'
+[params]
+  description = "Justin Mathew's notes on software engineering, system design, coding interviews, and other technical experiments."
+  images = ["/images/social-preview.jpeg"]
 [params.homeInfoParams]
   Title = "Hey, I'm Justin 👋"
   Content = "Welcome to my blog — Its some random thoughts from a foolish developer!"
