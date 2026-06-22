@@ -64,6 +64,7 @@ jobs:
           repository: mathewjustin/kubernetes-lab
           ref: main
           path: kubernetes-lab
+          token: ${{ secrets.BLOG_REPO_DISPATCH_TOKEN }}
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
