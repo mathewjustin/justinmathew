@@ -8,7 +8,7 @@ title = 'Department of random technical stuffs'
   images = ["/images/social-preview.jpeg"]
 [params.homeInfoParams]
   Title = "Hey, I'm Justin 👋"
-  Content = "Welcome to my blog — Its some random thoughts from a foolish developer!"
+  Content = "Welcome to my blog — Its some random thoughts from a foolish developer!<br><br><a class=\"button\" href=\"/kubernetes-lab/\" title=\"Open Kubernetes Lab\"><span class=\"button-inner\">Open Kubernetes Lab</span></a>"
 [params.math]
   enable = true  
 [outputs]
@@ -18,6 +18,11 @@ title = 'Department of random technical stuffs'
   name = "LeetCode Patterns"
   url = "/leetcode-patterns/"
   weight = 10
+[[menu.main]]
+  identifier = "kubernetes-lab"
+  name = "Kubernetes Lab"
+  url = "/kubernetes-lab/"
+  weight = 15
 [[menu.main]]
   identifier = "system-design-notes"
   name = "System Design"
