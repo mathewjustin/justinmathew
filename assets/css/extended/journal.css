@@ -1,0 +1,50 @@
+
+:root { --theme: #faf8f3; --entry: #faf8f3; --primary: #252820; --content: #30332d; --secondary: #66695f; --border: #d8d7cc; --code-bg: #efede5; --accent: #7c3b30; --nav-width: 1080px; }
+.dark { --theme: #20221f; --entry: #20221f; --primary: #f0eee5; --content: #deded5; --secondary: #b4b5a9; --border: #45483f; --code-bg: #30332d; --accent: #e1a48f; }
+body { font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+body.list { background: var(--theme); }
+.header { padding: 38px 24px 0; }
+.nav { display: block; max-width: 1080px; line-height: normal; border-top: 3px solid var(--primary); }
+.logo { margin: 22px 0 0; justify-content: space-between; align-items: center; flex-wrap: nowrap; gap: 16px; }
+.logo > a { font-family: Georgia, "Times New Roman", serif; font-size: clamp(26px, 4.3vw, 46px); line-height: 1.12; font-weight: 700; letter-spacing: -1.4px; }
+.logo-switches { margin: 0; flex-shrink: 0; }
+.masthead-subtitle { margin: 13px 0 22px; color: var(--secondary); font-size: 15px; line-height: 1.6; }
+#menu { margin: 0; padding: 13px 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--primary); gap: 25px; }
+#menu li + li { margin: 0; }
+#menu a { font-size: 13px; }
+.main:has(.journal) { max-width: 1128px; padding-top: 36px; }
+.journal { display: grid; grid-template-columns: minmax(0, 1fr) 280px; gap: 44px; }
+.section-label { font-family: inherit; font-size: 11px; line-height: 1.5; text-transform: uppercase; letter-spacing: 1.8px; font-weight: 700; color: var(--accent); margin: 0; }
+.journal-story { padding: 25px 0 28px; border-bottom: 1px solid var(--border); }
+.story-meta { display: flex; gap: 16px; color: var(--secondary); font-size: 12px; margin-bottom: 10px; }
+.journal-story h2, .journal-sidebar h3, .post-title, .post-content h1, .post-content h2, .post-content h3, .entry-header h2, .page-header h1 { font-family: Georgia, "Times New Roman", serif; }
+.journal-story h2 { font-size: 27px; line-height: 1.25; letter-spacing: -.5px; margin: 0 0 12px; }
+.journal-story.lead-story h2 { font-size: clamp(30px, 3.4vw, 40px); line-height: 1.15; letter-spacing: -.9px; }
+.journal-story p { font-size: 15px; line-height: 1.75; color: var(--secondary); margin: 0; }
+.read-story { display: inline-block; margin-top: 19px; font-size: 13px; color: var(--accent); font-weight: 600; }
+.journal-sidebar { padding-left: 28px; border-left: 1px solid var(--border); }
+.sidebar-intro { font-size: 13px; color: var(--secondary); line-height: 1.6; margin: 12px 0 0; }
+.nugget { padding: 23px 0; border-bottom: 1px solid var(--border); margin-bottom: 18px; }
+.nugget-topic { font-size: 10px; letter-spacing: 1px; text-transform: uppercase; color: var(--secondary); }
+.journal-sidebar h3 { font-size: 22px; line-height: 1.25; margin: 8px 0; }
+.journal-sidebar p:not(.sidebar-intro) { font-size: 13px; line-height: 1.75; color: var(--secondary); margin: 10px 0; }
+.text-link { font-size: 12px; color: var(--accent); }
+.lab-section, .sidebar-about { border-top: 1px solid var(--primary); margin-top: 32px; padding-top: 18px; }
+.journal-pagination { display: flex; justify-content: space-between; gap: 16px; align-items: center; font-size: 12px; padding-top: 25px; color: var(--secondary); }
+a:hover { color: var(--accent); }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 5px; }
+.post-entry { background: transparent; border: 0; border-bottom: 1px solid var(--border); border-radius: 0; padding: 24px 0; }
+.post-content { font-size: 18px; line-height: 1.8; }
+.post-content pre { font-size: 14px; line-height: 1.6; }
+.post-title { line-height: 1.15; }
+@media (max-width: 760px) {
+.header { padding: 24px 20px 0; }
+.logo > a { letter-spacing: -.6px; }
+.masthead-subtitle { font-size: 13px; }
+#menu { gap: 22px; }
+.main:has(.journal) { padding: 28px 20px; }
+.journal { grid-template-columns: minmax(0, 1fr); gap: 38px; }
+.journal-sidebar { padding: 24px 0 0; border-left: 0; border-top: 1px solid var(--primary); }
+.journal-story h2 { font-size: 25px; }
+.post-content { font-size: 17px; }
+}

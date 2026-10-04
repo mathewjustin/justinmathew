@@ -1,0 +1,40 @@
+{{ define "main" }}
+{{ $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}
+{{ $pages = where $pages "Params.hiddenInHomeList" "!=" "true" }}
+{{ $paginator := .Paginate $pages }}
+<div class="journal">
+  <section class="journal-articles" aria-label="Articles">
+    <div class="section-label">{{ if eq $paginator.PageNumber 1 }}Latest writing{{ else }}From the archive{{ end }}</div>
+    {{ range $index, $page := $paginator.Pages }}
+    <article class="journal-story {{ if and (eq $index 0) (eq $paginator.PageNumber 1) }}lead-story{{ end }}">
+      <div class="story-meta"><time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2, 2006" }}</time><span>{{ .ReadingTime }} min read</span></div>
+      <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+      <p>{{ with .Description }}{{ . }}{{ else }}{{ .Summary | plainify | htmlUnescape | truncate 180 }}{{ end }}</p>
+      {{ if and (eq $index 0) (eq $paginator.PageNumber 1) }}<a class="read-story" href="{{ .RelPermalink }}">Read the essay <span aria-hidden="true">↗</span></a>{{ end }}
+    </article>
+    {{ end }}
+    {{ if gt $paginator.TotalPages 1 }}
+    <nav class="journal-pagination" aria-label="Article pages">
+      {{ with $paginator.Prev }}<a href="{{ .URL }}">← Newer articles</a>{{ end }}
+      <span>{{ $paginator.PageNumber }} / {{ $paginator.TotalPages }}</span>
+      {{ with $paginator.Next }}<a href="{{ .URL }}">Older articles →</a>{{ end }}
+    </nav>
+    {{ end }}
+  </section>
+  <aside class="journal-sidebar">
+    <section id="systems-nuggets" aria-labelledby="nuggets-title">
+      <h2 class="section-label" id="nuggets-title">Systems nuggets</h2>
+      <p class="sidebar-intro">Small ideas from the systems rabbit hole.</p>
+      {{ with site.GetPage "/posts/replication" }}
+      <article class="nugget"><span class="nugget-topic">Replication</span><h3><a href="{{ .RelPermalink }}">The trade-off behind a read replica</a></h3><p>Replication changes how you think about reads, writes, and consistency.</p><a class="text-link" href="{{ .RelPermalink }}">Explore the notes →</a></article>
+      {{ end }}
+      {{ with site.GetPage "/posts/btree-whats-inside-your-db" }}
+      <article class="nugget"><span class="nugget-topic">Database internals</span><h3><a href="{{ .RelPermalink }}">What’s inside a database index?</a></h3><p>A closer look at B-trees and the structure beneath your queries.</p><a class="text-link" href="{{ .RelPermalink }}">Explore the notes →</a></article>
+      {{ end }}
+      <a class="text-link" href="{{ "system-design-notes/" | relURL }}">All system design notes ↗</a>
+    </section>
+    <section class="lab-section" aria-labelledby="lab-title"><h2 class="section-label" id="lab-title">On the workbench</h2><h3>Kubernetes Lab</h3><p>Hands-on experiments for learning how the pieces fit together.</p><a class="text-link" href="{{ "kubernetes-lab/" | relURL }}">Open the lab ↗</a></section>
+    <section class="sidebar-about"><h2 class="section-label">Behind the notes</h2><p>I’m Justin. This is where I write down what I learn while exploring systems and building software.</p><a class="text-link" href="{{ "index.xml" | relURL }}">Follow via RSS ↗</a></section>
+  </aside>
+</div>
+{{ end }}

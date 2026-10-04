@@ -6,9 +6,11 @@ title = 'Department of random technical stuffs'
 [params]
   description = "Justin Mathew's notes on software engineering, system design, coding interviews, and other technical experiments."
   images = ["/images/social-preview.jpeg"]
+  ShowReadingTime = true
+  defaultTheme = "light"
 [params.homeInfoParams]
-  Title = "Hey, I'm Justin 👋"
-  Content = "Welcome to my blog — Its some random thoughts from a foolish developer!<br><br><a class=\"button\" href=\"/kubernetes-lab/\" title=\"Open Kubernetes Lab\"><span class=\"button-inner\">Open Kubernetes Lab</span></a>"
+  Title = "Justin’s notes on distributed systems, databases, and building software."
+  Content = "Deep dives, small experiments, and lessons from building systems."
 [params.math]
   enable = true  
 [outputs]
