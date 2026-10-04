@@ -1,0 +1,9 @@
+<figure class="mvcc-diagram" aria-labelledby="mvcc-caption">
+  <div class="mvcc-diagram-heading">Same row. Different snapshots.</div>
+  <div class="mvcc-timeline">
+    <div class="mvcc-step"><span class="mvcc-number">01</span><div><strong>Checkout reads</strong><p>Repeatable Read snapshot established</p><span class="mvcc-value">House 10</span></div></div>
+    <div class="mvcc-step"><span class="mvcc-number">02</span><div><strong>Profile saves &amp; commits</strong><p>A new row version becomes visible to new snapshots</p><span class="mvcc-value">House 10</span> <span aria-hidden="true">→</span> <span class="mvcc-value">House 20</span></div></div>
+    <div class="mvcc-step"><span class="mvcc-number">03</span><div><strong>After that commit</strong><div class="mvcc-views"><div><span>Checkout’s same snapshot</span><b>House 10</b></div><div><span>A new transaction’s snapshot</span><b>House 20</b></div></div></div></div>
+  </div>
+  <figcaption id="mvcc-caption">Time flows downward. The writer commits; checkout keeps its earlier view.</figcaption>
+</figure>
