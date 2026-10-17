@@ -1,0 +1,14 @@
+{{ define "main" }}
+<div class="talk-software">
+<header class="talk-intro"><span class="section-label">Ideas, spoken aloud</span><h1>{{ .Title }}</h1><p class="talk-deck">Learning to explain software, one idea at a time.</p><p class="talk-purpose">I’m Justin. These are small experiments in making technical ideas clearer—with my voice, a diagram, and something we can actually run.</p></header>
+<article class="talk-episode">
+  <div class="talk-meta"><span class="section-label">Episode 01 · TLS</span><span class="talk-preview">Work in progress</span></div>
+  <h2>Why would your browser trust my root CA?</h2>
+  <p>Anyone can create a root certificate authority. This short pilot explores why creating one and getting a client to trust it are different things.</p>
+  <video controls preload="metadata" playsinline aria-label="TLS pilot narrated by Justin" class="talk-video"><source src="{{ "videos/tls-first-cut.mp4" | relURL }}" type="video/mp4">Your browser cannot play this video. <a href="{{ "videos/tls-first-cut.mp4" | relURL }}">Download the pilot</a>.</video>
+  <p class="talk-video-note">First cut · about 90 seconds · My narration, diagrams, and a replay of real OpenSSL output. Captions and a checked transcript will accompany the finished episode.</p>
+  <div class="talk-takeaway"><span class="section-label">The idea to take away</span><p>A self-signature doesn’t establish trust. The client’s configured trust anchor does.</p></div>
+</article>
+<footer class="talk-next"><span class="section-label">The practice</span><p>Ask a question. Make a prediction. Run the experiment. Explain what happened.</p></footer>
+</div>
+{{ end }}

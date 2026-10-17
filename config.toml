@@ -31,6 +31,11 @@ title = 'Department of random technical stuffs'
   url = "/system-design-notes/"
   weight = 20
 [[menu.main]]
+  identifier = "lets-talk-software"
+  name = "Let’s Talk Software"
+  url = "/lets-talk-software/"
+  weight = 25
+[[menu.main]]
   identifier = "search"
   name = "Search"
   url = "/search/"
