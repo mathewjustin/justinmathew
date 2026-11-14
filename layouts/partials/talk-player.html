@@ -1,0 +1,38 @@
+{{- /* SoundCloud-style player for an episode page. Context: the episode page. */ -}}
+{{- $p := . -}}
+{{- with $p.Params.video -}}
+{{- $src := . | relURL -}}
+{{- $key := path.BaseName . -}}
+{{- $peaks := index site.Data.waveforms $key -}}
+{{- $id := printf "wave-%s" (md5 $p.RelPermalink | truncate 8 "") -}}
+<div class="sc-player" data-sc-player>
+  <video controls preload="metadata" playsinline{{ with $p.Params.poster }} poster="{{ . | relURL }}"{{ end }} aria-label="{{ $p.Title }}" class="talk-video"><source src="{{ $src }}" type="video/mp4">Your browser cannot play this video. <a href="{{ $src }}">Download the episode</a>.</video>
+  <div class="sc-bar" hidden>
+    <button type="button" class="sc-play" aria-label="Play">
+      <svg class="sc-icon-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"/></svg>
+      <svg class="sc-icon-pause" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 5h3.5v14H7zM13.5 5H17v14h-3.5z"/></svg>
+    </button>
+    <div class="sc-body">
+      <div class="sc-head">
+        <div class="sc-titles"><span class="sc-author">{{ site.Title }}</span><span class="sc-title">{{ $p.Title }}</span></div>
+        <div class="sc-tools">{{ with $p.Params.topic }}<span class="sc-tag"># {{ . }}</span>{{ end }}<button type="button" class="sc-full" aria-label="Full screen"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9V4h5M15 4h5v5M20 15v5h-5M9 20H4v-5"/></svg></button></div>
+      </div>
+      <div class="sc-wave" role="slider" tabindex="0" aria-label="Seek" aria-valuemin="0" aria-valuemax="0" aria-valuenow="0" aria-valuetext="0:00">
+        {{- if $peaks }}
+        <svg class="sc-svg" viewBox="0 0 {{ mul (len $peaks) 3 }} 60" preserveAspectRatio="none" aria-hidden="true">
+          <defs><g id="{{ $id }}">
+            {{- range $i, $h := $peaks }}
+            {{- $x := mul $i 3 }}{{ $top := mul $h 41 }}<rect x="{{ $x }}" y="{{ printf "%.2f" (sub 42 $top) }}" width="2" height="{{ printf "%.2f" $top }}"/><rect x="{{ $x }}" y="43" width="2" height="{{ printf "%.2f" (mul $h 17) }}" opacity=".45"/>
+            {{- end }}
+          </g></defs>
+          <use href="#{{ $id }}" class="sc-layer sc-base"/>
+          <use href="#{{ $id }}" class="sc-layer sc-hover"/>
+          <use href="#{{ $id }}" class="sc-layer sc-played"/>
+        </svg>
+        {{- else }}<div class="sc-line"><span class="sc-line-fill"></span></div>{{ end }}
+        <span class="sc-time sc-cur">0:00</span><span class="sc-time sc-dur"></span>
+      </div>
+    </div>
+  </div>
+</div>
+{{- end -}}

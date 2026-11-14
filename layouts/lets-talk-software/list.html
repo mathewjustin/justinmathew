@@ -9,7 +9,7 @@
   <div class="talk-meta"><span class="section-label">Latest · Episode {{ printf "%02d" .Params.episode }} · {{ .Params.topic }}</span>{{ with .Params.status }}<span class="talk-preview">{{ . }}</span>{{ end }}</div>
   <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
   <p>{{ .Description }}</p>
-  {{ with .Params.video }}<video controls preload="metadata" playsinline aria-label="{{ $latest.Title }}" class="talk-video"><source src="{{ . | relURL }}" type="video/mp4">Your browser cannot play this video. <a href="{{ . | relURL }}">Download the episode</a>.</video>{{ end }}
+  {{ partial "talk-player.html" . }}
   {{ with .Params.takeaway }}<div class="talk-takeaway"><span class="section-label">The idea to take away</span><p>{{ . }}</p></div>{{ end }}
   <a class="read-story" href="{{ .RelPermalink }}">The full episode: the experiment, and how I’d say it to three people <span aria-hidden="true">→</span></a>
 </article>
@@ -34,4 +34,5 @@
 
 <footer class="talk-next"><span class="section-label">The practice</span><p>Ask a question. Make a prediction. Run the experiment. Explain what happened.</p></footer>
 </div>
+{{ partial "talk-player-script.html" . }}
 {{ end }}

@@ -7,7 +7,7 @@
   <div class="talk-meta"><span class="section-label">Episode {{ printf "%02d" .Params.episode }} · {{ .Params.topic }}{{ with $pillarName }} · {{ . }}{{ end }}</span>{{ with .Params.status }}<span class="talk-preview">{{ . }}</span>{{ end }}</div>
   <h1>{{ .Title }}</h1>
   <p class="talk-lede">{{ .Description }}</p>
-  {{ with .Params.video }}<video controls preload="metadata" playsinline aria-label="{{ $.Title }}" class="talk-video"><source src="{{ . | relURL }}" type="video/mp4">Your browser cannot play this video. <a href="{{ . | relURL }}">Download the episode</a>.</video>{{ end }}
+  {{ partial "talk-player.html" . }}
   {{ if or .Params.duration .Params.videoNote }}<p class="talk-video-note">{{ with .Params.duration }}{{ . | humanize }}{{ end }}{{ if and .Params.duration .Params.videoNote }} · {{ end }}{{ .Params.videoNote }}</p>{{ end }}
 
   {{ with .Params.practice }}
@@ -42,4 +42,5 @@
   {{ with .NextInSection }}<a href="{{ .RelPermalink }}">{{ .Title }} →</a>{{ end }}
 </nav>
 </div>
+{{ partial "talk-player-script.html" . }}
 {{ end }}

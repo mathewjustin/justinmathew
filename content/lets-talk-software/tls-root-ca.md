@@ -7,6 +7,7 @@ topic: "TLS"
 pillar: explain
 status: "Work in progress"
 video: "videos/tls-first-cut.mp4"
+poster: "videos/tls-first-cut.jpg"
 duration: "about 90 seconds"
 videoNote: "First cut. My narration, diagrams, and a replay of real OpenSSL output. Captions and a checked transcript will come with the finished episode."
 takeaway: "A self-signature doesn’t establish trust. The client’s configured trust anchor does."
