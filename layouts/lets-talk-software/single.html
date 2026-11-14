@@ -1,0 +1,45 @@
+{{ define "main" }}
+{{ $section := site.GetPage "/lets-talk-software" }}
+{{ $pillarName := "" }}{{ range $section.Params.pillars }}{{ if eq .key $.Params.pillar }}{{ $pillarName = .name }}{{ end }}{{ end }}
+<div class="talk-software talk-single">
+<nav class="talk-back"><a class="text-link" href="{{ $section.RelPermalink }}">← {{ $section.Title }}</a></nav>
+<article class="talk-episode">
+  <div class="talk-meta"><span class="section-label">Episode {{ printf "%02d" .Params.episode }} · {{ .Params.topic }}{{ with $pillarName }} · {{ . }}{{ end }}</span>{{ with .Params.status }}<span class="talk-preview">{{ . }}</span>{{ end }}</div>
+  <h1>{{ .Title }}</h1>
+  <p class="talk-lede">{{ .Description }}</p>
+  {{ with .Params.video }}<video controls preload="metadata" playsinline aria-label="{{ $.Title }}" class="talk-video"><source src="{{ . | relURL }}" type="video/mp4">Your browser cannot play this video. <a href="{{ . | relURL }}">Download the episode</a>.</video>{{ end }}
+  {{ if or .Params.duration .Params.videoNote }}<p class="talk-video-note">{{ with .Params.duration }}{{ . | humanize }}{{ end }}{{ if and .Params.duration .Params.videoNote }} · {{ end }}{{ .Params.videoNote }}</p>{{ end }}
+
+  {{ with .Params.practice }}
+  <section class="talk-practice" aria-labelledby="practice-title">
+    <h2 class="section-label" id="practice-title">The practice</h2>
+    <ol class="practice-steps">
+      {{ with .question }}<li><span class="practice-step">Question</span><p>{{ . }}</p></li>{{ end }}
+      {{ with .prediction }}<li><span class="practice-step">Prediction</span><p>{{ . }}</p></li>{{ end }}
+      {{ with .experiment }}<li><span class="practice-step">Experiment</span><p>{{ . }}</p></li>{{ end }}
+      {{ with .explanation }}<li><span class="practice-step">Explanation</span><p>{{ . }}</p></li>{{ end }}
+    </ol>
+  </section>
+  {{ end }}
+
+  {{ with .Params.takeaway }}<div class="talk-takeaway"><span class="section-label">The idea to take away</span><p>{{ . }}</p></div>{{ end }}
+
+  {{ with .Params.audiences }}
+  <section class="talk-audiences" aria-labelledby="audiences-title">
+    <h2 class="section-label" id="audiences-title">Same idea, three listeners</h2>
+    <div class="audience-grid">
+      {{ range . }}<figure class="audience"><figcaption>To {{ .who | lower }}</figcaption><blockquote>{{ .says }}</blockquote></figure>{{ end }}
+    </div>
+  </section>
+  {{ end }}
+
+  {{ with .Params.reflection }}<section class="talk-reflection"><h2 class="section-label">What I’d say differently</h2><p>{{ . }}</p></section>{{ end }}
+
+  {{ with .Content }}<section class="talk-transcript"><h2 class="section-label">Transcript</h2><div class="post-content">{{ . }}</div></section>{{ end }}
+</article>
+<nav class="talk-pager">
+  {{ with .PrevInSection }}<a href="{{ .RelPermalink }}">← {{ .Title }}</a>{{ else }}<span></span>{{ end }}
+  {{ with .NextInSection }}<a href="{{ .RelPermalink }}">{{ .Title }} →</a>{{ end }}
+</nav>
+</div>
+{{ end }}
