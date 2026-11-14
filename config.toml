@@ -2,49 +2,44 @@ theme = "PaperMod"
 baseURL = "https://justinmathew.com/"
 canonifyURLs = true
 languageCode = 'en-us'
-title = 'Department of random technical stuffs'
+title = 'Justin Mathew'
 [params]
-  description = "Justin Mathew's notes on software engineering, system design, coding interviews, and other technical experiments."
+  description = "Justin Mathew thinks out loud about building software: explaining hard ideas clearly, reasoning about trade-offs with people, and the systems underneath."
   images = ["/images/social-preview.jpeg"]
   ShowReadingTime = true
   defaultTheme = "light"
 [params.homeInfoParams]
-  Title = "Justin’s notes on distributed systems, databases, and building software."
-  Content = "Deep dives, small experiments, and lessons from building systems."
+  Title = "Engineering is mostly a conversation. These are my notes on having it well."
+  Content = "Explaining hard ideas clearly, reasoning about trade-offs with people, and the systems underneath."
 [params.math]
   enable = true  
 [outputs]
   home = ["HTML", "RSS", "JSON"]
 [[menu.main]]
-  identifier = "leetcode-patterns"
-  name = "LeetCode Patterns"
-  url = "/leetcode-patterns/"
-  weight = 10
-[[menu.main]]
-  identifier = "kubernetes-lab"
-  name = "Kubernetes Lab"
-  url = "/kubernetes-lab/"
-  weight = 15
-[[menu.main]]
-  identifier = "system-design-notes"
-  name = "System Design"
-  url = "/system-design-notes/"
-  weight = 20
-[[menu.main]]
   identifier = "lets-talk-software"
   name = "Let’s Talk Software"
   url = "/lets-talk-software/"
-  weight = 25
+  weight = 10
+[[menu.main]]
+  identifier = "writing"
+  name = "Writing"
+  url = "/posts/"
+  weight = 20
+[[menu.main]]
+  identifier = "workbench"
+  name = "Workbench"
+  url = "/workbench/"
+  weight = 30
+[[menu.main]]
+  identifier = "about"
+  name = "About"
+  url = "/about/"
+  weight = 40
 [[menu.main]]
   identifier = "search"
   name = "Search"
   url = "/search/"
-  weight = 30
-[[menu.main]]
-  identifier = "rss"
-  name = "RSS"
-  url = "/index.xml"
-  weight = 40
+  weight = 50
 [params.comments]
   enable=true
 [services.googleAnalytics]

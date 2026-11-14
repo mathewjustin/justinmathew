@@ -1,0 +1,12 @@
+.main:has(.page-intro-wrap){max-width:1048px}
+.page-intro-wrap{padding:25px 0 40px}
+.page-intro{padding:12px 0 38px;border-bottom:1px solid var(--primary)}
+.page-intro h1{font-family:Georgia,"Times New Roman",serif;font-size:clamp(38px,6vw,64px);font-weight:normal;line-height:1.12;letter-spacing:-1.5px;margin:17px 0}
+.page-deck{font-size:21px;line-height:1.6;color:var(--accent);margin:0 0 18px}
+.page-purpose{max-width:650px;color:var(--secondary);font-size:16px;line-height:1.8}
+.workbench-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 48px}
+.workbench-item{padding:30px 0;border-bottom:1px solid var(--border)}
+.workbench-item h2{font-family:Georgia,"Times New Roman",serif;font-size:28px;font-weight:normal;line-height:1.25;margin:12px 0}
+.workbench-item h2 a{box-shadow:none}
+.workbench-item p{color:var(--secondary);font-size:15px;line-height:1.75;margin:0 0 14px}
+@media(max-width:700px){.workbench-grid{grid-template-columns:1fr}.page-intro h1{letter-spacing:-.6px}.page-deck{font-size:18px}.page-intro-wrap{padding-top:10px}}
