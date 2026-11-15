@@ -13,6 +13,9 @@ pillars:
   - key: say
     name: "Say it"
     blurb: "Questions, feedback, saying no, talking to non-engineers, and writing prompts for AI."
+  - key: learn
+    name: "Learn it"
+    blurb: "Study sessions: working through a hard question out loud, with AI as a research partner I question."
 upcoming:
   - pillar: decide
     title: "How I explain a trade-off without saying “it depends”"
