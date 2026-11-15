@@ -3,7 +3,7 @@
 .talk-episode h2 a{box-shadow:none}
 .talk-episode .read-story{margin-top:26px}
 .talk-pillars{padding:34px 0;border-top:1px solid var(--border)}
-.pillar-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:36px;margin-top:22px}
+.pillar-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:32px;margin-top:22px}
 .pillar h3{font-family:Georgia,"Times New Roman",serif;font-size:26px;font-weight:normal;margin:0 0 8px}
 .pillar-blurb{color:var(--secondary);font-size:14px;line-height:1.7;margin:0 0 16px}
 .pillar-list{list-style:none;padding:0;margin:0}
@@ -32,3 +32,5 @@
 @media(max-width:800px){.pillar-grid,.audience-grid{grid-template-columns:1fr}.practice-steps{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:500px){.practice-steps{grid-template-columns:1fr}}
 .talk-episode h2.section-label{font-family:inherit;font-size:11px;line-height:1.5;margin:0}
+
+@media(max-width:1000px) and (min-width:801px){.pillar-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
