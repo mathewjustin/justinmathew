@@ -1,0 +1,35 @@
+.sc-player{--sc-p:0%;--sc-h:0%;margin-top:25px}
+.sc-player .talk-video{margin-top:0}
+.sc-player.is-enhanced .talk-video{cursor:pointer;border-bottom:0}
+.sc-bar{display:flex;gap:16px;align-items:flex-start;padding:16px 18px 14px;border:1px solid var(--border);background:var(--entry)}
+.sc-bar[hidden]{display:none}
+.sc-play{flex:0 0 52px;width:52px;height:52px;border-radius:50%;border:0;background:var(--accent);color:var(--theme);display:grid;place-items:center;cursor:pointer;margin-top:2px;transition:transform .15s ease}
+.sc-play:hover{transform:scale(1.05)}
+.sc-play svg{width:24px;height:24px;fill:currentColor}
+.sc-icon-play{margin-left:3px}
+.sc-icon-pause,.is-playing .sc-icon-play{display:none}
+.is-playing .sc-icon-pause{display:block}
+.sc-body{flex:1;min-width:0}
+.sc-head{display:flex;justify-content:space-between;gap:12px;align-items:flex-start}
+.sc-titles{display:flex;flex-direction:column;min-width:0}
+.sc-author{font-size:12px;color:var(--secondary);line-height:1.4}
+.sc-title{font-size:15px;color:var(--primary);line-height:1.4;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.sc-tools{display:flex;align-items:center;gap:8px;flex:0 0 auto}
+.sc-tag{font-size:11px;color:var(--secondary);background:var(--code-bg);border-radius:12px;padding:3px 10px;white-space:nowrap}
+.sc-full{border:0;background:none;color:var(--secondary);padding:4px;cursor:pointer;display:grid}
+.sc-full svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.sc-full:hover{color:var(--accent)}
+.sc-wave{position:relative;height:60px;margin-top:10px;cursor:pointer;outline-offset:3px}
+.sc-svg{display:block;width:100%;height:100%}
+.sc-base{fill:var(--secondary);opacity:.38}
+.sc-hover{fill:var(--accent);opacity:0;clip-path:inset(0 calc(100% - var(--sc-h)) 0 0)}
+.is-hovering .sc-hover{opacity:.35}
+.sc-played{fill:var(--accent);clip-path:inset(0 calc(100% - var(--sc-p)) 0 0)}
+.sc-line{position:absolute;left:0;right:0;top:28px;height:3px;background:var(--border)}
+.sc-line-fill{display:block;height:100%;width:var(--sc-p);background:var(--accent)}
+.sc-time{position:absolute;top:31px;font-size:11px;line-height:1;padding:2px 4px;background:var(--primary);color:var(--theme);pointer-events:none}
+.sc-cur{left:0}
+.sc-dur{right:0;background:var(--theme);color:var(--secondary)}
+.sc-dur:empty{display:none}
+.sc-player + .talk-video-note{margin-top:12px}
+@media(max-width:500px){.sc-bar{padding:12px;gap:12px}.sc-play{flex-basis:42px;width:42px;height:42px}.sc-tag{display:none}}
